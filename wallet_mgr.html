@@ -1,0 +1,1191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>:: RED BIT ::</title>
+    <!-- font -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <!-- css -->
+    <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+    <!-- jQuery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- js -->
+    <script src="js/main.js"></script>
+    <!-- scrollbar -->
+    <link rel="stylesheet" href="plugin/scrollbar/jquery.mCustomScrollbar.css">
+    <script src="plugin/scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+</head>
+
+<body>
+    <div id="wrap" class="wrap-bg">
+        <div id="m-open-menu">
+            <div class="menu-container">
+                <div class="user-input">
+                    <div class="greeting-box">
+                        <p><span class="user-name">홍길동</span>님 환영합니다.</p>
+                        <a class="close-btn bg-img" href="#"></a>
+                    </div>
+                    <div class="input-group flex-container">
+                        <input class="login" type="button" value="로그인" onclick="location.href='login.html'">
+                        <input class="sign" type="button" value="회원가입" onclick="location.href='join_agreement.html'">
+                    </div> <!-- end input-group -->
+                </div> <!-- end user-input -->
+                <div class="menu-list">
+                    <ul>
+                        <li><a href="market.html">거래소</a></li>
+                        <li><a href="wallet.html">지갑관리</a></li>
+                        <li><a href="customer_support_index.html">고객센터</a></li>
+                        <li><a href="#">ISO</a></li>
+                    </ul>
+                </div> <!-- end menu-list -->
+                <div class="lang-select">
+                    <ul>
+                        <li class="on">
+                            <p>한국어</p>
+                        </li>
+                        <li>
+                            <p>영어</p>
+                        </li>
+                    </ul>
+                </div> <!-- end lang-select -->
+                <div class="cs-area align-center">
+                    <p>고객센터 상담시간</p>
+                    <h3>09 : 00 ~ 18 : 00</h3>
+                </div> <!-- end cs-area -->
+            </div> <!-- end menu-container -->
+        </div> <!-- end m-open-menu -->
+        <div id="m-header">
+            <a class="m-logo bg-img" href="index.html"></a>
+            <a class="m-menu bg-img" href="#"></a>
+        </div> <!-- end m-header -->
+        <div id="main-header" class="sub">
+            <div class="container">
+                <a href="index.html" class="logo"><img src="img/logo.png" alt=""></a>
+                <nav class="left-mu">
+                    <ul>
+                        <li><a href="exchange.html">거래소</a></li>
+                        <li><a href="wallet_mgr.html">입출금</a></li>
+                        <li><a href="event_board.html">이벤트</a></li>
+                        <li><a href="customer_support_guide.html">고객센터</a></li>
+                    </ul>
+                </nav>
+                <nav class="right-mu">
+                    <ul>
+                        <li><a href="login.html">로그인</a></li>
+                        <li><a href="sign_up.html">회원가입</a></li>
+                        <li class="lang">
+                            <div class="sel-container">
+                                <div class="sel-head">
+                                    <p>English</p>
+                                </div>
+                                <ul class="sel-list">
+                                    <li class="on">
+                                        <p>English</p>
+                                    </li>
+                                    <li>
+                                        <p>Korea</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div> <!-- end container -->
+        </div> <!-- end main-header -->
+
+        <div id="balance" class="ct-wrap">
+            <div class="sub-container">
+                <div class="noti-area">
+                    <a href="#"><span>[Notice]</span> Redbit International Exchange Inspection Guide</a>
+                    <a href="#"><span>[Notice]</span> Redbit International Exchange Inspection Guide</a>
+                    <a href="#"><span>[Notice]</span> Redbit International Exchange Inspection Guide</a>
+                    <a href="#"><span>[Notice]</span> Redbit International Exchange Inspection Guide</a>
+                </div> <!-- end noti-area -->
+                <div class="deposit-ct font-0">
+                    <div class="slide-ct dp-common le-area">
+                        <div class="head font-0">
+                            <div class="search-box">
+                                <input type="text" name="" id="" class="width-100" placeholder="Coin Name Search">
+                                <button><img src="img/search_icon_thick.png" alt=""></button>
+                            </div> <!-- end search-box -->
+                            <div class="recommend">
+                                <span>recommend</span>
+                                <button><img src="img/star_icon_un.png" alt=""></button>
+                            </div> <!-- end recommend -->
+                        </div> <!-- end head -->
+                        <ul class="abb-tab-mu flex-container align-center">
+                            <li class="on">USDT</li>
+                            <li>BTC</li>
+                            <li>RDC</li>
+                            <li>KRW</li>
+                        </ul><!-- end abb-tab-mu -->
+                        <table>
+                            <colgroup>
+                                <col width="26%">
+                                <col width="24%">
+                                <col width="20%">
+                                <col width="30%">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>Coin Name</th>
+                                    <th>Price</th>
+                                    <th>Change</th>
+                                    <th>Volume</th>
+                                </tr>
+                            </thead>
+                        </table>
+                        <div class="t-scroll mCustomScrollbar" data-mcs-theme="minimal-dark">
+                            <table>
+                                <colgroup>
+                                    <col width="26%">
+                                    <col width="24%">
+                                    <col width="20%">
+                                    <col width="30%">
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="coin-nm font-0">
+                                                <div class="coin-img"><img src="img/eth_coin_icon.png" alt=""></div>
+                                                <div class="nm-abb">
+                                                    <p>Etherem</p>
+                                                    <span>ETH/USDT</span>
+                                                </div> <!-- end nm-abb-->
+                                            </div> <!-- end coin-nm -->
+                                        </td>
+                                        <td>
+                                            <div class="coin-price align-right">
+                                                <p class="pr-up">11643.82</p>
+                                                <span>13,906,000 KRW</span>
+                                            </div> <!-- end coin-price -->
+                                        </td>
+                                        <td>
+                                            <div class="coin-change">
+                                                <p class="plus-chg">+10.02%</p>
+                                            </div> <!-- end coin-change -->
+                                        </td>
+                                        <td>
+                                            <div class="coin-volume align-right">
+                                                <p>2,740,403,522</p>
+                                            </div> <!-- end coin-change -->
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="coin-nm font-0">
+                                                <div class="coin-img"><img src="img/red_coin_icon.png" alt=""></div>
+                                                <div class="nm-abb">
+                                                    <p>Redcoin</p>
+                                                    <span>RDC/USDT</span>
+                                                </div> <!-- end nm-abb-->
+                                            </div> <!-- end coin-nm -->
+                                        </td>
+                                        <td>
+                                            <div class="coin-price align-right">
+                                                <p class="pr-dm">0.09</p>
+                                                <span>13,906,000 KRW</span>
+                                            </div> <!-- end coin-price -->
+                                        </td>
+                                        <td>
+                                            <div class="coin-change">
+                                                <p class="minus-chg">-2.00%</p>
+                                            </div> <!-- end coin-change -->
+                                        </td>
+                                        <td>
+                                            <div class="coin-volume align-right">
+                                                <p>216,741</p>
+                                            </div> <!-- end coin-change -->
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="coin-nm font-0">
+                                                <div class="coin-img"><img src="img/eth_coin_icon.png" alt=""></div>
+                                                <div class="nm-abb">
+                                                    <p>Etherem</p>
+                                                    <span>ETH/USDT</span>
+                                                </div> <!-- end nm-abb-->
+                                            </div> <!-- end coin-nm -->
+                                        </td>
+                                        <td>
+                                            <div class="coin-price align-right">
+                                                <p class="pr-up">11643.82</p>
+                                                <span>13,906,000 KRW</span>
+                                            </div> <!-- end coin-price -->
+                                        </td>
+                                        <td>
+                                            <div class="coin-change">
+                                                <p class="plus-chg">+10.02%</p>
+                                            </div> <!-- end coin-change -->
+                                        </td>
+                                        <td>
+                                            <div class="coin-volume align-right">
+                                                <p>2,740,403,522</p>
+                                            </div> <!-- end coin-change -->
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="coin-nm font-0">
+                                                <div class="coin-img"><img src="img/red_coin_icon.png" alt=""></div>
+                                                <div class="nm-abb">
+                                                    <p>Another</p>
+                                                    <span>ETH/USDT</span>
+                                                </div> <!-- end nm-abb-->
+                                            </div> <!-- end coin-nm -->
+                                        </td>
+                                        <td>
+                                            <div class="coin-price align-right">
+                                                <p class="pr-up">11643.82</p>
+                                                <span>13,906,000 KRW</span>
+                                            </div> <!-- end coin-price -->
+                                        </td>
+                                        <td>
+                                            <div class="coin-change">
+                                                <p class="plus-chg">+10.02%</p>
+                                            </div> <!-- end coin-change -->
+                                        </td>
+                                        <td>
+                                            <div class="coin-volume align-right">
+                                                <p>2,740,403,522</p>
+                                            </div> <!-- end coin-change -->
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="coin-nm font-0">
+                                                <div class="coin-img"><img src="img/bit_coin_icon.png" alt=""></div>
+                                                <div class="nm-abb">
+                                                    <p>Bitcoin</p>
+                                                    <span>BTC/USDT</span>
+                                                </div> <!-- end nm-abb-->
+                                            </div> <!-- end coin-nm -->
+                                        </td>
+                                        <td>
+                                            <div class="coin-price align-right">
+                                                <p class="pr-dm">0.09</p>
+                                                <span>13,906,000 KRW</span>
+                                            </div> <!-- end coin-price -->
+                                        </td>
+                                        <td>
+                                            <div class="coin-change">
+                                                <p class="minus-chg">-2.00%</p>
+                                            </div> <!-- end coin-change -->
+                                        </td>
+                                        <td>
+                                            <div class="coin-volume align-right">
+                                                <p>216,741</p>
+                                            </div> <!-- end coin-change -->
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="coin-nm font-0">
+                                                <div class="coin-img"><img src="img/eth_coin_icon.png" alt=""></div>
+                                                <div class="nm-abb">
+                                                    <p>Etherem</p>
+                                                    <span>ETH/USDT</span>
+                                                </div> <!-- end nm-abb-->
+                                            </div> <!-- end coin-nm -->
+                                        </td>
+                                        <td>
+                                            <div class="coin-price align-right">
+                                                <p class="pr-up">11643.82</p>
+                                                <span>13,906,000 KRW</span>
+                                            </div> <!-- end coin-price -->
+                                        </td>
+                                        <td>
+                                            <div class="coin-change">
+                                                <p class="plus-chg">+10.02%</p>
+                                            </div> <!-- end coin-change -->
+                                        </td>
+                                        <td>
+                                            <div class="coin-volume align-right">
+                                                <p>2,740,403,522</p>
+                                            </div> <!-- end coin-change -->
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="coin-nm font-0">
+                                                <div class="coin-img"><img src="img/red_coin_icon.png" alt=""></div>
+                                                <div class="nm-abb">
+                                                    <p>Redcoin</p>
+                                                    <span>RDC/USDT</span>
+                                                </div> <!-- end nm-abb-->
+                                            </div> <!-- end coin-nm -->
+                                        </td>
+                                        <td>
+                                            <div class="coin-price align-right">
+                                                <p class="pr-dm">0.09</p>
+                                                <span>13,906,000 KRW</span>
+                                            </div> <!-- end coin-price -->
+                                        </td>
+                                        <td>
+                                            <div class="coin-change">
+                                                <p class="minus-chg">-2.00%</p>
+                                            </div> <!-- end coin-change -->
+                                        </td>
+                                        <td>
+                                            <div class="coin-volume align-right">
+                                                <p>216,741</p>
+                                            </div> <!-- end coin-change -->
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="coin-nm font-0">
+                                                <div class="coin-img"><img src="img/eth_coin_icon.png" alt=""></div>
+                                                <div class="nm-abb">
+                                                    <p>Etherem</p>
+                                                    <span>ETH/USDT</span>
+                                                </div> <!-- end nm-abb-->
+                                            </div> <!-- end coin-nm -->
+                                        </td>
+                                        <td>
+                                            <div class="coin-price align-right">
+                                                <p class="pr-up">11643.82</p>
+                                                <span>13,906,000 KRW</span>
+                                            </div> <!-- end coin-price -->
+                                        </td>
+                                        <td>
+                                            <div class="coin-change">
+                                                <p class="plus-chg">+10.02%</p>
+                                            </div> <!-- end coin-change -->
+                                        </td>
+                                        <td>
+                                            <div class="coin-volume align-right">
+                                                <p>2,740,403,522</p>
+                                            </div> <!-- end coin-change -->
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="coin-nm font-0">
+                                                <div class="coin-img"><img src="img/red_coin_icon.png" alt=""></div>
+                                                <div class="nm-abb">
+                                                    <p>Another</p>
+                                                    <span>ETH/USDT</span>
+                                                </div> <!-- end nm-abb-->
+                                            </div> <!-- end coin-nm -->
+                                        </td>
+                                        <td>
+                                            <div class="coin-price align-right">
+                                                <p class="pr-up">11643.82</p>
+                                                <span>13,906,000 KRW</span>
+                                            </div> <!-- end coin-price -->
+                                        </td>
+                                        <td>
+                                            <div class="coin-change">
+                                                <p class="plus-chg">+10.02%</p>
+                                            </div> <!-- end coin-change -->
+                                        </td>
+                                        <td>
+                                            <div class="coin-volume align-right">
+                                                <p>2,740,403,522</p>
+                                            </div> <!-- end coin-change -->
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="coin-nm font-0">
+                                                <div class="coin-img"><img src="img/bit_coin_icon.png" alt=""></div>
+                                                <div class="nm-abb">
+                                                    <p>Bitcoin</p>
+                                                    <span>BTC/USDT</span>
+                                                </div> <!-- end nm-abb-->
+                                            </div> <!-- end coin-nm -->
+                                        </td>
+                                        <td>
+                                            <div class="coin-price align-right">
+                                                <p class="pr-dm">0.09</p>
+                                                <span>13,906,000 KRW</span>
+                                            </div> <!-- end coin-price -->
+                                        </td>
+                                        <td>
+                                            <div class="coin-change">
+                                                <p class="minus-chg">-2.00%</p>
+                                            </div> <!-- end coin-change -->
+                                        </td>
+                                        <td>
+                                            <div class="coin-volume align-right">
+                                                <p>216,741</p>
+                                            </div> <!-- end coin-change -->
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="coin-nm font-0">
+                                                <div class="coin-img"><img src="img/red_coin_icon.png" alt=""></div>
+                                                <div class="nm-abb">
+                                                    <p>Redcoin</p>
+                                                    <span>RDC/USDT</span>
+                                                </div> <!-- end nm-abb-->
+                                            </div> <!-- end coin-nm -->
+                                        </td>
+                                        <td>
+                                            <div class="coin-price align-right">
+                                                <p class="pr-dm">0.09</p>
+                                                <span>13,906,000 KRW</span>
+                                            </div> <!-- end coin-price -->
+                                        </td>
+                                        <td>
+                                            <div class="coin-change">
+                                                <p class="minus-chg">-2.00%</p>
+                                            </div> <!-- end coin-change -->
+                                        </td>
+                                        <td>
+                                            <div class="coin-volume align-right">
+                                                <p>216,741</p>
+                                            </div> <!-- end coin-change -->
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="coin-nm font-0">
+                                                <div class="coin-img"><img src="img/eth_coin_icon.png" alt=""></div>
+                                                <div class="nm-abb">
+                                                    <p>Etherem</p>
+                                                    <span>ETH/USDT</span>
+                                                </div> <!-- end nm-abb-->
+                                            </div> <!-- end coin-nm -->
+                                        </td>
+                                        <td>
+                                            <div class="coin-price align-right">
+                                                <p class="pr-up">11643.82</p>
+                                                <span>13,906,000 KRW</span>
+                                            </div> <!-- end coin-price -->
+                                        </td>
+                                        <td>
+                                            <div class="coin-change">
+                                                <p class="plus-chg">+10.02%</p>
+                                            </div> <!-- end coin-change -->
+                                        </td>
+                                        <td>
+                                            <div class="coin-volume align-right">
+                                                <p>2,740,403,522</p>
+                                            </div> <!-- end coin-change -->
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="coin-nm font-0">
+                                                <div class="coin-img"><img src="img/bit_coin_icon.png" alt=""></div>
+                                                <div class="nm-abb">
+                                                    <p>Bitcoin</p>
+                                                    <span>BTC/USDT</span>
+                                                </div> <!-- end nm-abb-->
+                                            </div> <!-- end coin-nm -->
+                                        </td>
+                                        <td>
+                                            <div class="coin-price align-right">
+                                                <p class="pr-dm">0.09</p>
+                                                <span>13,906,000 KRW</span>
+                                            </div> <!-- end coin-price -->
+                                        </td>
+                                        <td>
+                                            <div class="coin-change">
+                                                <p class="minus-chg">-2.00%</p>
+                                            </div> <!-- end coin-change -->
+                                        </td>
+                                        <td>
+                                            <div class="coin-volume align-right">
+                                                <p>216,741</p>
+                                            </div> <!-- end coin-change -->
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="coin-nm font-0">
+                                                <div class="coin-img"><img src="img/red_coin_icon.png" alt=""></div>
+                                                <div class="nm-abb">
+                                                    <p>Redcoin</p>
+                                                    <span>RDC/USDT</span>
+                                                </div> <!-- end nm-abb-->
+                                            </div> <!-- end coin-nm -->
+                                        </td>
+                                        <td>
+                                            <div class="coin-price align-right">
+                                                <p class="pr-dm">0.09</p>
+                                                <span>13,906,000 KRW</span>
+                                            </div> <!-- end coin-price -->
+                                        </td>
+                                        <td>
+                                            <div class="coin-change">
+                                                <p class="minus-chg">-2.00%</p>
+                                            </div> <!-- end coin-change -->
+                                        </td>
+                                        <td>
+                                            <div class="coin-volume align-right">
+                                                <p>216,741</p>
+                                            </div> <!-- end coin-change -->
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="coin-nm font-0">
+                                                <div class="coin-img"><img src="img/eth_coin_icon.png" alt=""></div>
+                                                <div class="nm-abb">
+                                                    <p>Etherem</p>
+                                                    <span>ETH/USDT</span>
+                                                </div> <!-- end nm-abb-->
+                                            </div> <!-- end coin-nm -->
+                                        </td>
+                                        <td>
+                                            <div class="coin-price align-right">
+                                                <p class="pr-up">11643.82</p>
+                                                <span>13,906,000 KRW</span>
+                                            </div> <!-- end coin-price -->
+                                        </td>
+                                        <td>
+                                            <div class="coin-change">
+                                                <p class="plus-chg">+10.02%</p>
+                                            </div> <!-- end coin-change -->
+                                        </td>
+                                        <td>
+                                            <div class="coin-volume align-right">
+                                                <p>2,740,403,522</p>
+                                            </div> <!-- end coin-change -->
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="coin-nm font-0">
+                                                <div class="coin-img"><img src="img/bit_coin_icon.png" alt=""></div>
+                                                <div class="nm-abb">
+                                                    <p>Bitcoin</p>
+                                                    <span>BTC/USDT</span>
+                                                </div> <!-- end nm-abb-->
+                                            </div> <!-- end coin-nm -->
+                                        </td>
+                                        <td>
+                                            <div class="coin-price align-right">
+                                                <p class="pr-dm">0.09</p>
+                                                <span>13,906,000 KRW</span>
+                                            </div> <!-- end coin-price -->
+                                        </td>
+                                        <td>
+                                            <div class="coin-change">
+                                                <p class="minus-chg">-2.00%</p>
+                                            </div> <!-- end coin-change -->
+                                        </td>
+                                        <td>
+                                            <div class="coin-volume align-right">
+                                                <p>216,741</p>
+                                            </div> <!-- end coin-change -->
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="coin-nm font-0">
+                                                <div class="coin-img"><img src="img/red_coin_icon.png" alt=""></div>
+                                                <div class="nm-abb">
+                                                    <p>Redcoin</p>
+                                                    <span>RDC/USDT</span>
+                                                </div> <!-- end nm-abb-->
+                                            </div> <!-- end coin-nm -->
+                                        </td>
+                                        <td>
+                                            <div class="coin-price align-right">
+                                                <p class="pr-dm">0.09</p>
+                                                <span>13,906,000 KRW</span>
+                                            </div> <!-- end coin-price -->
+                                        </td>
+                                        <td>
+                                            <div class="coin-change">
+                                                <p class="minus-chg">-2.00%</p>
+                                            </div> <!-- end coin-change -->
+                                        </td>
+                                        <td>
+                                            <div class="coin-volume align-right">
+                                                <p>216,741</p>
+                                            </div> <!-- end coin-change -->
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="coin-nm font-0">
+                                                <div class="coin-img"><img src="img/eth_coin_icon.png" alt=""></div>
+                                                <div class="nm-abb">
+                                                    <p>Etherem</p>
+                                                    <span>ETH/USDT</span>
+                                                </div> <!-- end nm-abb-->
+                                            </div> <!-- end coin-nm -->
+                                        </td>
+                                        <td>
+                                            <div class="coin-price align-right">
+                                                <p class="pr-up">11643.82</p>
+                                                <span>13,906,000 KRW</span>
+                                            </div> <!-- end coin-price -->
+                                        </td>
+                                        <td>
+                                            <div class="coin-change">
+                                                <p class="plus-chg">+10.02%</p>
+                                            </div> <!-- end coin-change -->
+                                        </td>
+                                        <td>
+                                            <div class="coin-volume align-right">
+                                                <p>2,740,403,522</p>
+                                            </div> <!-- end coin-change -->
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div> <!-- end t-scroll -->
+                    </div> <!-- end slide-ct -->
+                    <div class="rg-area font-0">
+                        <div class="user-bank dp-common">
+                            <!-- <p>test8888test</p> -->
+                            <ul class="tab-menu flex-container align-center">
+                                <li class="on">Assets</li>
+                                <li>Deposit history</li>
+                            </ul> <!-- end tab-menu -->
+                            <div class="asset-ct cm-ct show">
+                                <div class="holding-check align-right">
+                                    <input type="checkbox" name="hold-ch" id="hold-ch"><label for="hold-ch">View only
+                                        assets held assets</label>
+                                </div> <!-- end holding-check -->
+                                <table>
+                                    <colgroup>
+                                        <col width="25%">
+                                        <col width="25%">
+                                        <col width="25%">
+                                        <col width="25%">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th>Coin name</th>
+                                            <th>Rate</th>
+                                            <th>Balance</th>
+                                            <th>Enabled withdrawal</th>
+                                        </tr>
+                                    </thead>
+                                </table>
+                                <div class="t-scroll mCustomScrollbar" data-mcs-theme="minimal-dark">
+                                <table>
+                                    <colgroup>
+                                        <col width="25%">
+                                        <col width="25%">
+                                        <col width="25%">
+                                        <col width="25%">
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <td class="coin-nm">
+                                                <div class="font-0">
+                                                    <div class="coin-img"><img src="img/bit_coin_icon.png" alt=""></div>
+                                                    <div class="nm-abb">
+                                                        <p>Bitcoin</p>
+                                                        <span>BTC</span>
+                                                    </div> <!-- nm-abb -->
+                                                </div>
+                                            </td>
+                                            <td class="rate">0.00%</td>
+                                            <td class="hold-pr">0.00%</td>
+                                            <td class="wh-pr">0.000</td>
+                                        </tr>
+                                        <tr class="show">
+                                            <td class="coin-nm">
+                                                <div class="font-0">
+                                                    <div class="coin-img"><img src="img/eth_coin_icon.png" alt=""></div>
+                                                    <div class="nm-abb">
+                                                        <p>Etherem</p>
+                                                        <span>ETH</span>
+                                                    </div> <!-- nm-abb -->
+                                                </div>
+                                            </td>
+                                            <td class="rate">0.00%</td>
+                                            <td class="hold-pr">0.00%</td>
+                                            <td class="wh-pr">0.000</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="coin-nm">
+                                                <div class="font-0">
+                                                    <div class="coin-img"><img src="img/red_coin_icon.png" alt=""></div>
+                                                    <div class="nm-abb">
+                                                        <p>Redbit</p>
+                                                        <span>RDC</span>
+                                                    </div> <!-- nm-abb -->
+                                                </div>
+                                            </td>
+                                            <td class="rate">0.00%</td>
+                                            <td class="hold-pr">0.00%</td>
+                                            <td class="wh-pr">0.000</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="coin-nm">
+                                                <div class="font-0">
+                                                    <div class="coin-img"><img src="img/bit_coin_icon.png" alt=""></div>
+                                                    <div class="nm-abb">
+                                                        <p>Bitcoin</p>
+                                                        <span>BTC</span>
+                                                    </div> <!-- nm-abb -->
+                                                </div>
+                                            </td>
+                                            <td class="rate">0.00%</td>
+                                            <td class="hold-pr">0.00%</td>
+                                            <td class="wh-pr">0.000</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="coin-nm">
+                                                <div class="font-0">
+                                                    <div class="coin-img"><img src="img/eth_coin_icon.png" alt=""></div>
+                                                    <div class="nm-abb">
+                                                        <p>Etherem</p>
+                                                        <span>ETH</span>
+                                                    </div> <!-- nm-abb -->
+                                                </div>
+                                            </td>
+                                            <td class="rate">0.00%</td>
+                                            <td class="hold-pr">0.00%</td>
+                                            <td class="wh-pr">0.000</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="coin-nm">
+                                                <div class="font-0">
+                                                    <div class="coin-img"><img src="img/red_coin_icon.png" alt=""></div>
+                                                    <div class="nm-abb">
+                                                        <p>Redbit</p>
+                                                        <span>RDC</span>
+                                                    </div> <!-- nm-abb -->
+                                                </div>
+                                            </td>
+                                            <td class="rate">0.00%</td>
+                                            <td class="hold-pr">0.00%</td>
+                                            <td class="wh-pr">0.000</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="coin-nm">
+                                                <div class="font-0">
+                                                    <div class="coin-img"><img src="img/bit_coin_icon.png" alt=""></div>
+                                                    <div class="nm-abb">
+                                                        <p>Bitcoin</p>
+                                                        <span>BTC</span>
+                                                    </div> <!-- nm-abb -->
+                                                </div>
+                                            </td>
+                                            <td class="rate">0.00%</td>
+                                            <td class="hold-pr">0.00%</td>
+                                            <td class="wh-pr">0.000</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="coin-nm">
+                                                <div class="font-0">
+                                                    <div class="coin-img"><img src="img/eth_coin_icon.png" alt=""></div>
+                                                    <div class="nm-abb">
+                                                        <p>Etherem</p>
+                                                        <span>ETH</span>
+                                                    </div> <!-- nm-abb -->
+                                                </div>
+                                            </td>
+                                            <td class="rate">0.00%</td>
+                                            <td class="hold-pr">0.00%</td>
+                                            <td class="wh-pr">0.000</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="coin-nm">
+                                                <div class="font-0">
+                                                    <div class="coin-img"><img src="img/red_coin_icon.png" alt=""></div>
+                                                    <div class="nm-abb">
+                                                        <p>Redbit</p>
+                                                        <span>RDC</span>
+                                                    </div> <!-- nm-abb -->
+                                                </div>
+                                            </td>
+                                            <td class="rate">0.00%</td>
+                                            <td class="hold-pr">0.00%</td>
+                                            <td class="wh-pr">0.000</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="coin-nm">
+                                                <div class="font-0">
+                                                    <div class="coin-img"><img src="img/bit_coin_icon.png" alt=""></div>
+                                                    <div class="nm-abb">
+                                                        <p>Bitcoin</p>
+                                                        <span>BTC</span>
+                                                    </div> <!-- nm-abb -->
+                                                </div>
+                                            </td>
+                                            <td class="rate">0.00%</td>
+                                            <td class="hold-pr">0.00%</td>
+                                            <td class="wh-pr">0.000</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="coin-nm">
+                                                <div class="font-0">
+                                                    <div class="coin-img"><img src="img/eth_coin_icon.png" alt=""></div>
+                                                    <div class="nm-abb">
+                                                        <p>Etherem</p>
+                                                        <span>ETH</span>
+                                                    </div> <!-- nm-abb -->
+                                                </div>
+                                            </td>
+                                            <td class="rate">0.00%</td>
+                                            <td class="hold-pr">0.00%</td>
+                                            <td class="wh-pr">0.000</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="coin-nm">
+                                                <div class="font-0">
+                                                    <div class="coin-img"><img src="img/red_coin_icon.png" alt=""></div>
+                                                    <div class="nm-abb">
+                                                        <p>Redbit</p>
+                                                        <span>RDC</span>
+                                                    </div> <!-- nm-abb -->
+                                                </div>
+                                            </td>
+                                            <td class="rate">0.00%</td>
+                                            <td class="hold-pr">0.00%</td>
+                                            <td class="wh-pr">0.000</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="coin-nm">
+                                                <div class="font-0">
+                                                    <div class="coin-img"><img src="img/bit_coin_icon.png" alt=""></div>
+                                                    <div class="nm-abb">
+                                                        <p>Bitcoin</p>
+                                                        <span>BTC</span>
+                                                    </div> <!-- nm-abb -->
+                                                </div>
+                                            </td>
+                                            <td class="rate">0.00%</td>
+                                            <td class="hold-pr">0.00%</td>
+                                            <td class="wh-pr">0.000</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="coin-nm">
+                                                <div class="font-0">
+                                                    <div class="coin-img"><img src="img/eth_coin_icon.png" alt=""></div>
+                                                    <div class="nm-abb">
+                                                        <p>Etherem</p>
+                                                        <span>ETH</span>
+                                                    </div> <!-- nm-abb -->
+                                                </div>
+                                            </td>
+                                            <td class="rate">0.00%</td>
+                                            <td class="hold-pr">0.00%</td>
+                                            <td class="wh-pr">0.000</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="coin-nm">
+                                                <div class="font-0">
+                                                    <div class="coin-img"><img src="img/red_coin_icon.png" alt=""></div>
+                                                    <div class="nm-abb">
+                                                        <p>Redbit</p>
+                                                        <span>RDC</span>
+                                                    </div> <!-- nm-abb -->
+                                                </div>
+                                            </td>
+                                            <td class="rate">0.00%</td>
+                                            <td class="hold-pr">0.00%</td>
+                                            <td class="wh-pr">0.000</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="coin-nm">
+                                                <div class="font-0">
+                                                    <div class="coin-img"><img src="img/bit_coin_icon.png" alt=""></div>
+                                                    <div class="nm-abb">
+                                                        <p>Bitcoin</p>
+                                                        <span>BTC</span>
+                                                    </div> <!-- nm-abb -->
+                                                </div>
+                                            </td>
+                                            <td class="rate">0.00%</td>
+                                            <td class="hold-pr">0.00%</td>
+                                            <td class="wh-pr">0.000</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="coin-nm">
+                                                <div class="font-0">
+                                                    <div class="coin-img"><img src="img/eth_coin_icon.png" alt=""></div>
+                                                    <div class="nm-abb">
+                                                        <p>Etherem</p>
+                                                        <span>ETH</span>
+                                                    </div> <!-- nm-abb -->
+                                                </div>
+                                            </td>
+                                            <td class="rate">0.00%</td>
+                                            <td class="hold-pr">0.00%</td>
+                                            <td class="wh-pr">0.000</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="coin-nm">
+                                                <div class="font-0">
+                                                    <div class="coin-img"><img src="img/red_coin_icon.png" alt=""></div>
+                                                    <div class="nm-abb">
+                                                        <p>Redbit</p>
+                                                        <span>RDC</span>
+                                                    </div> <!-- nm-abb -->
+                                                </div>
+                                            </td>
+                                            <td class="rate">0.00%</td>
+                                            <td class="hold-pr">0.00%</td>
+                                            <td class="wh-pr">0.000</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="coin-nm">
+                                                <div class="font-0">
+                                                    <div class="coin-img"><img src="img/bit_coin_icon.png" alt=""></div>
+                                                    <div class="nm-abb">
+                                                        <p>Bitcoin</p>
+                                                        <span>BTC</span>
+                                                    </div> <!-- nm-abb -->
+                                                </div>
+                                            </td>
+                                            <td class="rate">0.00%</td>
+                                            <td class="hold-pr">0.00%</td>
+                                            <td class="wh-pr">0.000</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="coin-nm">
+                                                <div class="font-0">
+                                                    <div class="coin-img"><img src="img/eth_coin_icon.png" alt=""></div>
+                                                    <div class="nm-abb">
+                                                        <p>Etherem</p>
+                                                        <span>ETH</span>
+                                                    </div> <!-- nm-abb -->
+                                                </div>
+                                            </td>
+                                            <td class="rate">0.00%</td>
+                                            <td class="hold-pr">0.00%</td>
+                                            <td class="wh-pr">0.000</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="coin-nm">
+                                                <div class="font-0">
+                                                    <div class="coin-img"><img src="img/red_coin_icon.png" alt=""></div>
+                                                    <div class="nm-abb">
+                                                        <p>Redbit</p>
+                                                        <span>RDC</span>
+                                                    </div> <!-- nm-abb -->
+                                                </div>
+                                            </td>
+                                            <td class="rate">0.00%</td>
+                                            <td class="hold-pr">0.00%</td>
+                                            <td class="wh-pr">0.000</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div> <!-- end t-scroll -->
+                            </div> <!-- end asset-ct -->
+                            <div class="dep-history cm-ct">
+                                <div class="division">
+                                    <div class="select-container">
+                                        <div class="select-head">
+                                            <p>Division</p>
+                                        </div> <!-- end select-head -->
+                                        <div class="select-op">
+                                            <p class="option">
+                                                <input type="radio" name="type" id="wh"><label
+                                                    for="wh">Withdrawal</label>
+                                            </p>
+                                            <p class="option">
+                                                <input type="radio" name="type" id="dep"><label
+                                                    for="dep">Deposit</label>
+                                            </p>
+                                            <p class="option">
+                                                <input type="radio" name="type" id="all"><label for="all">ALL</label>
+                                            </p>
+                                        </div> <!-- select-op -->
+                                    </div> <!-- end select-container -->
+                                </div> <!-- end division -->
+                                <table>
+                                    <colgroup>
+                                        <col width="15%">
+                                        <col width="20%">
+                                        <col width="25%">
+                                        <col width="25%">
+                                        <col width="15%">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th>Date</th>
+                                            <th>Coin name</th>
+                                            <th>Division</th>
+                                            <th>Price</th>
+                                            <th>status</th>
+                                        </tr>
+                                    </thead>
+                                </table>
+                                <div class="t-scroll mCustomScrollbar" data-mcs-theme="minimal-dark">
+                                    <table>
+                                        <colgroup>
+                                            <col width="15%">
+                                            <col width="20%">
+                                            <col width="25%">
+                                            <col width="25%">
+                                            <col width="15%">
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <td colspan="5" class="empty align-center">No detail have been inquired.
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div> <!-- end t-scroll -->
+                            </div> <!-- end dep-history -->
+                        </div> <!-- end user-bank -->
+                        <div class="trans-ct dp-common">
+                            <h2><span>Etherem</span> Wallet</h2>
+                            <ul class="user-wallet">
+                                <li>Balance</li>
+                                <li>0 <span>ETH</span> </li>
+                            </ul> <!-- end user-wallet -->
+                            <div class="trans-status">
+                                <ul class="hold-coin">
+                                    <li>Transaction Hold</li>
+                                    <li>0 <span>ETH</span> </li>
+                                </ul>
+                                <ul class="enab-coin">
+                                    <li>Transaction Hold</li>
+                                    <li>0 <span>ETH</span> </li>
+                                </ul> <!-- end enab-coin -->
+                            </div>
+                            <!--end trans-status -->
+                            <div class="trans-form">
+                                <ul class="tab-menu">
+                                    <li class="on">Deposit</li>
+                                    <li>Withdrawal</li>
+                                </ul> <!-- end tab-menu -->
+                                <div class="dep-form fr-common show mCustomScrollbar" data-mcs-theme="minimal-dark">
+                                    <div class="qr-input">
+                                        <div class="qr-code"><img src="img/qr_code.png" alt=""></div>
+                                        <input type="text" name="" id="" class="width-100" placeholder="bc1q0r8nq0j0mt5v5yvrl8gxpv7kj003dkvxcfnq7k">
+                                        <p>copy</p>
+                                        <input class="width-100" type="button" value="Creat Deposit Address">
+                                    </div> <!-- end qr-input -->
+                                    <div class="trans-noti">
+                                        <p>[ Precautions for Deposit ]</p>
+                                        <ul class="align-left">
+                                            <li> · Newly registered customers will need to click 'Check Your Deposit
+                                                Address' to create their own wallet.</li>
+                                            <li>· The coin is deposited in the electronic wallet when sent to the coin
+                                                address.</li>
+                                            <li>* Cancellation cannot be completed if sent to the wrong address. The
+                                                user is solely responsible for the consequences of this incident.</li>
+                                            <li>· Please check your deposit address before making the deposit.</li>
+                                        </ul>
+                                    </div> <!-- end trans-noti -->
+                                </div> <!-- end dep-form -->
+                                <div class="wh-form fr-common mCustomScrollbar" data-mcs-theme="minimal-dark">
+                                    <div class="qr-input">
+                                        <div class="qr-code"><img src="img/qr_code.png" alt=""></div>
+                                        <input type="text" name="" id="" class="width-100">
+                                        <input class="width-100" type="button" value="OTP CODE">
+                                    </div> <!-- end qr-input -->
+                                   
+                                    <div class="remit-area">
+                                        <div class="remit-addr">
+                                            <input type="text" name="" id="" class="width-100" placeholder="Remittance address">
+                                            <div class="remit-inp">
+                                                <input type="text" name="" id="" class="width-100 align-right">
+                                                <span>BTC</span>
+                                            </div>
+                                        </div> <!-- end remit-addr -->
+                                        <div class="wh-trans-info">
+                                            <ul class="font-0">
+                                                <li>Available Coins</li>
+                                                <li>0 BTC</li>
+                                            </ul>
+                                            <ul>
+                                                <li>Withdrawal Fee</li>
+                                                <li>0.001 BTC</li>
+                                            </ul>
+                                            <ul>
+                                                <li>Total Withdrawal Price</li>
+                                                <li>0 BTC</li>
+                                            </ul>
+                                        </div> <!-- end wh-trans-info -->
+                                        <input class="width-100" type="button" value="Coin withdrawal apply">
+                                    </div> <!-- end remit-area -->
+                                    <div class="trans-noti">
+                                        <p>[ Precautions for withdrawal ]</p>
+                                        <ul class="align-left">
+                                            <li>· Due to the coin characteristics, it is not possible to cancel when the withdrawal request is completed.</li>
+                                            <li>· Please check your address and quantity before sending it.</li>
+                                            <li>* Bitcoin can only be transferred to Bitcoin wallets. There's nothing on the exchange that can help you if you send the wrong money to another encrypted wallet.</li>
+                                            <li>· Following completion of the application for withdrawal of a block transfer process is then processed by the chain network. Transfer Delay, problems that may occur in the process in the exchange are unable to process.</li>
+                                            <li>· The withdrawal address is not the same as the member's deposit address because the withdrawal is conducted at Hot Wallet.</li>
+                                            <li>· Exits may be restricted if suspected of fraudulent transactions.</li>
+                                            <li>· You may be subject to legal punishment if you lend your own exchange account to another person, as directed or requested by others.</li>
+                                            <li>· You may be at risk of personal information exposure if you lend a real name certified account to another person.</li>
+                                        </ul>
+                                    </div> <!-- end trans-noti -->
+                                </div> <!-- end dep-form -->
+                            </div> <!-- end trans-form -->
+                        </div> <!-- end user-bank -->
+                    </div> <!-- end rg-area -->
+                </div> <!-- end deposit-ct -->
+            </div> <!-- end sub-container -->
+        </div> <!-- end deposit -->
+
+        <footer>
+            <div class="content font-0">
+                <div class="f-logo foot-ct">
+                    <h3><img src="img/f_logo.png" alt=""></h3>
+                    <p>Check out REDBIT's news on SNS</p>
+                </div>
+                <div class="navi foot-ct">
+                    <h3>Navigation</h3>
+                    <ul>
+                        <li><a href="#">free Guide <span>></span></a></li>
+                    </ul>
+                </div>
+                <div class="cs-center foot-ct">
+                    <h3>CS Center</h3>
+                    <ul class="le-txt">
+                        <li>Inquiry for Listing</li>
+                        <li>Customer Support</li>
+                    </ul>
+                    <ul class="rg-txt">
+                        <li>master@redbiter.com</li>
+                        <li>Is this day incorporated In Hong Kong under the Companies Ordinance (Chapter 622 of the Laws
+                            of Hong Kong), and that this company is a limited company</li>
+                        <li>Operating hours: 9:00 a.m. to 6:00 p.m. on weekdays (excluding Saturdays and Sundays
+                            holidays)</li>
+                    </ul>
+                </div>
+            </div> <!-- end content -->
+            <p class="copyright">COPYRIGHT &copy; REDBIT. All Right Reserved.</p>
+        </footer>
+        <div id="m-fixed-footer">
+            <ul class="flex-container align-center">
+                <li class="market-menu">
+                    <a href="market.html">
+                        <img src="img/m_market_icon.png" alt="">
+                        <p>마켓</p>
+                    </a>
+                </li>
+                <li class="wallet-menu">
+                    <a href="wallet.html">
+                        <img src="img/m_wallet_icon.png" alt="">
+                        <p>지갑</p>
+                    </a>
+                </li>
+                <li class="trans-menu">
+                    <a href="trans-list.html">
+                        <img src="img/m_trans_icon.png" alt="">
+                        <p>입출금내역</p>
+                    </a>
+                </li>
+                <li class="invest-menu">
+                    <a href="inverstment-detail.html">
+                        <img src="img/m_invest_icon.png" alt="">
+                        <p>투자내역</p>
+                    </a>
+                </li>
+            </ul>
+        </div> <!-- end m-fixed-footer -->
+    </div> <!-- end wrap -->
+</body>
+
+</html>

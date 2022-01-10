@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>:: RED BIT ::</title>
+    <!-- favicon -->
+    <link href="img/favicon.png" rel="shortcut icon">
+    <link href="img/favicon.png" rel="apple-touch-icon">
+    <!-- font -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <!-- css -->
+    <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+    <!-- jQuery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- js -->
+    <script src="js/main.js"></script>
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="m-open-menu">
+            <div class="menu-container">
+                <div class="user-input">
+                    <div class="greeting-box">
+                        <p><span class="user-name">홍길동</span>님 환영합니다.</p>
+                        <a class="close-btn bg-img" href="#"></a>
+                    </div>
+                    <div class="input-group flex-container">
+                        <input class="login" type="button" value="로그인" onclick="location.href='login.html'">
+                        <input class="sign" type="button" value="회원가입" onclick="location.href='m_sign_up01.html'">
+                    </div> <!-- end input-group -->
+                </div> <!-- end user-input -->
+                <div class="menu-list">
+                    <ul>
+                        <li><a href="market.html">거래소</a></li>
+                        <li><a href="wallet.html">지갑관리</a></li>
+                        <li><a href="event_board.html">이벤트</a></li>
+                        <li><a href="customer_support_index.html">고객센터</a></li>
+                        <li><a href="#">ISO</a></li>
+                    </ul>
+                </div> <!-- end menu-list -->
+                <div class="lang-select">
+                    <ul>
+                        <li class="on">
+                            <p>한국어</p>
+                        </li>
+                        <li>
+                            <p>영어</p>
+                        </li>
+                    </ul>
+                </div> <!-- end lang-select -->
+                <div class="cs-area align-center">
+                    <p>고객센터 상담시간</p>
+                    <h3>09 : 00 ~ 18 : 00</h3>
+                </div> <!-- end cs-area -->
+            </div> <!-- end menu-container -->
+        </div> <!-- end m-open-menu -->
+        <div id="m-header">
+            <a class="home-icon bg-img" href="index.html"></a>
+            <h1 class="page-title">코인전환</h1>
+            <a class="m-menu bg-img" href="#"></a>
+        </div> <!-- end m-header -->
+        <header id="main-header" class="sub">
+            <div class="container">
+                <a href="index.html" class="logo"><img src="img/logo.png" alt=""></a>
+                <nav class="left-mu">
+                    <ul>
+                        <li><a href="exchange.html">거래소</a></li>
+                        <li><a href="wallet_mgr.html">입출금</a></li>
+                        <li><a href="event_board.html">이벤트</a></li>
+                        <li><a href="customer_support_guide.html">고객센터</a></li>
+                    </ul>
+                </nav>
+                <nav class="right-mu">
+                    <ul>
+                        <li><a href="login.html">로그인</a></li>
+                        <li><a href="sign_up.html">회원가입</a></li>
+                        <li class="lang">
+                            <div class="sel-container">
+                                <div class="sel-head">
+                                    <p>English</p>
+                                </div>
+                                <ul class="sel-list">
+                                    <li class="on">
+                                        <p>English</p>
+                                    </li>
+                                    <li>
+                                        <p>Korea</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div> <!-- end container -->
+        </header> <!-- end main-header -->
+
+        <div id="support">
+            <div class="content">
+                <aside id="aside-menu">
+                    <div class="mu-head">
+                        <h1>Customer<br>
+                            Support
+                        </h1>
+                    </div> <!-- end mu-head -->
+                    <nav>
+                        <ul>
+                            <li><a href="customer_support_guide.html">User Guide</a></li>
+                            <li><a href="customer_support_fee_info.html">Fee Info</a></li>
+                            <li class="on"><a href="customer_support_conversion.html">Coin Conversion</a></li>
+                            <li><a href="customer_support_inquiry.html">1 : 1 Inquiry</a></li>
+                            <li><a href="customer_support_notice.html">Notice</a></li>
+                            <li><a href="customer_support_faq.html">FAQ</a></li>
+                            <li><a href="customer_support_press.html">Press Coverage</a></li>
+                        </ul>
+                    </nav>
+                </aside> <!-- end aside-menu -->
+                <div class="cus-area cm-area conversion">
+                    <div class="location align-right">
+                        <ul>
+                            <li class="home">Home</li>
+                            <li class="route">></li>
+                            <li>Customer Support</li>
+                            <li class="route">></li>
+                            <li>Coin Conversion</li>
+                        </ul>
+                    </div> <!-- end location -->
+                    <h1>Coin Conversion</h1>
+                    <div class="conv-visual bg-img">
+                        <div class="visual-txt align-center">
+                            <h2>Coin Exchange</h2>
+                            <p>Conversion amount is based on the current price of coins. <br>
+                                Coin converted into shopping mall coin can not be exchanged again.</p>
+                        </div>
+                    </div> <!-- end conv-visual -->
+                    <div class="conv-area font-0">
+                        <div class="sel-coin conv-ct">
+                            <div class="search-coin">
+                                <input type="text" name="" id="" class=" width-100" placeholder="Search Coin">
+                                <input type="button" value="▲">
+                            </div> <!-- end search-coin -->
+                            <div class="coin-list">
+                                <div class="coin-box">
+                                    <div class="coin-img"><img src="img/bit_coin_icon.png" alt=""></div>
+                                    <p class="coin-nm">BTC/Bitcoin</p>
+                                </div> <!-- end coin-box -->
+                                <div class="coin-box">
+                                    <div class="coin-img"><img src="img/eth_coin_icon.png" alt=""></div>
+                                    <p class="coin-nm">ETH/Ethereum</p>
+                                </div> <!-- end coin-box -->
+                                <div class="coin-box">
+                                    <div class="coin-img"><img src="img/red_coin_icon.png" alt=""></div>
+                                    <p class="coin-nm">RDC/Redcoin</p>
+                                </div> <!-- end coin-box -->
+                                <div class="coin-box">
+                                    <div class="coin-img"><img src="img/bit_coin_icon.png" alt=""></div>
+                                    <p class="coin-nm">BTC/Bitcoin</p>
+                                </div> <!-- end coin-box -->
+                                <div class="coin-box">
+                                    <div class="coin-img"><img src="img/eth_coin_icon.png" alt=""></div>
+                                    <p class="coin-nm">ETH/Ethereum</p>
+                                </div> <!-- end coin-box -->
+                                <div class="coin-box">
+                                    <div class="coin-img"><img src="img/red_coin_icon.png" alt=""></div>
+                                    <p class="coin-nm">RDC/Redcoin</p>
+                                </div> <!-- end coin-box -->
+                            </div> <!-- end coin-list -->
+                        </div> <!-- end conv-ct -->
+                        <div class="conv-form conv-ct">
+                            <ul>
+                                <li>Convertable Coin</li>
+                                <li><input type="text" name="" id="" class="fixed" class="width-100"
+                                        placeholder="0.000000 BTC" disabled></li>
+                            </ul>
+                            <ul>
+                                <li>Conversion Coin</li>
+                                <li><input type="text" name="" id="" class="width-100" placeholder="0.000000 BTC"></li>
+                            </ul>
+                            <ul>
+                                <li>Estimated Transition Coin</li>
+                                <li>
+                                    <div class="user-input">
+                                        <input type="text" name="" id="" class="width-100 align-right" placeholder="0">
+                                        <span>BTC</span>
+                                    </div> <!-- end user-input -->
+                                </li>
+                            </ul>
+                        </div> <!-- end conv-ct -->
+                    </div> <!-- end conv-area -->
+                    <div class="btn-group align-right">
+                        <input type="button" value="Switching Coins">
+                    </div>
+                </div> <!-- end cus-area -->
+            </div> <!-- end content -->
+        </div> <!-- end support -->
+
+        <div id="m-support">
+            <div class="m-cus-ct m-conv">
+                <div class="conv-noti">
+                    <ul>
+                        <li>- 전환 금액은 코인의 현재 시세 가격을 기준으로 합니다.</li>
+                        <li>- 쇼핑몰 코인으로 전환된 코인은 다시 거래소 코인으로 환전 할 수 없습니다.</li>
+                    </ul>
+                </div> <!-- end conv-noti -->
+                <div class="conv-coin-list">
+                    <p class="slide-tit">총 보유자산</p>
+                    <ul>
+                        <li class="coin-list">
+                            <div class="coin-box">
+                                <div class="coin-img"><img src="img/bit_coin_icon.png" alt=""></div>
+                                <div class="coin-name">
+                                    <p>비트코인</p>
+                                    <span>BTC</span>
+                                </div>
+                                <div class="holding-coin">
+                                    <p class="holding-amount">0.00000000 <span>BTC</span></p>
+                                </div> <!-- end holding-amount -->
+                            </div> <!-- end coin-box -->
+                        </li>
+                        <li class="coin-list">
+                            <div class="coin-box">
+                                <div class="coin-img"><img src="img/eth_coin_icon.png" alt=""></div>
+                                <div class="coin-name">
+                                    <p>이더리움</p>
+                                    <span>ETH</span>
+                                </div>
+                                <div class="holding-coin">
+                                    <p class="holding-amount">0.00000000 <span>BTC</span></p>
+                                </div> <!-- end holding-amount -->
+                            </div> <!-- end coin-box -->
+                        </li>
+                        <li class="coin-list">
+                            <div class="coin-box">
+                                <div class="coin-img"><img src="img/awn_coin_icon.png" alt=""></div>
+                                <div class="coin-name">
+                                    <p>아질로원 코인</p>
+                                    <span>AWN</span>
+                                </div>
+                                <div class="holding-coin">
+                                    <p class="holding-amount">0.00000000 <span>BTC</span></p>
+                                </div> <!-- end holding-amount -->
+                            </div> <!-- end coin-box -->
+                        </li>
+                        <li class="coin-list">
+                            <div class="coin-box">
+                                <div class="coin-img"><img src="img/krc_coin_icon.png" alt=""></div>
+                                <div class="coin-name">
+                                    <p>코렌코인</p>
+                                    <span>KRC</span>
+                                </div>
+                                <div class="holding-coin">
+                                    <p class="holding-amount">0.00000000 <span>BTC</span></p>
+                                </div> <!-- end holding-amount -->
+                            </div> <!-- end coin-box -->
+                        </li>
+                        <li class="coin-list">
+                            <div class="coin-box">
+                                <div class="coin-img"><img src="img/edu_coin_icon.png" alt=""></div>
+                                <div class="coin-name">
+                                    <p>에듀코인</p>
+                                    <span>EDU</span>
+                                </div>
+                                <div class="holding-coin">
+                                    <p class="holding-amount">0.00000000 <span>BTC</span></p>
+                                </div> <!-- end holding-amount -->
+                            </div> <!-- end coin-box -->
+                        </li>
+                        <li class="coin-list">
+                            <div class="coin-box">
+                                <div class="coin-img"><img src="img/acc_coin_icon.png" alt=""></div>
+                                <div class="coin-name">
+                                    <p>뉴아질로원캐시</p>
+                                    <span>ACC</span>
+                                </div>
+                                <div class="holding-coin">
+                                    <p class="holding-amount">0.00000000 <span>BTC</span></p>
+                                </div> <!-- end holding-amount -->
+                            </div> <!-- end coin-box -->
+                        </li>
+                    </ul>
+                </div> <!-- end conv-coin-list -->
+                <div class="conv-form">
+                    <ul>
+                        <li class="thead">전환 가능한 코인</li>
+                        <li class="tbody">
+                            <div class="input-box">
+                                <input type="text" name="" id="" class="width-100">
+                                <span>BTC</span>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li class="thead">전환 코인</li>
+                        <li class="tbody">
+                            <div class="input-box">
+                                <input type="text" name="" id="" class="width-100">
+                                <span>BTC</span>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li class="thead">예상 전환 코인</li>
+                        <li class="tbody">
+                            <p class="result">0<span>BTC</span></p>
+                        </li>
+                    </ul>
+                </div> <!-- end conv-form -->
+            </div> <!-- m-conv -->
+        </div> <!-- end m-support -->
+
+        <footer>
+            <div class="content font-0">
+                <div class="f-info cm-foot">
+                    <div class="top-head">
+                        <div class="cp-info-area">
+                            <a class="f-logo" href="index.html"><img src="img/f_logo.png" alt=""></a>
+                            <ul>
+                                <li>고객센터</li>
+                                <li class="bar">|</li>
+                                <li>1688-5886</li>
+                                <li class="bar">|</li>
+                                <li>평일 오전 09:00 ~ 오후 06:00 (토, 일 공휴일 제외)</li>
+                                <li class="bar">|</li>
+                                <li>(주) 월드 코리아</li>
+                                <li class="bar">|</li>
+                                <li>대표 : 정정수</li>
+                                <li class="bar">|</li>
+                                <li>사업자등록번호 : 878-86-01217</li>
+                            </ul>
+                        </div> <!-- end cp-info-area -->
+                        <p>Check out PHOENIX's news on SNS</p>
+                    </div><!-- end top-head -->
+                    <div class="f-btm">
+                        <ul class="sns-icon">
+                            <li><a href="#"><img src="img/sns_twitter.png" alt=""></a></li>
+                            <li><a href="#"><img src="img/sns_facebook.png" alt=""></a></li>
+                            <li><a href="#"><img src="img/sns_naver.png" alt=""></a></li>
+                            <li><a href="#"><img src="img/sns_instar.png" alt=""></a></li>
+                            <li><a href="#"><img src="img/sns_youtube.png" alt=""></a></li>
+                        </ul>
+                        <p class="copyright">COPYRIGHT &copy; REDBIT. All Right Reserved.</p>
+                    </div>
+                </div> <!-- end f-info -->
+                <div class="f-support cm-foot">
+                    <p>고객지원</p>
+                    <ul>
+                        <li><a href="#">이용가이드</a></li>
+                        <li><a href="#">자주묻는질문</a></li>
+                        <li><a href="#">1:1 문의</a></li>
+                        <li><a href="#">공지사항</a></li>
+                        <li><a href="#">상장문의 및 제보 (이메일 주소 입력)</a></li>
+                    </ul>
+                </div> <!-- end cm-foot -->
+                <div class="ad-inquiry">
+                    <p>[ 제휴 및 광고문의 ]</p>
+                    <ul>
+                        <li><a href="#"><img src="img/ad_site_icon.png" alt=""></a></li>
+                        <li><a href="#"><img src="img/ad_site_icon2.png" alt=""></a></li>
+                        <li><a href="#"><img src="img/ad_site_icon3.png" alt=""></a></li>
+                    </ul>
+                </div> <!-- end ad-inquiry -->
+            </div> <!-- end content -->
+        </footer>
+        <div id="m-fixed-footer">
+            <ul class="flex-container align-center">
+                <li>
+                    <a href="index.html">
+                        <img src="img/m_market_icon.png" alt="">
+                        <p>홈</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="m_exchange.html">
+                        <img src="img/m_wallet_icon.png" alt="">
+                        <p>거래소</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="m_asset_status.html">
+                        <img src="img/m_invest_icon.png" alt="">
+                        <p>자산현황</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="m_balance.html">
+                        <img src="img/m_trans_icon.png" alt="">
+                        <p>입출금</p>
+                    </a>
+                </li>
+            </ul>
+        </div> <!-- end m-fixed-footer -->
+    </div> <!-- end wrap -->
+</body>
+
+</html>

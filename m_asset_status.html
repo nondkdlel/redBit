@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>:: RED BIT ::</title>
+    <!-- favicon -->
+    <link href="img/favicon.png" rel="shortcut icon">
+    <link href="img/favicon.png" rel="apple-touch-icon">
+    <!-- 외부 CSS -->
+    <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+    <!-- jQuery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- main.js -->
+    <script src="js/main.js"></script>
+    <!-- slick-slider -->
+    <link rel="stylesheet" type="text/css" href="/plugin/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="/plugin/slick/slick-theme.css" />
+    <script type="text/javascript" src="/js/jquery.js"></script>
+    <script type="text/javascript" src="/plugin/slick/slick.js"></script>
+
+    <script>
+        jQuery(document).ready(function ($) {
+
+            var body_height = $("body").outerHeight();
+            var m_head_height = $("#m-header").outerHeight();
+            var status_tab_height = $("#m-asset-status .status-tab").outerHeight();
+            var user_setting_height = $(".tab-cm-ct .user-function").outerHeight();
+            var thead_height = $(".tab-cm-ct .wrap-thead").outerHeight();
+            var foot_height = $("#m-fixed-footer").outerHeight();
+
+            var trans_ct_height = body_height - m_head_height - status_tab_height - user_setting_height - thead_height - foot_height
+            var order_ct_height = body_height - m_head_height - status_tab_height - user_setting_height - foot_height
+            // 2020/11/16 line 35 m_asset_status : my-asset
+            var asset_ct_height = body_height - m_head_height - status_tab_height - foot_height
+            console.log(trans_ct_height);
+
+            $("#my-asset .asset-list").css("height", asset_ct_height);
+            $("#trans-list .inner-content").css("height", trans_ct_height);
+            $("#order-list .inner-content").css("height", order_ct_height);
+            $("#not-signed .inner-content").css("height", order_ct_height);
+            $("#waiting-ct .inner-content").css("height", trans_ct_height);
+
+
+            var wrap_table_width = $("body").width();
+
+            $("#m-asset-status .wrap-table").css("width", wrap_table_width);
+        });
+    </script>
+
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="m-open-menu">
+            <div class="menu-container">
+                <div class="user-input">
+                    <div class="greeting-box">
+                        <p><span class="user-name">홍길동</span>님 환영합니다.</p>
+                        <a class="close-btn bg-img" href="#"></a>
+                    </div>
+                    <div class="input-group flex-container">
+                        <input class="login" type="button" value="로그인" onclick="location.href='login.html'">
+                        <input class="sign" type="button" value="회원가입" onclick="location.href='m_sign_up01.html'">
+                    </div> <!-- end input-group -->
+                </div> <!-- end user-input -->
+                <div class="menu-list">
+                    <ul>
+                        <li><a href="market.html">거래소</a></li>
+                        <li><a href="wallet.html">지갑관리</a></li>
+                        <li><a href="customer_support_index.html">고객센터</a></li>
+                        <li><a href="#">ISO</a></li>
+                    </ul>
+                </div> <!-- end menu-list -->
+                <div class="lang-select">
+                    <ul>
+                        <li class="on">
+                            <p>한국어</p>
+                        </li>
+                        <li>
+                            <p>영어</p>
+                        </li>
+                    </ul>
+                </div> <!-- end lang-select -->
+                <div class="cs-area align-center">
+                    <p>고객센터 상담시간</p>
+                    <h3>09 : 00 ~ 18 : 00</h3>
+                </div> <!-- end cs-area -->
+            </div> <!-- end menu-container -->
+        </div> <!-- end m-open-menu -->
+        <div id="m-header" class="m-trans-head">
+            <a class="back-icon bg-img" href="m_balance.html"></a>
+            <h1>자산현황</h1>
+            <a class="home-icon bg-img" href="index.html"></a>
+            <a class="m-menu bg-img" href="#"></a>
+        </div> <!-- end m-header -->
+        <div id="m-asset-status">
+            <div class="status-tab">
+                <ul>
+                    <li class="on">나의자산</li>
+                    <li>거래내역</li>
+                    <li>주문내역</li>
+                    <li>미체결</li>
+                    <li>입출금대기</li>
+                </ul>
+            </div> <!-- end status-tab -->
+            <!-- 2020/11/16 line 102 m_asset_status : my-asset -->
+            <div id="my-asset" class="tab-cm-ct show">
+                <div class="asset-list">
+                    <div class="cm-type-at font-0">    
+                        <div class="coin-info font-0">
+                            <div class="coin-name">
+                                <div class="coin-img"><img src="img/bit_coin_icon.png" alt=""></div>
+                            <p>비트코인 (BTC)</p>
+                            </div> <!-- end coin-name -->
+                            <div class="coin-quote">
+                                <p class="coin-pr pr-Down">17,644,000</p>
+                                <ul class="compare-pr">
+                                    <li>전일대비</li>
+                                    <li class="pr-Down">-0.43%</li>
+                                </ul> 
+                            </div> <!-- end coin-quote -->
+                        </div> <!-- end coin-info -->
+                        <div class="tr-info">
+                            <ul>
+                                <li>판매주문량</li>
+                                <li>191.1387337</li>
+                            </ul>
+                            <ul>
+                                <li>출금요청량</li>
+                                <li>0</li>
+                            </ul>
+                            <ul>
+                                <li>주문가능량</li>
+                                <li>900000000</li>
+                            </ul>
+                            <ul>
+                                <li>총량</li>
+                                <li>900000000</li>
+                            </ul>
+                        </div> <!-- end tr-info -->
+                    </div> <!-- end cm-type-at -->
+                    <div class="cm-type-at font-0">    
+                        <div class="coin-info font-0">
+                            <div class="coin-name">
+                                <div class="coin-img"><img src="img/eth_coin_icon.png" alt=""></div>
+                            <p>이더리움 (ETH)</p>
+                            </div> <!-- end coin-name -->
+                            <div class="coin-quote">
+                                <p class="coin-pr pr-Down">17,644,000</p>
+                                <ul class="compare-pr">
+                                    <li>전일대비</li>
+                                    <li class="pr-Down">-0.43%</li>
+                                </ul> 
+                            </div> <!-- end coin-quote -->
+                        </div> <!-- end coin-info -->
+                        <div class="tr-info">
+                            <ul>
+                                <li>판매주문량</li>
+                                <li>191.1387337</li>
+                            </ul>
+                            <ul>
+                                <li>출금요청량</li>
+                                <li>0</li>
+                            </ul>
+                            <ul>
+                                <li>주문가능량</li>
+                                <li>900000000</li>
+                            </ul>
+                            <ul>
+                                <li>총량</li>
+                                <li>900000000</li>
+                            </ul>
+                        </div> <!-- end tr-info -->
+                    </div> <!-- end cm-type-at -->
+                    <div class="cm-type-at font-0">    
+                        <div class="coin-info font-0">
+                            <div class="coin-name">
+                                <div class="coin-img"><img src="img/red_coin_icon.png" alt=""></div>
+                            <p>레드코인 (RDC)</p>
+                            </div> <!-- end coin-name -->
+                            <div class="coin-quote">
+                                <p class="coin-pr pr-Up">17,644,000</p>
+                                <ul class="compare-pr">
+                                    <li>전일대비</li>
+                                    <li class="pr-Up">+0.43%</li>
+                                </ul> 
+                            </div> <!-- end coin-quote -->
+                        </div> <!-- end coin-info -->
+                        <div class="tr-info">
+                            <ul>
+                                <li>판매주문량</li>
+                                <li>191.1387337</li>
+                            </ul>
+                            <ul>
+                                <li>출금요청량</li>
+                                <li>0</li>
+                            </ul>
+                            <ul>
+                                <li>주문가능량</li>
+                                <li>900000000</li>
+                            </ul>
+                            <ul>
+                                <li>총량</li>
+                                <li>900000000</li>
+                            </ul>
+                        </div> <!-- end tr-info -->
+                    </div> <!-- end cm-type-at -->
+                </div> <!-- end asset-list -->
+            </div> <!-- end my-asset -->
+            <div id="trans-list" class="tab-cm-ct">
+                <div class="user-function">
+                    <button class="period-btn">7일</button>
+                    <div class="select_01 sel-btn">
+                        <div class="head">
+                            <p>자산 전체</p>
+                        </div> <!-- end head -->
+                        <ul>
+                            <li>KRW</li>
+                            <li>BTC</li>
+                            <li>RDC</li>
+                            <li>ETH</li>
+                            <li>LINK</li>
+                            <li>USUD</li>
+                            <li>YFI</li>
+                            <li>UMA</li>
+                            <li>LEND</li>
+                            <li>WBTC</li>
+                            <li>OMG</li>
+                            <li>SNX</li>
+                            <li>MKR</li>
+                            <li>DAI</li>
+                            <li>COMP</li>
+                            <li>OKB</li>
+                            <li>BAT</li>
+                            <li>ZRX</li>
+                            <li>AWN</li>
+                            <li>EDU</li>
+                        </ul>
+                    </div> <!-- end sel-btn -->
+                    <div class="select_02 sel-btn">
+                        <div class="head">
+                            <p>거래 전체</p>
+                        </div> <!-- end head -->
+                        <ul>
+                            <li>매수</li>
+                            <li>매도</li>
+                            <li>입금</li>
+                            <li>출금</li>
+                        </ul>
+                    </div> <!-- end sel-btn -->
+                </div> <!-- end user-function -->
+                <div class="wrap-table">
+                    <div class="wrap-thead">
+                        <table style="table-layout: fixed;">
+                            <thead>
+                                <th style="width: 90px">거래일시</th>
+                                <th style="width: 90px">자산</th>
+                                <th style="width: 100px">거래구분</th>
+                                <th style="width: 100px">거래</th>
+                                <th style="width: 100px">수량</th>
+                                <th style="width: 100px">체결가격</th>
+                                <th style="width: 100px">거래금액</th>
+                                <th style="width: 100px">수수료</th>
+                                <th style="width: 100px">정산금액</th>
+                                <th style="width: 100px">상태</th>
+                            </thead>
+                        </table>
+                    </div> <!-- end wrap-head -->
+                    <div class="inner-content wrap-tbody">
+                        <table style="table-layout: fixed;">
+                            <tbody>
+                                <td class="tr-tm align-left" style="width: 90px;">
+                                   <p>2020-07-13</p>
+                                   <span>12:07:11</span> 
+                                </td>
+                                <td class="tr-coin" style="width: 90px;">
+                                    <p>이오스</p>
+                                    <span>EOS/KRW</span> 
+                                 </td>
+                                <td style="width: 100px;">1</td>
+                                <td style="width: 100px;">2</td>
+                                <td style="width: 100px;">3</td>
+                                <td style="width: 100px;">4</td>
+                                <td style="width: 100px;">5</td>
+                                <td style="width: 100px;">6</td>
+                                <td style="width: 100px;">7</td>
+                                <td style="width: 100px;">8</td>
+                            </tbody>
+                        </table>
+                    </div> <!-- end inner-content -->
+                </div> <!-- end wrap-table -->
+            </div> <!-- end trans-list -->
+            <div id="order-list" class="tab-cm-ct">
+                <div class="user-function">
+                    <button class="period-btn">7일</button>
+                    <div class="select_01 sel-btn">
+                        <div class="head">
+                            <p>자산 전체</p>
+                        </div> <!-- end head -->
+                        <ul>
+                            <li>KRW</li>
+                            <li>BTC</li>
+                            <li>RDC</li>
+                            <li>ETH</li>
+                            <li>LINK</li>
+                            <li>USUD</li>
+                            <li>YFI</li>
+                            <li>UMA</li>
+                            <li>LEND</li>
+                            <li>WBTC</li>
+                            <li>OMG</li>
+                            <li>SNX</li>
+                            <li>MKR</li>
+                            <li>DAI</li>
+                            <li>COMP</li>
+                            <li>OKB</li>
+                            <li>BAT</li>
+                            <li>ZRX</li>
+                            <li>AWN</li>
+                            <li>EDU</li>
+                        </ul>
+                    </div> <!-- end sel-btn -->
+                    <div class="select_02 sel-btn">
+                        <div class="head">
+                            <p>거래 전체</p>
+                        </div> <!-- end head -->
+                        <ul>
+                            <li>매수</li>
+                            <li>매도</li>
+                            <li>입금</li>
+                            <li>출금</li>
+                        </ul>
+                    </div> <!-- end sel-btn -->
+                </div> <!-- end user-function -->
+                <div class="inner-content">
+                    <div class="order-box">
+                        <div class="coin-order-fr font-0">
+                            <ul>
+                                <li class="coin-type">
+                                    <span class="pr-Down">지정가 매도</span>
+                                    <span>EOS / KRW</span>
+                                </li>
+                                <li class="order-date">
+                                    <span>2020-11-13</span>
+                                    <span>10:08:54</span>
+                                </li>
+                            </ul>
+                            <p class="conclusion un">미체결</p>
+                        </div> <!-- end coin-order-fr -->
+                        <div class="order-dt">
+                            <ul>
+                                <li>주문금액</li>
+                                <li>- <span class="unit">KRW</span></li>
+                            </ul>
+                            <ul>
+                                <li>주문가격</li>
+                                <li>3,000 <span class="unit">KRW</span></li>
+                            </ul>
+                            <ul>
+                                <li>주문수량</li>
+                                <li>50.04 <span class="unit">EOS</span></li>
+                            </ul>
+                            <ul>
+                                <li>체결수량</li>
+                                <li>- <span class="unit">EOS</span></li>
+                            </ul>
+                        </div> <!-- end order-dt -->
+                        <input type="button" value="주문취소" class="width-100 cancel">
+                    </div> <!-- end order-box -->
+                    <div class="order-box">
+                        <div class="coin-order-fr font-0">
+                            <ul>
+                                <li class="coin-type">
+                                    <span class="pr-Up">지정가 매수</span>
+                                    <span>EOS / KRW</span>
+                                </li>
+                                <li class="order-date">
+                                    <span>2020-11-13</span>
+                                    <span>10:08:54</span>
+                                </li>
+                            </ul>
+                            <p class="conclusion un">미체결</p>
+                        </div> <!-- end coin-order-fr -->
+                        <div class="order-dt">
+                            <ul>
+                                <li>주문금액</li>
+                                <li>- <span class="unit">KRW</span></li>
+                            </ul>
+                            <ul>
+                                <li>주문가격</li>
+                                <li>3,000 <span class="unit">KRW</span></li>
+                            </ul>
+                            <ul>
+                                <li>주문수량</li>
+                                <li>50.04 <span class="unit">EOS</span></li>
+                            </ul>
+                            <ul>
+                                <li>체결수량</li>
+                                <li>- <span class="unit">EOS</span></li>
+                            </ul>
+                        </div> <!-- end order-dt -->
+                        <input type="button" value="주문취소" class="width-100 cancel">
+                    </div> <!-- end order-box -->
+                    <div class="order-box">
+                        <div class="coin-order-fr font-0">
+                            <ul>
+                                <li class="coin-type">
+                                    <span class="pr-Up">지정가 매수</span>
+                                    <span>EOS / KRW</span>
+                                </li>
+                                <li class="order-date">
+                                    <span>2020-11-13</span>
+                                    <span>10:08:54</span>
+                                </li>
+                            </ul>
+                            <p class="conclusion un">미체결</p>
+                        </div> <!-- end coin-order-fr -->
+                        <div class="order-dt">
+                            <ul>
+                                <li>주문금액</li>
+                                <li>- <span class="unit">KRW</span></li>
+                            </ul>
+                            <ul>
+                                <li>주문가격</li>
+                                <li>3,000 <span class="unit">KRW</span></li>
+                            </ul>
+                            <ul>
+                                <li>주문수량</li>
+                                <li>50.04 <span class="unit">EOS</span></li>
+                            </ul>
+                            <ul>
+                                <li>체결수량</li>
+                                <li>- <span class="unit">EOS</span></li>
+                            </ul>
+                        </div> <!-- end order-dt -->
+                        <input type="button" value="주문취소" class="width-100 cancel">
+                    </div> <!-- end order-box -->
+                </div> <!-- end inner-content -->
+            </div> <!-- end order-list -->
+            <div id="not-signed" class="tab-cm-ct">
+                <div class="user-function">
+                    <button class="period-btn">7일</button>
+                    <div class="align-right order-cancel">
+                        <input type="checkbox" name="" id=""><label for="">선택 주문취소</label>
+                    </div> <!-- end align-right -->
+                </div> <!-- end user-function -->
+                <div class="inner-content">
+                    <div class="order-box">
+                        <div class="coin-order-fr font-0">
+                            <input type="checkbox" name="delete" id="delete"><label for="delete"></label>
+                            <ul>
+                                <li class="coin-type">
+                                    <span class="pr-Down">지정가 매도</span>
+                                    <span>EOS / KRW</span>
+                                </li>
+                                <li class="order-date">
+                                    <span>2020-11-13</span>
+                                    <span>10:08:54</span>
+                                </li>
+                            </ul>
+                            <p class="conclusion un">미체결</p>
+                        </div> <!-- end coin-order-fr -->
+                        <div class="order-dt">
+                            <ul>
+                                <li>주문금액</li>
+                                <li>- <span class="unit">KRW</span></li>
+                            </ul>
+                            <ul>
+                                <li>주문가격</li>
+                                <li>3,000 <span class="unit">KRW</span></li>
+                            </ul>
+                            <ul>
+                                <li>주문수량</li>
+                                <li>50.04 <span class="unit">EOS</span></li>
+                            </ul>
+                            <ul>
+                                <li>체결수량</li>
+                                <li>- <span class="unit">EOS</span></li>
+                            </ul>
+                        </div> <!-- end order-dt -->
+                    </div> <!-- end order-box -->
+                    <div class="order-box">
+                        <div class="coin-order-fr font-0">
+                            <input type="checkbox" name="delete2" id="delete2"><label for="delete2"></label>
+                            <ul>
+                                <li class="coin-type">
+                                    <span class="pr-Down">지정가 매도</span>
+                                    <span>EOS / KRW</span>
+                                </li>
+                                <li class="order-date">
+                                    <span>2020-11-13</span>
+                                    <span>10:08:54</span>
+                                </li>
+                            </ul>
+                            <p class="conclusion un">미체결</p>
+                        </div> <!-- end coin-order-fr -->
+                        <div class="order-dt">
+                            <ul>
+                                <li>주문금액</li>
+                                <li>- <span class="unit">KRW</span></li>
+                            </ul>
+                            <ul>
+                                <li>주문가격</li>
+                                <li>3,000 <span class="unit">KRW</span></li>
+                            </ul>
+                            <ul>
+                                <li>주문수량</li>
+                                <li>50.04 <span class="unit">EOS</span></li>
+                            </ul>
+                            <ul>
+                                <li>체결수량</li>
+                                <li>- <span class="unit">EOS</span></li>
+                            </ul>
+                        </div> <!-- end order-dt -->
+                    </div> <!-- end order-box -->
+                    <div class="order-box">
+                        <div class="coin-order-fr font-0">
+                            <input type="checkbox" name="delete3" id="delete3"><label for="delete3"></label>
+                            <ul>
+                                <li class="coin-type">
+                                    <span class="pr-Down">지정가 매도</span>
+                                    <span>EOS / KRW</span>
+                                </li>
+                                <li class="order-date">
+                                    <span>2020-11-13</span>
+                                    <span>10:08:54</span>
+                                </li>
+                            </ul>
+                            <p class="conclusion un">미체결</p>
+                        </div> <!-- end coin-order-fr -->
+                        <div class="order-dt">
+                            <ul>
+                                <li>주문금액</li>
+                                <li>- <span class="unit">KRW</span></li>
+                            </ul>
+                            <ul>
+                                <li>주문가격</li>
+                                <li>3,000 <span class="unit">KRW</span></li>
+                            </ul>
+                            <ul>
+                                <li>주문수량</li>
+                                <li>50.04 <span class="unit">EOS</span></li>
+                            </ul>
+                            <ul>
+                                <li>체결수량</li>
+                                <li>- <span class="unit">EOS</span></li>
+                            </ul>
+                        </div> <!-- end order-dt -->
+                    </div> <!-- end order-box -->
+                </div> <!-- end inner-content -->
+            </div> <!-- end not-signed -->
+            <div id="waiting-ct" class="tab-cm-ct">
+                <div class="user-function">
+                    <button class="period-btn">7일</button>
+                    <div class="select_01 sel-btn">
+                        <div class="head">
+                            <p>자산 전체</p>
+                        </div> <!-- end head -->
+                        <ul class="align-left">
+                            <li>KRW</li>
+                            <li>BTC</li>
+                            <li>RDC</li>
+                            <li>ETH</li>
+                            <li>LINK</li>
+                            <li>USUD</li>
+                            <li>YFI</li>
+                            <li>UMA</li>
+                            <li>LEND</li>
+                            <li>WBTC</li>
+                            <li>OMG</li>
+                            <li>SNX</li>
+                            <li>MKR</li>
+                            <li>DAI</li>
+                            <li>COMP</li>
+                            <li>OKB</li>
+                            <li>BAT</li>
+                            <li>ZRX</li>
+                            <li>AWN</li>
+                            <li>EDU</li>
+                        </ul>
+                    </div> <!-- end sel-btn -->
+                </div> <!-- end user-function -->
+                <div class="wrap-table">
+                    <div class="wrap-thead">
+                        <table style="table-layout: fixed;">
+                            <thead>
+                                <th style="width: 90px">거래일시</th>
+                                <th style="width: 90px">자산</th>
+                                <th style="width: 100px">거래구분</th>
+                                <th style="width: 100px">거래</th>
+                                <th style="width: 100px">수량</th>
+                                <th style="width: 100px">체결가격</th>
+                                <th style="width: 100px">거래금액</th>
+                                <th style="width: 100px">수수료</th>
+                                <th style="width: 100px">정산금액</th>
+                                <th style="width: 100px">상태</th>
+                            </thead>
+                        </table>
+                    </div> <!-- end wrap-head -->
+                    <div class="inner-content wrap-tbody">
+                        <table style="table-layout: fixed;">
+                            <tbody>
+                                <td class="tr-tm align-left" style="width: 90px;">
+                                   <p>2020-07-13</p>
+                                   <span>12:07:11</span> 
+                                </td>
+                                <td class="tr-coin" style="width: 90px;">
+                                    <p>이오스</p>
+                                    <span>EOS/KRW</span> 
+                                 </td>
+                                <td style="width: 100px;">1</td>
+                                <td style="width: 100px;">2</td>
+                                <td style="width: 100px;">3</td>
+                                <td style="width: 100px;">4</td>
+                                <td style="width: 100px;">5</td>
+                                <td style="width: 100px;">6</td>
+                                <td style="width: 100px;">7</td>
+                                <td style="width: 100px;">8</td>
+                            </tbody>
+                        </table>
+                    </div> <!-- end inner-content -->
+                </div> <!-- end wrap-table -->
+            </div> <!-- end waiting-ct -->
+            <div id="m-popup" class="trans-period">
+                <div class="inner-wrap">
+                    <div class="head">
+                        <p class="pop-tit">기간설정</p>
+                        <button class="close-btn"><img src="img/noti_close_btn.png" alt=""></button>
+                    </div> <!-- end head -->
+                    <div class="period-ct">
+                        <div class="date-btn">
+                            <input type="button" value="7일">
+                            <input class="on" type="button" value="30일">
+                            <input type="button" value="90일">
+                            <input type="button" value="180일">
+                        </div> <!-- end date-btn -->
+                        <div class="date-direct">
+                            <input type="date" name="" id="">
+                            <span>~</span>
+                            <input type="date" name="" id="">
+                        </div> <!-- end date-direct -->
+                        <span>조회구간은 180일까지 설정 가능합니다.</span>
+                    </div> <!-- end period-ct -->
+                    <input class="lookup-btn" type="button" value="조회">
+                </div> <!-- end inner-wrap -->
+            </div> <!-- end trans-period -->
+        </div> <!-- end m_asset_status -->
+        <div id="m-fixed-noti">
+            <div class="noti-icon align-center"><span>NOTICE</span></div>
+            <p>[공지사항] 금융사기 주의 안내</p>
+            <button><img src="img/close-btn.png" alt=""></button>
+        </div> <!-- end fixed-noti -->
+        <div id="m-fixed-footer">
+            <ul class="flex-container align-center">
+                <li>
+                    <a href="index.html">
+                        <img src="img/m_market_icon.png" alt="">
+                        <p>홈</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="m_exchange.html">
+                        <img src="img/m_wallet_icon.png" alt="">
+                        <p>거래소</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="m_asset_status.html">
+                        <img src="img/m_invest_icon.png" alt="">
+                        <p>자산현황</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="m_balance.html">
+                        <img src="img/m_trans_icon.png" alt="">
+                        <p>입출금</p>
+                    </a>
+                </li>
+            </ul>
+        </div> <!-- end m-fixed-footer -->
+    </div> <!-- end wrap -->
+</body>
+
+</html>

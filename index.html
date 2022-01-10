@@ -1,0 +1,1008 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>:: Red Bit ::</title>
+    <!-- favicon -->
+    <link href="img/favicon.png" rel="shortcut icon">
+    <link href="img/favicon.png" rel="apple-touch-icon">
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400&display=swap"
+        rel="stylesheet">
+    <!-- css -->
+    <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+    <!-- jQuery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- jQuery cookie -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="plugin/jquery.cookie.js"></script>
+    <!-- js -->
+    <script src="js/main.js"></script>
+    <!-- slick-slider -->
+    <link rel="stylesheet" type="text/css" href="/plugin/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="/plugin/slick/slick-theme.css" />
+    <script type="text/javascript" src="/plugin/slick/slick.js"></script>
+    <script>
+        jQuery(document).ready(function ($) {
+
+
+            var body_height = $("body").innerHeight();
+            var head_height = $("#m-header").innerHeight();
+            var banner_height = $(".m_ct_wrap .m-slider-banner").innerHeight();
+            var market_head_height = $("#market .fixed-mk-head").innerHeight();
+            var foot_height = $("#m-fixed-footer").innerHeight();
+
+            var content_height = body_height - head_height - banner_height - market_head_height - foot_height
+
+            $("#market .inner-scroll").css("height", content_height);
+        });
+    </script>
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="m-open-menu">
+            <div class="menu-container">
+                <div class="user-input">
+                    <div class="greeting-box">
+                        <p><span class="user-name">홍길동</span>님 환영합니다.</p>
+                        <a class="close-btn bg-img" href="#"></a>
+                    </div>
+                    <div class="input-group flex-container">
+                        <input class="login" type="button" value="로그인" onclick="location.href='login.html'">
+                        <input class="sign" type="button" value="회원가입" onclick="location.href='m_sign_up01.html'">
+                    </div> <!-- end input-group -->
+                </div> <!-- end user-input -->
+                <div class="menu-list">
+                    <ul>
+                        <li><a href="m_exchange.html">거래소</a></li>
+                        <li><a href="m_balance.html">입출금</a></li>
+                        <li><a href="event_board.html">이벤트</a></li>
+                        <li><a href="customer_support_index.html">고객센터</a></li>
+                        <li><a href="#">ISO</a></li>
+                    </ul>
+                </div> <!-- end menu-list -->
+                <div class="lang-select">
+                    <ul>
+                        <li class="on">
+                            <p>한국어</p>
+                        </li>
+                        <li>
+                            <p>영어</p>
+                        </li>
+                    </ul>
+                </div> <!-- end lang-select -->
+                <div class="cs-area align-center">
+                    <p>고객센터 상담시간</p>
+                    <h3>09 : 00 ~ 18 : 00</h3>
+                </div> <!-- end cs-area -->
+            </div> <!-- end menu-container -->
+        </div> <!-- end m-open-menu -->
+        <div id="m-header">
+            <a class="m-logo bg-img" href="index.html"></a>
+            <ul class="user-op-mu">
+                <li><a href="login.html">로그인</a></li>
+                <li><a href="m_sign_up01.html">회원가입</a></li>
+            </ul> <!-- end user-op-mu -->
+            <a class="m-menu bg-img" href="#"></a>
+        </div> <!-- end m-header -->
+        <div id="fixed-popup">
+            <div class="content">
+                <div class="coin-update">
+                    <h1 class="tit">비트코인(BTC)<br>
+                        KRW 마켓 신규 상장 !</h1>
+                    <img class="c-symbol" src="img/bit_coin_icon.png" alt="">
+                    <a class="link" href="#">자세히 보기</a>
+                </div> <!-- end coin-update -->
+                <div class="btn-group">
+                    <input type="button" class="no-again" value="하루동안 보지 않기">
+                    <input type="button" class="hide-btn" value="확인">
+                </div>
+            </div> <!-- end content -->
+        </div> <!-- end fixed-popup -->
+
+        <script>
+        
+            $(function () {
+                $('#fixed-popup .btn-group .hide-btn').click(function (e) {
+                    e.preventDefault();
+                    $('#fixed-popup').css("display", "none");
+                });
+                $('#fixed-popup .btn-group .no-again').click(function (e) {
+                    e.preventDefault();
+                    $.cookie('#fixed-popup', 'hidden', { expires: 1 });
+                    $('#fixed-popup').css("display", "none");
+                });
+
+                if ($.cookie('#fixed-popup') == 'hidden') {
+
+                    $('#fixed-popup').hide();
+                } else {
+                    $('#fixed-popup').show();
+                }
+
+            });
+        </script>
+        <div id="main-visual" class="bg-img">
+            <header id="main-header">
+                <div class="container">
+                    <a href="index.html" class="logo"><img src="img/logo.png" alt=""></a>
+                    <nav class="left-mu">
+                        <ul>
+                            <li><a href="exchange.html">거래소</a></li>
+                            <li><a href="wallet_mgr.html">입출금</a></li>
+                            <li><a href="event_board.html">이벤트</a></li>
+                            <li><a href="customer_support_guide.html">고객센터</a></li>
+                        </ul>
+                    </nav>
+                    <nav class="right-mu">
+                        <ul>
+                            <li><a href="login.html">로그인</a></li>
+                            <li><a href="sign_up.html">회원가입</a></li>
+                            <li class="lang">
+                                <div class="sel-container">
+                                    <div class="sel-head">
+                                        <p>English</p>
+                                    </div>
+                                    <ul class="sel-list">
+                                        <li class="on">
+                                            <p>English</p>
+                                        </li>
+                                        <li>
+                                            <p>Korea</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </nav>
+                </div> <!-- end container -->
+            </header> <!-- end main-header -->
+            <div class="container">
+                <div class="txt-box">
+                    <h1>Exchange with<br> safety and convenience</h1>
+                    <p>You can conveniently trade the coin's real-time execution graph and<br> a form that allows you to
+                        actually trade the desired coin on one page.</p>
+                </div>
+                <!-- <div class="site-link">
+                    <ul>
+                        <li><a href="#"><img src="img/family_site01.png" alt=""></a></li>
+                        <li><a href="#"><img src="img/family_site02.png" alt=""></a></li>
+                        <li><a href="#"><img src="img/family_site03.png" alt=""></a></li>
+                    </ul>
+                </div>  -->
+                <!-- end site-link -->
+            </div> <!-- end container -->
+        </div> <!-- end main-visual -->
+
+        <div class="web_ct_wrap">
+            <section class="market-ct">
+                <div class="content">
+                    <div class="ct-head font-0">
+                        <h2>코인 시세</h2>
+                        <div class="move-btn">
+                            <a href="exchange.html">
+                                <p>거래소 이동</p>
+                            </a>
+                        </div> <!-- end move-btn -->
+                    </div> <!-- end move-btn -->
+                    <div class="mk-coin-area flex-container">
+                        <article>
+                            <div class="coin-info">
+                                <div class="coin-name font-0">
+                                    <div class="coin-img in-block align-middle">
+                                        <img src="img/bit_coin_icon.png" alt="">
+                                    </div>
+                                    <div class="coin-txt">
+                                        <p>Bitcoin</p>
+                                        <span>BTC</span>
+                                    </div>
+                                </div> <!-- end coin-name -->
+                                <ul class="coin-trans">
+                                    <li class="climb stats">
+                                        <span>▲</span>
+                                        <span>155,750</span>
+                                        <span class="bar">/</span>
+                                        <span>+ 1.3%</span>
+                                    </li>
+                                    <li>
+                                        <span>11,739.81</span>
+                                        <span class="usdt">USDT</span>
+                                    </li>
+                                </ul> <!-- end coin-trans -->
+                            </div> <!-- end coin-info -->
+                        </article>
+                        <article>
+                            <div class="coin-info">
+                                <div class="coin-name font-0">
+                                    <div class="coin-img in-block align-middle">
+                                        <img src="img/eth_coin_icon.png" alt="">
+                                    </div>
+                                    <div class="coin-txt">
+                                        <p>Ethereum</p>
+                                        <span>ETH</span>
+                                    </div>
+                                </div> <!-- end coin-name -->
+                                <ul class="coin-trans">
+                                    <li class="descent stats">
+                                        <span>▲</span>
+                                        <span>155,750</span>
+                                        <span class="bar">/</span>
+                                        <span>+ 1.3%</span>
+                                    </li>
+                                    <li>
+                                        <span>11,739.81</span>
+                                        <span class="usdt">USDT</span>
+                                    </li>
+                                </ul> <!-- end coin-trans -->
+                            </div>
+                        </article>
+                        <article>
+                            <div class="coin-info">
+                                <div class="coin-name font-0">
+                                    <div class="coin-img in-block align-middle">
+                                        <img src="img/bit_coin_icon.png" alt="">
+                                    </div>
+                                    <div class="coin-txt">
+                                        <p>Bitcoin</p>
+                                        <span>BTC</span>
+                                    </div>
+                                </div> <!-- end coin-name -->
+                                <ul class="coin-trans">
+                                    <li class="climb stats">
+                                        <span>▲</span>
+                                        <span>155,750</span>
+                                        <span class="bar">/</span>
+                                        <span>+ 1.3%</span>
+                                    </li>
+                                    <li>
+                                        <span>11,739.81</span>
+                                        <span class="usdt">USDT</span>
+                                    </li>
+                                </ul> <!-- end coin-trans -->
+                            </div> <!-- end coin-info -->
+                        </article>
+                        <article>
+                            <div class="coin-info">
+                                <div class="coin-name font-0">
+                                    <div class="coin-img in-block align-middle">
+                                        <img src="img/eth_coin_icon.png" alt="">
+                                    </div>
+                                    <div class="coin-txt">
+                                        <p>Ethereum</p>
+                                        <span>ETH</span>
+                                    </div>
+                                </div> <!-- end coin-name -->
+                                <ul class="coin-trans">
+                                    <li class="descent stats">
+                                        <span>▲</span>
+                                        <span>155,750</span>
+                                        <span class="bar">/</span>
+                                        <span>+ 1.3%</span>
+                                    </li>
+                                    <li>
+                                        <span>11,739.81</span>
+                                        <span class="usdt">USDT</span>
+                                    </li>
+                                </ul> <!-- end coin-trans -->
+                            </div>
+                        </article>
+                        <article>
+                            <div class="coin-info">
+                                <div class="coin-name font-0">
+                                    <div class="coin-img in-block align-middle">
+                                        <img src="img/bit_coin_icon.png" alt="">
+                                    </div>
+                                    <div class="coin-txt">
+                                        <p>Bitcoin</p>
+                                        <span>BTC</span>
+                                    </div>
+                                </div> <!-- end coin-name -->
+                                <ul class="coin-trans">
+                                    <li class="climb stats">
+                                        <span>▲</span>
+                                        <span>155,750</span>
+                                        <span class="bar">/</span>
+                                        <span>+ 1.3%</span>
+                                    </li>
+                                    <li>
+                                        <span>11,739.81</span>
+                                        <span class="usdt">USDT</span>
+                                    </li>
+                                </ul> <!-- end coin-trans -->
+                            </div> <!-- end coin-info -->
+                        </article>
+                        <article>
+                            <div class="coin-info">
+                                <div class="coin-name font-0">
+                                    <div class="coin-img in-block align-middle">
+                                        <img src="img/eth_coin_icon.png" alt="">
+                                    </div>
+                                    <div class="coin-txt">
+                                        <p>Ethereum</p>
+                                        <span>ETH</span>
+                                    </div>
+                                </div> <!-- end coin-name -->
+                                <ul class="coin-trans">
+                                    <li class="descent stats">
+                                        <span>▲</span>
+                                        <span>155,750</span>
+                                        <span class="bar">/</span>
+                                        <span>+ 1.3%</span>
+                                    </li>
+                                    <li>
+                                        <span>11,739.81</span>
+                                        <span class="usdt">USDT</span>
+                                    </li>
+                                </ul> <!-- end coin-trans -->
+                            </div>
+                        </article>
+                    </div> <!-- end mk-coin-area -->
+                </div> <!-- end content -->
+            </section> <!-- end market-ct -->
+            <section class="about-ct">
+                <div class="content">
+                    <div class="ct-head font-0">
+                        <h2>About <span>RED</span>BIT</h2>
+                    </div>
+                    <div class="wrap-ct">
+                        <article>
+                            <div class="about-icon">
+                                <img src="img/a_icon1.png" alt="">
+                            </div>
+                            <h3>투명한 운영</h3>
+                            <p>피닉스 글로벌은 '고객 자산 보호'를 최우선 경영 이념으로 삼고, 고객 투자 자산을 안전하게 보호하는데에 목적을 두고 있습니다.</p>
+                        </article>
+                        <article>
+                            <div class="about-icon">
+                                <img src="img/a_icon2.png" alt="">
+                            </div>
+                            <h3>최상위 보완 플랫폼</h3>
+                            <p>다중 서명 기술로 Cold Wallet 보관, 데이터 모니터링, 암호 보안, 2FA 인증 등 이용자에게 최상위 보안 서비스를 제공합니다.</p>
+                        </article>
+                        <article>
+                            <div class="about-icon">
+                                <img src="img/a_icon3.png" alt="">
+                            </div>
+                            <h3>누구나 이용하기 쉽고 편리한 거래소</h3>
+                            <p>트레이딩 뷰 차트 지원</p>
+                        </article>
+                        <article>
+                            <div class="about-icon">
+                                <img src="img/a_icon4.png" alt="">
+                            </div>
+                            <h3>이용자 간 소통 및 다양한 고객 서비스 채널 지원</h3>
+                            <p>실시간 쳇, 텔레그램 등 다양한 소통 창구 지원</p>
+                        </article>
+                    </div> <!-- end wrap-ct -->
+                </div> <!-- end content -->
+            </section> <!-- end about-ct -->
+            <div class="update-area">
+                <div class="content">
+                    <div class="ct-head font-0">
+                        <h2>Notice & News</h2>
+                    </div>
+                    <div class="flex-container">
+                        <section class="notice-ct">
+                            <article>
+                                <div class="thum-txt in-block align-middle">
+                                    <p>Redbit International Exchange Inspection Redbit International Exchange Inspection
+                                    </p>
+                                    <span>Redbit International</span>
+                                </div>
+                                <div class="more-btn in-block align-middle">
+                                    <img src="img/more_btn.png" alt="">
+                                </div>
+                            </article>
+                            <article>
+                                <div class="thum-txt in-block align-middle">
+                                    <p>Redbit International Exchange Inspection Redbit International Exchange Inspection
+                                    </p>
+                                    <span>Redbit International</span>
+                                </div>
+                                <div class="more-btn in-block align-middle">
+                                    <img src="img/more_btn.png" alt="">
+                                </div>
+                            </article>
+                            <article>
+                                <div class="thum-txt in-block align-middle">
+                                    <p>Redbit International Exchange Inspection Redbit International Exchange Inspection
+                                    </p>
+                                    <span>Redbit International</span>
+                                </div>
+                                <div class="more-btn in-block align-middle">
+                                    <img src="img/more_btn.png" alt="">
+                                </div>
+                            </article>
+                        </section>
+                        <section class="news-ct font-0">
+                            <div class="news-thum in-block align-top width-50"><img src="img/news_thum_img.png" alt="">
+                            </div>
+                            <div class="news-txt in-block align-top width-50">
+                                <h3>Governor of Jeju, Won one two threegg</h3>
+                                <span>2020. 10. 10</span>
+                                <p>Governor of Jeju, Won Hee Ryong said, “We are considering issuing blockchain based
+                                    blah
+                                    blah</p>
+                                <div class="align-right">
+                                    <input class="all-view" type="button" value="View details >">
+                                </div>
+                            </div> <!-- end news-txt -->
+                        </section>
+                    </div> <!-- end flex-container -->
+                </div> <!-- end content -->
+            </div><!-- end update-area -->
+            <section class="cs-ct">
+                <div class="content flex-container">
+                    <article>
+                        <h2>고객센터 <span>1688-5886</span></h2>
+                        <p class="sub">※ 본사 방문 상담은 진행하지 않습니다.</p>
+                    </article>
+                    <article class="align-right font-0">
+                        <ul>
+                            <li>
+                                <p>Redbit (Telegram)</p>
+                                <input type="button" value="텔레그램 상담(24시간)">
+                            </li>
+                            <li>
+                                <p>Support center</p>
+                                <input type="button" value="1:1 문의 홈페이지 상담(24시간)"
+                                    onclick="location.href='customer_support_inquiry.html'">
+                            </li>
+                        </ul>
+                    </article>
+                </div> <!-- end content -->
+            </section> <!-- end cs-ct -->
+            <section class="join-bg">
+                <div class="join-ct">
+                    <h1>가입하고 거래 시작하기</h1>
+                    <div class="btn-area">
+                        <input type="button" value="회원가입" onclick="location.href='sign_up.html'">
+                        <input type="button" value="거래하기">
+                    </div> <!-- end btn-area -->
+                </div> <!-- end join-ct -->
+            </section> <!-- end join-bg -->
+        </div> <!-- end web_ct_wrap -->
+        <div class="m_ct_wrap">
+            <div class="m-slider-banner">
+                <img src="img/m_slider_banner.png" alt="">
+                <ul>
+                    <li><a href="#"><img src="img/family_site01.png" alt=""></a></li>
+                    <li><a href="#"><img src="img/family_site02.png" alt=""></a></li>
+                    <li><a href="#"><img src="img/family_site03.png" alt=""></a></li>
+                </ul>
+            </div>
+            <div id="market">
+                <div class="fixed-mk-head">
+                    <div class="search-box">
+                        <input type="text" class="width-100" placeholder="검색">
+                        <button><img src="img/search_icon.png" alt=""></button>
+                    </div> <!-- end search-box -->
+                    <div class="user-select">
+                        <ul class="tab-mu">
+                            <li class="on">마켓</li>
+                            <li>보유</li>
+                        </ul> <!-- end tab-mu -->
+                    </div> <!-- end user-select -->
+                    <ul class="asset-tab">
+                        <li class="on">전체 <span>100</span></li>
+                    </ul> <!-- end asset-tab -->
+                    <div class="coin-list">
+                        <table>
+                            <colgroup>
+                                <col width="28%">
+                                <col width="26%">
+                                <col width="20%">
+                                <col width="26%">
+                            </colgroup>
+                            <thead>
+                                <th>
+                                    <p>자산</p>
+                                </th>
+                                <th>
+                                    <p>현재가</p>
+                                </th>
+                                <th>
+                                    <p>변동률</p>
+                                </th>
+                                <th>
+                                    <p>거래금액</p>
+                                </th>
+                            </thead>
+                        </table>
+                    </div> <!-- end coin-list -->
+                </div> <!-- end fixed-mk-head -->
+                <div class="inner-scroll">
+                    <div class="coin-list wrap-tbody">
+                        <table>
+                            <colgroup>
+                                <col width="28%">
+                                <col width="26%">
+                                <col width="20%">
+                                <col width="26%">
+                            </colgroup>
+                            <tbody>
+                                <tr onclick="location.href='m_exchange.html'">
+                                    <td class="coin-nm">
+                                        <p>비트코인</p>
+                                        <span>BTC/KRW</span>
+                                    </td> <!-- end coin-nm -->
+                                    <td class="pr-now pr-Up">17,268,000</td> <!-- end coin-nm -->
+                                    <td class="pr-change pr-Up">+0.86%</td> <!-- end coin-nm -->
+                                    <td class="trans-pr">
+                                        <p>47,411 <span class="m-unit">백만</span></p>
+                                    </td>
+                                </tr>
+                                <tr onclick="location.href='m_exchange.html'">
+                                    <td class="coin-nm">
+                                        <p>이더리움</p>
+                                        <span>ETH/KRW</span>
+                                    </td> <!-- end coin-nm -->
+                                    <td class="pr-now pr-Down">506,500</td> <!-- end coin-nm -->
+                                    <td class="pr-change pr-Down">-0.86%</td> <!-- end coin-nm -->
+                                    <td class="trans-pr">
+                                        <p>16,275 <span class="m-unit">백만</span></p>
+                                    </td>
+                                </tr>
+                                <tr onclick="location.href='m_exchange.html'">
+                                    <td class="coin-nm">
+                                        <p>레드비트</p>
+                                        <span>RDC/KRW</span>
+                                    </td> <!-- end coin-nm -->
+                                    <td class="pr-now pr-Up">184,400</td> <!-- end coin-nm -->
+                                    <td class="pr-change pr-Up">+0.86%</td> <!-- end coin-nm -->
+                                    <td class="trans-pr">
+                                        <p>16,275 <span class="m-unit">백만</span></p>
+                                    </td>
+                                </tr>
+                                <tr onclick="location.href='m_exchange.html'">
+                                    <td class="coin-nm">
+                                        <p>비트코인</p>
+                                        <span>BTC/KRW</span>
+                                    </td> <!-- end coin-nm -->
+                                    <td class="pr-now pr-Up">17,268,000</td> <!-- end coin-nm -->
+                                    <td class="pr-change pr-Up">+0.86%</td> <!-- end coin-nm -->
+                                    <td class="trans-pr">
+                                        <p>47,411 <span class="m-unit">백만</span></p>
+                                    </td>
+                                </tr>
+                                <tr onclick="location.href='m_exchange.html'">
+                                    <td class="coin-nm">
+                                        <p>이더리움</p>
+                                        <span>ETH/KRW</span>
+                                    </td> <!-- end coin-nm -->
+                                    <td class="pr-now pr-Down">506,500</td> <!-- end coin-nm -->
+                                    <td class="pr-change pr-Down">-0.86%</td> <!-- end coin-nm -->
+                                    <td class="trans-pr">
+                                        <p>16,275 <span class="m-unit">백만</span></p>
+                                    </td>
+                                </tr>
+                                <tr onclick="location.href='m_exchange.html'">
+                                    <td class="coin-nm">
+                                        <p>레드비트</p>
+                                        <span>RDC/KRW</span>
+                                    </td> <!-- end coin-nm -->
+                                    <td class="pr-now pr-Up">184,400</td> <!-- end coin-nm -->
+                                    <td class="pr-change pr-Up">+0.86%</td> <!-- end coin-nm -->
+                                    <td class="trans-pr">
+                                        <p>16,275 <span class="m-unit">백만</span></p>
+                                    </td>
+                                </tr>
+                                <tr onclick="location.href='m_exchange.html'">
+                                    <td class="coin-nm">
+                                        <p>비트코인</p>
+                                        <span>BTC/KRW</span>
+                                    </td> <!-- end coin-nm -->
+                                    <td class="pr-now pr-Up">17,268,000</td> <!-- end coin-nm -->
+                                    <td class="pr-change pr-Up">+0.86%</td> <!-- end coin-nm -->
+                                    <td class="trans-pr">
+                                        <p>47,411 <span class="m-unit">백만</span></p>
+                                    </td>
+                                </tr>
+                                <tr onclick="location.href='m_exchange.html'">
+                                    <td class="coin-nm">
+                                        <p>이더리움</p>
+                                        <span>ETH/KRW</span>
+                                    </td> <!-- end coin-nm -->
+                                    <td class="pr-now pr-Down">506,500</td> <!-- end coin-nm -->
+                                    <td class="pr-change pr-Down">-0.86%</td> <!-- end coin-nm -->
+                                    <td class="trans-pr">
+                                        <p>16,275 <span class="m-unit">백만</span></p>
+                                    </td>
+                                </tr>
+                                <tr onclick="location.href='m_exchange.html'">
+                                    <td class="coin-nm">
+                                        <p>레드비트</p>
+                                        <span>RDC/KRW</span>
+                                    </td> <!-- end coin-nm -->
+                                    <td class="pr-now pr-Up">184,400</td> <!-- end coin-nm -->
+                                    <td class="pr-change pr-Up">+0.86%</td> <!-- end coin-nm -->
+                                    <td class="trans-pr">
+                                        <p>16,275 <span class="m-unit">백만</span></p>
+                                    </td>
+                                </tr>
+                                <tr onclick="location.href='m_exchange.html'">
+                                    <td class="coin-nm">
+                                        <p>비트코인</p>
+                                        <span>BTC/KRW</span>
+                                    </td> <!-- end coin-nm -->
+                                    <td class="pr-now pr-Up">17,268,000</td> <!-- end coin-nm -->
+                                    <td class="pr-change pr-Up">+0.86%</td> <!-- end coin-nm -->
+                                    <td class="trans-pr">
+                                        <p>47,411 <span class="m-unit">백만</span></p>
+                                    </td>
+                                </tr>
+                                <tr onclick="location.href='m_exchange.html'">
+                                    <td class="coin-nm">
+                                        <p>이더리움</p>
+                                        <span>ETH/KRW</span>
+                                    </td> <!-- end coin-nm -->
+                                    <td class="pr-now pr-Down">506,500</td> <!-- end coin-nm -->
+                                    <td class="pr-change pr-Down">-0.86%</td> <!-- end coin-nm -->
+                                    <td class="trans-pr">
+                                        <p>16,275 <span class="m-unit">백만</span></p>
+                                    </td>
+                                </tr>
+                                <tr onclick="location.href='m_exchange.html'">
+                                    <td class="coin-nm">
+                                        <p>레드비트</p>
+                                        <span>RDC/KRW</span>
+                                    </td> <!-- end coin-nm -->
+                                    <td class="pr-now pr-Up">184,400</td> <!-- end coin-nm -->
+                                    <td class="pr-change pr-Up">+0.86%</td> <!-- end coin-nm -->
+                                    <td class="trans-pr">
+                                        <p>16,275 <span class="m-unit">백만</span></p>
+                                    </td>
+                                </tr>
+                                <tr onclick="location.href='m_exchange.html'">
+                                    <td class="coin-nm">
+                                        <p>비트코인</p>
+                                        <span>BTC/KRW</span>
+                                    </td> <!-- end coin-nm -->
+                                    <td class="pr-now pr-Up">17,268,000</td> <!-- end coin-nm -->
+                                    <td class="pr-change pr-Up">+0.86%</td> <!-- end coin-nm -->
+                                    <td class="trans-pr">
+                                        <p>47,411 <span class="m-unit">백만</span></p>
+                                    </td>
+                                </tr>
+                                <tr onclick="location.href='m_exchange.html'">
+                                    <td class="coin-nm">
+                                        <p>이더리움</p>
+                                        <span>ETH/KRW</span>
+                                    </td> <!-- end coin-nm -->
+                                    <td class="pr-now pr-Down">506,500</td> <!-- end coin-nm -->
+                                    <td class="pr-change pr-Down">-0.86%</td> <!-- end coin-nm -->
+                                    <td class="trans-pr">
+                                        <p>16,275 <span class="m-unit">백만</span></p>
+                                    </td>
+                                </tr>
+                                <tr onclick="location.href='m_exchange.html'">
+                                    <td class="coin-nm">
+                                        <p>레드비트</p>
+                                        <span>RDC/KRW</span>
+                                    </td> <!-- end coin-nm -->
+                                    <td class="pr-now pr-Up">184,400</td> <!-- end coin-nm -->
+                                    <td class="pr-change pr-Up">+0.86%</td> <!-- end coin-nm -->
+                                    <td class="trans-pr">
+                                        <p>16,275 <span class="m-unit">백만</span></p>
+                                    </td>
+                                </tr>
+                                <tr onclick="location.href='m_exchange.html'">
+                                    <td class="coin-nm">
+                                        <p>비트코인</p>
+                                        <span>BTC/KRW</span>
+                                    </td> <!-- end coin-nm -->
+                                    <td class="pr-now pr-Up">17,268,000</td> <!-- end coin-nm -->
+                                    <td class="pr-change pr-Up">+0.86%</td> <!-- end coin-nm -->
+                                    <td class="trans-pr">
+                                        <p>47,411 <span class="m-unit">백만</span></p>
+                                    </td>
+                                </tr>
+                                <tr onclick="location.href='m_exchange.html'">
+                                    <td class="coin-nm">
+                                        <p>이더리움</p>
+                                        <span>ETH/KRW</span>
+                                    </td> <!-- end coin-nm -->
+                                    <td class="pr-now pr-Down">506,500</td> <!-- end coin-nm -->
+                                    <td class="pr-change pr-Down">-0.86%</td> <!-- end coin-nm -->
+                                    <td class="trans-pr">
+                                        <p>16,275 <span class="m-unit">백만</span></p>
+                                    </td>
+                                </tr>
+                                <tr onclick="location.href='m_exchange.html'">
+                                    <td class="coin-nm">
+                                        <p>레드비트</p>
+                                        <span>RDC/KRW</span>
+                                    </td> <!-- end coin-nm -->
+                                    <td class="pr-now pr-Up">184,400</td> <!-- end coin-nm -->
+                                    <td class="pr-change pr-Up">+0.86%</td> <!-- end coin-nm -->
+                                    <td class="trans-pr">
+                                        <p>16,275 <span class="m-unit">백만</span></p>
+                                    </td>
+                                </tr>
+                                <tr onclick="location.href='m_exchange.html'">
+                                    <td class="coin-nm">
+                                        <p>비트코인</p>
+                                        <span>BTC/KRW</span>
+                                    </td> <!-- end coin-nm -->
+                                    <td class="pr-now pr-Up">17,268,000</td> <!-- end coin-nm -->
+                                    <td class="pr-change pr-Up">+0.86%</td> <!-- end coin-nm -->
+                                    <td class="trans-pr">
+                                        <p>47,411 <span class="m-unit">백만</span></p>
+                                    </td>
+                                </tr>
+                                <tr onclick="location.href='m_exchange.html'">
+                                    <td class="coin-nm">
+                                        <p>이더리움</p>
+                                        <span>ETH/KRW</span>
+                                    </td> <!-- end coin-nm -->
+                                    <td class="pr-now pr-Down">506,500</td> <!-- end coin-nm -->
+                                    <td class="pr-change pr-Down">-0.86%</td> <!-- end coin-nm -->
+                                    <td class="trans-pr">
+                                        <p>16,275 <span class="m-unit">백만</span></p>
+                                    </td>
+                                </tr>
+                                <tr onclick="location.href='m_exchange.html'">
+                                    <td class="coin-nm">
+                                        <p>레드비트</p>
+                                        <span>RDC/KRW</span>
+                                    </td> <!-- end coin-nm -->
+                                    <td class="pr-now pr-Up">184,400</td> <!-- end coin-nm -->
+                                    <td class="pr-change pr-Up">+0.86%</td> <!-- end coin-nm -->
+                                    <td class="trans-pr">
+                                        <p>16,275 <span class="m-unit">백만</span></p>
+                                    </td>
+                                </tr>
+                                <tr onclick="location.href='m_exchange.html'">
+                                    <td class="coin-nm">
+                                        <p>비트코인</p>
+                                        <span>BTC/KRW</span>
+                                    </td> <!-- end coin-nm -->
+                                    <td class="pr-now pr-Up">17,268,000</td> <!-- end coin-nm -->
+                                    <td class="pr-change pr-Up">+0.86%</td> <!-- end coin-nm -->
+                                    <td class="trans-pr">
+                                        <p>47,411 <span class="m-unit">백만</span></p>
+                                    </td>
+                                </tr>
+                                <tr onclick="location.href='m_exchange.html'">
+                                    <td class="coin-nm">
+                                        <p>이더리움</p>
+                                        <span>ETH/KRW</span>
+                                    </td> <!-- end coin-nm -->
+                                    <td class="pr-now pr-Down">506,500</td> <!-- end coin-nm -->
+                                    <td class="pr-change pr-Down">-0.86%</td> <!-- end coin-nm -->
+                                    <td class="trans-pr">
+                                        <p>16,275 <span class="m-unit">백만</span></p>
+                                    </td>
+                                </tr>
+                                <tr onclick="location.href='m_exchange.html'">
+                                    <td class="coin-nm">
+                                        <p>레드비트</p>
+                                        <span>RDC/KRW</span>
+                                    </td> <!-- end coin-nm -->
+                                    <td class="pr-now pr-Up">184,400</td> <!-- end coin-nm -->
+                                    <td class="pr-change pr-Up">+0.86%</td> <!-- end coin-nm -->
+                                    <td class="trans-pr">
+                                        <p>16,275 <span class="m-unit">백만</span></p>
+                                    </td>
+                                </tr>
+                                <tr onclick="location.href='m_exchange.html'">
+                                    <td class="coin-nm">
+                                        <p>비트코인</p>
+                                        <span>BTC/KRW</span>
+                                    </td> <!-- end coin-nm -->
+                                    <td class="pr-now pr-Up">17,268,000</td> <!-- end coin-nm -->
+                                    <td class="pr-change pr-Up">+0.86%</td> <!-- end coin-nm -->
+                                    <td class="trans-pr">
+                                        <p>47,411 <span class="m-unit">백만</span></p>
+                                    </td>
+                                </tr>
+                                <tr onclick="location.href='m_exchange.html'">
+                                    <td class="coin-nm">
+                                        <p>이더리움</p>
+                                        <span>ETH/KRW</span>
+                                    </td> <!-- end coin-nm -->
+                                    <td class="pr-now pr-Down">506,500</td> <!-- end coin-nm -->
+                                    <td class="pr-change pr-Down">-0.86%</td> <!-- end coin-nm -->
+                                    <td class="trans-pr">
+                                        <p>16,275 <span class="m-unit">백만</span></p>
+                                    </td>
+                                </tr>
+                                <tr onclick="location.href='m_exchange.html'">
+                                    <td class="coin-nm">
+                                        <p>레드비트</p>
+                                        <span>RDC/KRW</span>
+                                    </td> <!-- end coin-nm -->
+                                    <td class="pr-now pr-Up">184,400</td> <!-- end coin-nm -->
+                                    <td class="pr-change pr-Up">+0.86%</td> <!-- end coin-nm -->
+                                    <td class="trans-pr">
+                                        <p>16,275 <span class="m-unit">백만</span></p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div> <!-- end wrap-tbody -->
+                    <div class="notice-ct m-common">
+                        <div class="head">
+                            <h2>공지사항</h2>
+                            <a class="link bg-img" href="customer_support_notice.html"></a>
+                        </div> <!-- end head -->
+                        <div class="noti-list">
+                            <div class="noti-box">
+                                <p class="tit">[ 앱 ] 레드비트 모바일 앱 이용 가능</p>
+                                <ul class="update">
+                                    <li>2020-11-11</li>
+                                    <li>20:16:43</li>
+                                </ul>
+                            </div> <!-- end noti-box -->
+                            <div class="noti-box">
+                                <p class="tit">[ 앱 ] 레드비트 모바일 앱 이용 가능</p>
+                                <ul class="update">
+                                    <li>2020-11-11</li>
+                                    <li>20:16:43</li>
+                                </ul>
+                            </div> <!-- end noti-box -->
+                            <div class="noti-box">
+                                <p class="tit">[ 앱 ] 레드비트 모바일 앱 이용 가능</p>
+                                <ul class="update">
+                                    <li>2020-11-11</li>
+                                    <li>20:16:43</li>
+                                </ul>
+                            </div> <!-- end noti-box -->
+                            <div class="noti-box">
+                                <p class="tit">[ 앱 ] 레드비트 모바일 앱 이용 가능</p>
+                                <ul class="update">
+                                    <li>2020-11-11</li>
+                                    <li>20:16:43</li>
+                                </ul>
+                            </div> <!-- end noti-box -->
+                            <div class="noti-box">
+                                <p class="tit">[ 앱 ] 레드비트 모바일 앱 이용 가능</p>
+                                <ul class="update">
+                                    <li>2020-11-11</li>
+                                    <li>20:16:43</li>
+                                </ul>
+                            </div> <!-- end noti-box -->
+                        </div> <!-- end noti-list -->
+                    </div> <!-- end notice-ct -->
+                    <div class="cs-center m-common">
+                        <div class="head">
+                            <h2>고객센터</h2>
+                        </div> <!-- end head -->
+                        <div class="service-info font-0">
+                            <p class="tit">운영시간</p>
+                            <p class="oper-time">AM 9:00 ~ PM 6:00 <span>(주말/공휴일 제외)</span></p>
+                        </div> <!-- end service-info -->
+                    </div> <!-- end cs-center -->
+                    <div class="m-footer">
+                        <div class="m-content">
+                            <ul>
+                                <li><a href="customer_support_fee_info.html">수수료 안내</a></li>
+                                <li class="bar">|</li>
+                                <li>상장문의 : master@redbiter.com</li>
+                            </ul>
+                            <div class="cs-info">
+                                <p>Is this day incorporated In Hong Kong under the Companies Ordinance (Chapter 622 of
+                                    the Laws of Hong Kong), and that this company is a limited company</p>
+                                <p>운영시간 : 평일 오전 9:00 ~ 오후 6:00 (토,일 공휴일 제외)</p>
+                            </div> <!-- end cs-info -->
+                            <p class="copyright">COPYRIGHT &copy; REDBIT. All Right Reserved.</p>
+                        </div> <!-- end m-content -->
+                    </div> <!-- end m-footer -->
+                </div> <!-- end inner-scroll -->
+            </div> <!-- end market -->
+            <div id="period-popup">
+                <div class="inner-wrap">
+                    <button class="hide-btn"><img src="img/close-btn.png" alt=""></button>
+                    <div class="pop-head">
+                        <p>변동률 기간 설정</p>
+                    </div>
+                    <ul class="period-ct">
+                        <li class="on"><input type="radio" name="period_1" id="period_1" checked><label
+                                for="period_1">전일대비</label></li>
+                        <li><input type="radio" name="period_2" id="period_2"><label for="period_2">24시간</label></li>
+                        <li><input type="radio" name="period_3" id="period_3"><label for="period_3">12시간</label></li>
+                        <li><input type="radio" name="period_4" id="period_4"><label for="period_4">1시간</label></li>
+                        <li><input type="radio" name="period_5" id="period_5"><label for="period_5">30분</label></li>
+                    </ul> <!-- end period-ct -->
+                </div> <!-- end inner-wrap -->
+            </div> <!-- end period-popup -->
+            <div id="m-fixed-noti">
+                <div class="noti-icon align-center"><span>NOTICE</span></div>
+                <p>[공지사항] 금융사기 주의 안내</p>
+                <button><img src="img/close-btn.png" alt=""></button>
+            </div> <!-- end fixed-noti -->
+        </div> <!-- end m_ct_wrap -->
+        
+        <footer>
+            <div class="content font-0">
+                <div class="f-info cm-foot">
+                    <div class="top-head">
+                        <div class="cp-info-area">
+                            <a class="f-logo" href="index.html"><img src="img/f_logo.png" alt=""></a>
+                            <ul>
+                                <li>고객센터</li>
+                                <li class="bar">|</li>
+                                <li>1688-5886</li>
+                                <li class="bar">|</li>
+                                <li>평일 오전 09:00 ~ 오후 06:00 (토, 일 공휴일 제외)</li>
+                                <li class="bar">|</li>
+                                <li>(주) 월드 코리아</li>
+                                <li class="bar">|</li>
+                                <li>대표 : 정정수</li>
+                                <li class="bar">|</li>
+                                <li>사업자등록번호 : 878-86-01217</li>
+                            </ul>
+                        </div> <!-- end cp-info-area -->
+                        <p>Check out PHOENIX's news on SNS</p>
+                    </div><!-- end top-head -->
+                    <div class="f-btm">
+                        <ul class="sns-icon">
+                            <li><a href="#"><img src="img/sns_twitter.png" alt=""></a></li>
+                            <li><a href="#"><img src="img/sns_facebook.png" alt=""></a></li>
+                            <li><a href="#"><img src="img/sns_naver.png" alt=""></a></li>
+                            <li><a href="#"><img src="img/sns_instar.png" alt=""></a></li>
+                            <li><a href="#"><img src="img/sns_youtube.png" alt=""></a></li>
+                        </ul>
+                        <p class="copyright">COPYRIGHT &copy; REDBIT. All Right Reserved.</p>
+                    </div>
+                </div> <!-- end f-info -->
+                <div class="f-support cm-foot">
+                    <p>고객지원</p>
+                    <ul>
+                        <li><a href="#">이용가이드</a></li>
+                        <li><a href="#">자주묻는질문</a></li>
+                        <li><a href="#">1:1 문의</a></li>
+                        <li><a href="#">공지사항</a></li>
+                        <li><a href="#">상장문의 및 제보 (이메일 주소 입력)</a></li>
+                    </ul>
+                </div> <!-- end cm-foot -->
+                <div class="ad-inquiry">
+                    <p>[ 제휴 및 광고문의 ]</p>
+                    <ul>
+                        <li><a href="#"><img src="img/ad_site_icon.png" alt=""></a></li>
+                        <li><a href="#"><img src="img/ad_site_icon2.png" alt=""></a></li>
+                        <li><a href="#"><img src="img/ad_site_icon3.png" alt=""></a></li>
+                    </ul>
+                </div> <!-- end ad-inquiry -->
+            </div> <!-- end content -->
+        </footer>
+        <div id="m-fixed-footer">
+            <ul class="flex-container align-center">
+                <li>
+                    <a href="index.html">
+                        <img src="img/m_market_icon.png" alt="">
+                        <p>홈</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="m_exchange.html">
+                        <img src="img/m_wallet_icon.png" alt="">
+                        <p>거래소</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="m_asset_status.html">
+                        <img src="img/m_invest_icon.png" alt="">
+                        <p>자산현황</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="m_balance.html">
+                        <img src="img/m_trans_icon.png" alt="">
+                        <p>입출금</p>
+                    </a>
+                </li>
+            </ul>
+        </div> <!-- end m-fixed-footer -->
+    </div> <!-- end wrap -->
+</body>
+
+</html>

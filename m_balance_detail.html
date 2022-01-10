@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>:: RED BIT ::</title>
+    <!-- favicon -->
+    <link href="img/favicon.png" rel="shortcut icon">
+    <link href="img/favicon.png" rel="apple-touch-icon">
+    <!-- 외부 CSS -->
+    <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+    <!-- jQuery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- main.js -->
+    <script src="js/main.js"></script>
+    <!-- slick-slider -->
+    <link rel="stylesheet" type="text/css" href="/plugin/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="/plugin/slick/slick-theme.css" />
+    <script type="text/javascript" src="/plugin/slick/slick.js"></script>
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="m-open-menu">
+            <div class="menu-container">
+                <div class="user-input">
+                    <div class="greeting-box">
+                        <p><span class="user-name">홍길동</span>님 환영합니다.</p>
+                        <a class="close-btn bg-img" href="#"></a>
+                    </div>
+                    <div class="input-group flex-container">
+                        <input class="login" type="button" value="로그인" onclick="location.href='login.html'">
+                        <input class="sign" type="button" value="회원가입" onclick="location.href='m_sign_up01.html'">
+                    </div> <!-- end input-group -->
+                </div> <!-- end user-input -->
+                <div class="menu-list">
+                    <ul>
+                        <li><a href="market.html">거래소</a></li>
+                        <li><a href="wallet.html">지갑관리</a></li>
+                        <li><a href="customer_support_index.html">고객센터</a></li>
+                        <li><a href="#">ISO</a></li>
+                    </ul>
+                </div> <!-- end menu-list -->
+                <div class="lang-select">
+                    <ul>
+                        <li class="on">
+                            <p>한국어</p>
+                        </li>
+                        <li>
+                            <p>영어</p>
+                        </li>
+                    </ul>
+                </div> <!-- end lang-select -->
+                <div class="cs-area align-center">
+                    <p>고객센터 상담시간</p>
+                    <h3>09 : 00 ~ 18 : 00</h3>
+                </div> <!-- end cs-area -->
+            </div> <!-- end menu-container -->
+        </div> <!-- end m-open-menu -->
+        <div id="m-header" class="m-trans-head">
+            <a class="back-icon bg-img" href="m_balance.html"></a>
+            <h1>비트코인 입출금</h1>
+            <a class="home-icon bg-img" href="index.html"></a>
+            <a class="m-menu bg-img" href="#"></a>
+        </div> <!-- end m-header -->
+        <div id="m-balance-dt">
+            <div class="user-wallet">
+                <div class="total-pr font-0">
+                    <p class="le-tit">총 보유금액</p>
+                    <p class="wallet-pr">9.6386008<span>BTC</span></p>
+                </div> <!-- end total-pr -->
+                <div class="trans-status">
+                    <ul>
+                        <li>거래대기</li>
+                        <li>0.6386008<span>BTC</span></li>
+                    </ul>
+                    <ul>
+                        <li>출금가능</li>
+                        <li>9.6386008<span>BTC</span></li>
+                    </ul>
+                </div> <!-- end trans-status -->
+                <div class="btn-group">
+                    <input class="on" type="button" value="입금하기" onclick="location.href='m_balance_deposit.html'">
+                    <input type="button" value="출금하기" onclick="location.href='m_balance_withdraw.html'">
+                </div> <!-- end btn-group -->
+            </div> <!-- end user-wallet -->
+            <div class="trans-list">
+                <div class="head font-0">
+                    <p>입출금 내역</p>
+                    <div class="sel-area">
+                        <button class="period-btn">30일</button>
+                        <select name="" id="">
+                            <option value="">거래전체</option>
+                            <option value="">입금</option>
+                            <option value="">출금</option>
+                        </select>
+                    </div> <!-- end sel-area -->
+                </div> <!-- end head -->
+                <div class="sel-list-area">
+                    <table>
+                        <colgroup>
+                        <col width="25%">
+                        <col width="15%">
+                        <col width="45%">
+                        <col width="15%">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>처리날짜</th>
+                                <th>구분</th>
+                                <th>금액</th>
+                                <th>상태</th>
+                            </tr>
+                        </thead>
+                    </table>
+                    <table>
+                        <colgroup>
+                        <col width="25%">
+                        <col width="15%">
+                        <col width="45%">
+                        <col width="15%">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <td>2020-09-25</td>
+                                <td>입금</td>
+                                <td>+0.001 ETH</td>
+                                <td>완료</td>
+                            </tr>
+                            <tr>
+                                <td>2020-09-25</td>
+                                <td>입금</td>
+                                <td>+0.001 ETH</td>
+                                <td>완료</td>
+                            </tr>
+                            <tr class="empty-ct">
+                                <td colspan="4">내역이 없습니다.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div> <!-- end sel-list-area -->
+            </div> <!-- end trans-list -->
+            <div id="m-popup" class="trans-period">
+                <div class="inner-wrap">
+                    <div class="head">
+                        <p class="pop-tit">기간설정</p>
+                        <button class="close-btn"><img src="img/noti_close_btn.png" alt=""></button>
+                    </div> <!-- end head -->
+                    <div class="period-ct">
+                        <div class="date-btn">
+                            <input type="button" value="7일">
+                            <input class="on" type="button" value="30일">
+                            <input type="button" value="90일">
+                            <input type="button" value="180일">
+                        </div> <!-- end date-btn -->
+                        <div class="date-direct">
+                            <input type="date" name="" id="">
+                            <span>~</span>
+                            <input type="date" name="" id="">
+                        </div> <!-- end date-direct -->
+                        <span>조회구간은 180일까지 설정 가능합니다.</span>
+                    </div> <!-- end period-ct -->
+                    <input class="lookup-btn" type="button" value="조회">
+                </div> <!-- end inner-wrap -->
+            </div> <!-- end trans-period -->
+        </div> <!-- end m-balance-dt -->
+        <div id="m-fixed-noti">
+            <div class="noti-icon align-center"><span>NOTICE</span></div>
+            <p>[공지사항] 금융사기 주의 안내</p>
+            <button><img src="img/close-btn.png" alt=""></button>
+        </div> <!-- end fixed-noti -->
+        <div id="m-fixed-footer">
+            <ul class="flex-container align-center">
+                <li>
+                    <a href="index.html">
+                        <img src="img/m_market_icon.png" alt="">
+                        <p>홈</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="m_exchange.html">
+                        <img src="img/m_wallet_icon.png" alt="">
+                        <p>거래소</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="m_asset_status.html">
+                        <img src="img/m_invest_icon.png" alt="">
+                        <p>자산현황</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="m_balance.html">
+                        <img src="img/m_trans_icon.png" alt="">
+                        <p>입출금</p>
+                    </a>
+                </li>
+            </ul>
+        </div> <!-- end m-fixed-footer -->
+    </div> <!-- end wrap -->
+</body>
+
+</html>

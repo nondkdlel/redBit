@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>:: RED BIT ::</title>
+    <!-- favicon -->
+    <link href="img/favicon.png" rel="shortcut icon">
+    <link href="img/favicon.png" rel="apple-touch-icon">
+    <!-- 외부 CSS -->
+    <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+    <!-- jQuery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- main.js -->
+    <script src="js/main.js"></script>
+    <!-- slick-slider -->
+    <link rel="stylesheet" type="text/css" href="/plugin/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="/plugin/slick/slick-theme.css" />
+    <script type="text/javascript" src="/js/jquery.js"></script>
+    <script type="text/javascript" src="/plugin/slick/slick.js"></script>
+    <script>
+        jQuery(document).ready(function ($) {
+
+            var body_height = $("body").outerHeight();
+            var m_head_height = $("#m-header").outerHeight();
+            var foot_height = $("#m-fixed-footer").outerHeight();
+
+            var trans_form_height = body_height - m_head_height - foot_height
+            console.log(trans_form_height);
+
+            $("#m-trans-fr").css("height", trans_form_height);
+
+        });
+    </script>
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="m-open-menu">
+            <div class="menu-container">
+                <div class="user-input">
+                    <div class="greeting-box">
+                        <p><span class="user-name">홍길동</span>님 환영합니다.</p>
+                        <a class="close-btn bg-img" href="#"></a>
+                    </div>
+                    <div class="input-group flex-container">
+                        <input class="login" type="button" value="로그인" onclick="location.href='login.html'">
+                        <input class="sign" type="button" value="회원가입" onclick="location.href='m_sign_up01.html'">
+                    </div> <!-- end input-group -->
+                </div> <!-- end user-input -->
+                <div class="menu-list">
+                    <ul>
+                        <li><a href="m_exchange.html">거래소</a></li>
+                        <li><a href="m_balance.html">입출금</a></li>
+                        <li><a href="customer_support_index.html">고객센터</a></li>
+                        <li><a href="#">ISO</a></li>
+                    </ul>
+                </div> <!-- end menu-list -->
+                <div class="lang-select">
+                    <ul>
+                        <li class="on">
+                            <p>한국어</p>
+                        </li>
+                        <li>
+                            <p>영어</p>
+                        </li>
+                    </ul>
+                </div> <!-- end lang-select -->
+                <div class="cs-area align-center">
+                    <p>고객센터 상담시간</p>
+                    <h3>09 : 00 ~ 18 : 00</h3>
+                </div> <!-- end cs-area -->
+            </div> <!-- end menu-container -->
+        </div> <!-- end m-open-menu -->
+        <div id="m-header">
+            <a class="m-logo bg-img" href="index.html"></a>
+            <a class="m-menu bg-img" href="#"></a>
+        </div> <!-- end m-header -->
+        <div id="m-trans-fr">
+            <div class="head">
+                <h1>비트코인 출금</h1>
+                <a class="bf-pg-btn bg-img" href="m_balance_detail.html"></a>
+            </div> <!-- end head -->
+            <div class="tr-content">
+                <div class="tr-coin-sel">
+                    <img src="img/bit_coin_icon.png" alt="">
+                    <p>비트코인</p>
+                </div> <!-- end tr-coin-sel -->
+                <div id="trans-pop-list" class="cm-hold-wallet">
+                    <div class="user-function">
+                        <div class="hold-check in-block align-middle">
+                            <input type="radio" name="hold_on" id="hold_on">
+                            <label for="hold_on">보유코인만 보기</label>
+                        </div> <!-- end hold-check -->
+                        <div class="sch-box in-block align-middle">
+                            <input type="text" name="" id="" placeholder="검색">
+                            <a class="sch-icon" href="#"><img src="img/ex_sch_icon.png" alt=""></a>
+                        </div> <!-- end sch-box -->
+                    </div> <!-- end user-function -->
+                    <div class="wrap-thead">
+                        <table>
+                            <colgroup>
+                                <col width="50%">
+                                <col width="50%">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>자산</th>
+                                    <th>보유잔고</th>
+                                </tr>
+                            </thead>
+                        </table>
+                    </div> <!-- end wrap-thead -->
+                    <div class="wrap-tbody">
+                        <table>
+                            <colgroup>
+                                <col width="50%">
+                                <col width="50%">
+                            </colgroup>
+                            <tbody>
+                                <tr onclick="location.href='m_balance_detail.html'">
+                                    <td class="coin-info">
+                                        <img src="img/red_coin_icon.png" alt="">
+                                        <p>레드코인</p>
+                                    </td>
+                                    <td class="coin-wallet">
+                                        <p>0.00000000</p>
+                                    </td>
+                                </tr>
+                                <tr onclick="location.href='m_balance_detail.html'">
+                                    <td class="coin-info">
+                                        <img src="img/red_coin_icon.png" alt="">
+                                        <p>레드코인</p>
+                                    </td>
+                                    <td class="coin-wallet">
+                                        <p>0.00000000</p>
+                                    </td>
+                                </tr>
+                                <tr onclick="location.href='m_balance_detail.html'">
+                                    <td class="coin-info">
+                                        <img src="img/bit_coin_icon.png" alt="">
+                                        <p>비트코인</p>
+                                    </td>
+                                    <td class="coin-wallet">
+                                        <p>0.00000000</p>
+                                    </td>
+                                </tr>
+                                <tr onclick="location.href='m_balance_detail.html'">
+                                    <td class="coin-info">
+                                        <img src="img/eth_coin_icon.png" alt="">
+                                        <p>이더리움</p>
+                                    </td>
+                                    <td class="coin-wallet">
+                                        <p>0.00000000</p>
+                                    </td>
+                                </tr>
+                                <tr onclick="location.href='m_balance_detail.html'">
+                                    <td class="coin-info">
+                                        <img src="img/bit_coin_icon.png" alt="">
+                                        <p>비트코인</p>
+                                    </td>
+                                    <td class="coin-wallet">
+                                        <p>0.00000000</p>
+                                    </td>
+                                </tr>
+                                <tr onclick="location.href='m_balance_detail.html'">
+                                    <td class="coin-info">
+                                        <img src="img/eth_coin_icon.png" alt="">
+                                        <p>이더리움</p>
+                                    </td>
+                                    <td class="coin-wallet">
+                                        <p>0.00000000</p>
+                                    </td>
+                                </tr>
+                                <tr onclick="location.href='m_balance_detail.html'">
+                                    <td class="coin-info">
+                                        <img src="img/bit_coin_icon.png" alt="">
+                                        <p>비트코인</p>
+                                    </td>
+                                    <td class="coin-wallet">
+                                        <p>0.00000000</p>
+                                    </td>
+                                </tr>
+                                <tr onclick="location.href='m_balance_detail.html'">
+                                    <td class="coin-info">
+                                        <img src="img/eth_coin_icon.png" alt="">
+                                        <p>이더리움</p>
+                                    </td>
+                                    <td class="coin-wallet">
+                                        <p>0.00000000</p>
+                                    </td>
+                                </tr>
+                                <tr onclick="location.href='m_balance_detail.html'">
+                                    <td class="coin-info">
+                                        <img src="img/red_coin_icon.png" alt="">
+                                        <p>레드코인</p>
+                                    </td>
+                                    <td class="coin-wallet">
+                                        <p>0.00000000</p>
+                                    </td>
+                                </tr>
+                                <tr onclick="location.href='m_balance_detail.html'">
+                                    <td class="coin-info">
+                                        <img src="img/red_coin_icon.png" alt="">
+                                        <p>레드코인</p>
+                                    </td>
+                                    <td class="coin-wallet">
+                                        <p>0.00000000</p>
+                                    </td>
+                                </tr>
+                                <tr onclick="location.href='m_balance_detail.html'">
+                                    <td class="coin-info">
+                                        <img src="img/bit_coin_icon.png" alt="">
+                                        <p>비트코인</p>
+                                    </td>
+                                    <td class="coin-wallet">
+                                        <p>0.00000000</p>
+                                    </td>
+                                </tr>
+                                <tr onclick="location.href='m_balance_detail.html'">
+                                    <td class="coin-info">
+                                        <img src="img/eth_coin_icon.png" alt="">
+                                        <p>이더리움</p>
+                                    </td>
+                                    <td class="coin-wallet">
+                                        <p>0.00000000</p>
+                                    </td>
+                                </tr>
+                                <tr onclick="location.href='m_balance_detail.html'">
+                                    <td class="coin-info">
+                                        <img src="img/bit_coin_icon.png" alt="">
+                                        <p>비트코인</p>
+                                    </td>
+                                    <td class="coin-wallet">
+                                        <p>0.00000000</p>
+                                    </td>
+                                </tr>
+                                <tr onclick="location.href='m_balance_detail.html'">
+                                    <td class="coin-info">
+                                        <img src="img/eth_coin_icon.png" alt="">
+                                        <p>이더리움</p>
+                                    </td>
+                                    <td class="coin-wallet">
+                                        <p>0.00000000</p>
+                                    </td>
+                                </tr>
+                                <tr onclick="location.href='m_balance_detail.html'">
+                                    <td class="coin-info">
+                                        <img src="img/bit_coin_icon.png" alt="">
+                                        <p>비트코인</p>
+                                    </td>
+                                    <td class="coin-wallet">
+                                        <p>0.00000000</p>
+                                    </td>
+                                </tr>
+                                <tr onclick="location.href='m_balance_detail.html'">
+                                    <td class="coin-info">
+                                        <img src="img/eth_coin_icon.png" alt="">
+                                        <p>이더리움</p>
+                                    </td>
+                                    <td class="coin-wallet">
+                                        <p>0.00000000</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div> <!-- end wrap-tbody -->
+                </div> <!-- end trans-pop-list -->
+                <div class="withdraw-fr tr-form">
+                    <div class="qr-code">
+                        <img src="img/qr_code.png" alt="">
+                    </div> <!-- end qr-code -->
+                    <div class="qr-pw">
+                        <input type="text" name="" id="" class="width-100">
+                        <input class="otp-btn width-100" type="button" value="OTP CODE">
+                    </div> <!-- end qr-pw -->
+                    <div class="wtd-addr">
+                        <input type="text" name="" id="" class="width-100">
+                        <div class="pr-withdraw">
+                            <input type="text" class="width-100">
+                            <span>BTC</span>
+                        </div> <!-- end pr-withdraw -->
+                    </div> <!-- end wtd-addr -->
+                    <div class="wtd-status">
+                        <ul>
+                            <li>사용가능한 코인</li>
+                            <li>9.8086003<span>BTC</span></li>
+                        </ul>
+                        <ul>
+                            <li>출금 수수료</li>
+                            <li>0.0001<span>BTC</span></li>
+                        </ul>
+                        <ul>
+                            <li>총 출금액</li>
+                            <li>0<span>BTC</span></li>
+                        </ul>
+                    </div> <!-- end wth-status -->
+                    <input class="tr-btn width-100" type="button" value="코인출금 신청">
+                </div> <!-- end withdraw-fr -->
+            </div> <!-- end tr-content -->
+            <div class="trade-noti">
+                <p>[ 출금 시 주의사항 ]</p>
+                <ul>
+                    <li>암호화폐의 특성상 출금신청이 완료되면 취소 할 수 없습니다.</li>
+                    <li>보내기 전 주소와 수량을 꼭 확인해주세요.</li>
+                    <li>* 비트코인은 비트코인 지갑으로만 송금 가능합니다. 다른 암호화폐 지갑으로 잘못 송금하는 경우 거래소에서 도와드릴 수 있는 부분이 없습니다.</li>
+                    <li>출금신청 완료 이후 송금 과정은 블록체인 네트워크에서 처리됩니다. 이 과정에서 발생할 수 있는 송금 지연 등의 문제는 거래소에서 처리가 불가능합니다.</li>
+                    <li>출금은 핫월렛에서 진행되기 때문에 출금이 이루어지는 주소는 회원님의 입금 주소와 동일하지 않습니다.</li>
+                    <li>부정거래가 의심되는 경우 출금이 제한될 수 있습니다.</li>
+                    <li>타인의 지시나 요청 등으로 본인 명의의 거래소 계정을 타인에게 대여시 법적 처벌 대상이 될 수 있습니다.</li>
+                    <li>실명 인증된 계정을 타인에게 대여하는 경우 개인정보 노출 위험에 처할 수 있습니다.</li>
+                </ul>
+            </div> <!-- end trade-noti -->
+        </div> <!-- end m-trans-fr -->
+        <div id="m-fixed-noti">
+            <div class="noti-icon align-center"><span>NOTICE</span></div>
+            <p>[공지사항] 금융사기 주의 안내</p>
+            <button><img src="img/close-btn.png" alt=""></button>
+        </div> <!-- end fixed-noti -->
+        <footer>
+            <div class="container">
+                <div class="f-ct sns">
+                    <h3><a class="f-logo bg-img" href="index.html"><img src="img/logo.png" alt=""></a></h3>
+                    <p>Check out REDBIT's news on SNS</p>
+                    <ul class="align-center">
+                        <li><a href="#"><img src="img/facebook_icon.png" alt=""></a></li>
+                        <li><a href="#"><img src="img/ins_icon.png" alt=""></a></li>
+                        <li><a href="#"><img src="img/twitter_icon.png" alt=""></a></li>
+                        <li><a href="#"><img src="img/telegram_icon.png" alt=""></a></li>
+                    </ul>
+                </div> <!-- end sns -->
+                <div class="f-ct nav">
+                    <h3>NAVIGATION</h3>
+                    <a class="align-middle" href="#">수수료 안내<img class="align-middle" src="img/page_move-icon.png"
+                            alt=""></a>
+                </div> <!-- end nav -->
+                <div class="f-ct cs-center font-0">
+                    <h3>CS CENTER</h3>
+                    <ul class="width-20 align-top">
+                        <li>전화상담</li>
+                        <li>상장문의</li>
+                        <li>고객센터</li>
+                    </ul>
+                    <ul class="width-80 align-top">
+                        <li>02-867-8118 ( AM 09 : 00 ~ PM 06 : 00 )</li>
+                        <li>master@azilowon.io</li>
+                        <li>
+                            <p>서울 특별시 강남구 테헤란로 53길 22,2층</p>
+                            <p>제주도 제주시 복지로 복길 33 3층(원경빌딩)</p>
+                            <p>운영시간 : 평일 AM 09 : 00 ~ PM 06 : 00 ( 주말 및 공휴일 제외 )</p>
+                        </li>
+                    </ul>
+                </div> <!-- end cs-center -->
+                <div class="f-ct lang">
+                    <h3>LANGUAGE</h3>
+                    <ul>
+                        <li>한국어 <img class="align-middle" src="img/page_move-icon.png" alt=""></li>
+                        <li>영어 <img class="align-middle" src="img/page_move-icon.png" alt=""></li>
+                    </ul>
+                </div> <!-- end lang -->
+            </div> <!-- end container -->
+        </footer>
+        <div id="m-fixed-footer">
+            <ul class="flex-container align-center">
+                <li>
+                    <a href="index.html">
+                        <img src="img/m_market_icon.png" alt="">
+                        <p>홈</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="m_exchange.html">
+                        <img src="img/m_wallet_icon.png" alt="">
+                        <p>거래소</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="m_asset_status.html">
+                        <img src="img/m_invest_icon.png" alt="">
+                        <p>자산현황</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="m_balance.html">
+                        <img src="img/m_trans_icon.png" alt="">
+                        <p>입출금</p>
+                    </a>
+                </li>
+            </ul>
+        </div> <!-- end m-fixed-footer -->
+    </div> <!-- end wrap -->
+</body>
+
+</html>

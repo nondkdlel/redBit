@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>:: Red Bit ::</title>
+    <!-- favicon -->
+    <link href="img/favicon.png" rel="shortcut icon">
+    <link href="img/favicon.png" rel="apple-touch-icon">
+    <!-- font -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <!-- css -->
+    <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+    <!-- jQuery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- js -->
+    <script src="js/main.js"></script>
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="m-open-menu">
+            <div class="menu-container">
+                <div class="user-input">
+                    <div class="greeting-box">
+                        <p><span class="user-name">홍길동</span>님 환영합니다.</p>
+                        <a class="close-btn bg-img" href="#"></a>
+                    </div>
+                    <div class="input-group flex-container">
+                        <input class="login" type="button" value="로그인" onclick="location.href='login.html'">
+                        <input class="sign" type="button" value="회원가입" onclick="location.href='m_sign_up01.html'">
+                    </div> <!-- end input-group -->
+                </div> <!-- end user-input -->
+                <div class="menu-list">
+                    <ul>
+                        <li><a href="m_exchange.html">거래소</a></li>
+                        <li><a href="m_balance.html">입출금</a></li>
+                        <li><a href="event_board.html">이벤트</a></li>
+                        <li><a href="customer_support_index.html">고객센터</a></li>
+                        <li><a href="#">ISO</a></li>
+                    </ul>
+                </div> <!-- end menu-list -->
+                <div class="lang-select">
+                    <ul>
+                        <li class="on">
+                            <p>한국어</p>
+                        </li>
+                        <li>
+                            <p>영어</p>
+                        </li>
+                    </ul>
+                </div> <!-- end lang-select -->
+                <div class="cs-area align-center">
+                    <p>고객센터 상담시간</p>
+                    <h3>09 : 00 ~ 18 : 00</h3>
+                </div> <!-- end cs-area -->
+            </div> <!-- end menu-container -->
+        </div> <!-- end m-open-menu -->
+        <div id="m-header">
+            <a class="back-icon night bg-img" href="customer_index.html"></a>
+            <h1 class="page-title">이벤트</h1>
+            <a class="m-menu bg-img" href="#"></a>
+        </div> <!-- end m-header -->
+        <header id="main-header" class="sub">
+            <div class="container">
+                <a href="index.html" class="logo"><img src="img/logo.png" alt=""></a>
+                <nav class="left-mu">
+                    <ul>
+                        <li><a href="exchange.html">거래소</a></li>
+                        <li><a href="wallet_mgr.html">입출금</a></li>
+                        <li><a href="event_board.html">이벤트</a></li>
+                        <li><a href="customer_support_guide.html">고객센터</a></li>
+                    </ul>
+                </nav>
+                <nav class="right-mu">
+                    <ul>
+                        <li><a href="login.html">로그인</a></li>
+                        <li><a href="sign_up.html">회원가입</a></li>
+                        <li class="lang">
+                            <div class="sel-container">
+                                <div class="sel-head">
+                                    <p>English</p>
+                                </div>
+                                <ul class="sel-list">
+                                    <li class="on">
+                                        <p>English</p>
+                                    </li>
+                                    <li>
+                                        <p>Korea</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div> <!-- end container -->
+        </header> <!-- end main-header -->
+
+        <div id="event">
+            <div class="content cm-area">
+                <div class="location align-right">
+                    <ul>
+                        <li class="home">Home</li>
+                        <li class="route">&gt;</li>
+                        <li>고객센터</li>
+                        <li class="route">&gt;</li>
+                        <li class="sub-title">이벤트</li>
+                    </ul>
+                </div> <!-- end location -->
+                <div class="head font-0">
+                    <h1>이벤트</h1>
+                    <div class="tab-menu">
+                        <input class="on" type="button" value="전체">
+                        <input type="button" value="진행중">
+                        <input type="button" value="종료됨">
+                        <div>종료됨</div>
+                    </div> <!-- end tab-menu -->
+                </div> <!-- end head -->
+                <div class="details">
+                   <div class="thead">
+                        <h1>IEO 1차 사전판매 안내</h1>
+                        <ul>
+                            <li>2021-01-29</li>
+                            <li>11:33:52</li>
+                        </ul>
+                   </div> <!-- end thead -->
+                   <div class="form">
+                       <div class="f-txt">
+                        <p>안녕하세요. Red-Bit 입니다.</p>
+                        <p>IEO 사전판매를 진행 예정 중에 있으며, 거래소를 이용하시는 회원 분들 중 희망하시는 분은 사전판매에 참여해주세요.</p>
+                        <p>아래의 자세한 사항을 확인해주세요.</p>
+                        <p>감사합니다.</p>
+                       </div> <!-- end f-txt -->
+                        <img src="img/event_noti_img.png" alt="">
+                        <div class="apply-btn align-right">
+                            <input type="button" value="사전판매 참여하기" onclick="location.href='event_apply_form.html'">
+                            <p>※ 선착순 조기마감 되는 이벤트입니다. </p>
+                        </div>
+                   </div> <!-- end form -->
+                   <div class="btm-group">
+                        <input class="list-btn" type="button" value="목록" onclick="location.href='event_board.html'">
+                   </div> <!-- end btm-group -->
+                </div> <!-- end details -->
+            </div> <!-- end content -->
+        </div> <!-- end event -->
+
+        <div id="m-event">
+            <div class="m-details">
+                <div class="head">
+                    <h1>IEO 1차 사전판매 안내</h1>
+                    <ul>
+                        <li>2021/01/29</li>
+                        <li>11:33:25</li>
+                    </ul>
+                </div> <!-- end head -->
+                <div class="detail-form">
+                    <div class="fr-txt">
+                        <p>안녕하세요. Red-Bit 입니다.</p>
+                        <p>IEO 사전판매를 진행 예정 중에 있으며, 거래소를 이용하시는 회원 분들 중 희망하시는 분은 사전판매에 참여해주세요.</p>
+                        <p>아래의 자세한 사항을 확인해주세요.</p>
+                        <p>감사합니다.</p>
+                    </div> <!-- end fr-txt -->
+                    <img src="img/m_event_noti_img.png" alt="">
+                    <div class="apply-btn">
+                        <input type="button" value="사전판매 참여하기" onclick="location.href='event_apply_form.html'">
+                        <p>※ 선착순 조기마감 되는 이벤트입니다.</p>
+                    </div>  <!-- end apply-btn -->
+                </div> <!-- end detail-form -->
+                <div class="btm-group">
+                    <input class="list-btn" type="button" value="목록" onclick="location.href='event_board.html'">
+                </div> <!-- end btm-group -->
+            </div> <!-- end m-details -->
+        </div> <!-- end m-event -->
+
+        <footer>
+            <div class="content font-0">
+                <div class="f-info cm-foot">
+                    <div class="top-head">
+                        <div class="cp-info-area">
+                            <a class="f-logo" href="index.html"><img src="img/f_logo.png" alt=""></a>
+                            <ul>
+                                <li>고객센터</li>
+                                <li class="bar">|</li>
+                                <li>1688-5886</li>
+                                <li class="bar">|</li>
+                                <li>평일 오전 09:00 ~ 오후 06:00 (토, 일 공휴일 제외)</li>
+                                <li class="bar">|</li>
+                                <li>(주) 월드 코리아</li>
+                                <li class="bar">|</li>
+                                <li>대표 : 정정수</li>
+                                <li class="bar">|</li>
+                                <li>사업자등록번호 : 878-86-01217</li>
+                            </ul>
+                        </div> <!-- end cp-info-area -->
+                        <p>Check out PHOENIX's news on SNS</p>
+                    </div><!-- end top-head -->
+                    <div class="f-btm">
+                        <ul class="sns-icon">
+                            <li><a href="#"><img src="img/sns_twitter.png" alt=""></a></li>
+                            <li><a href="#"><img src="img/sns_facebook.png" alt=""></a></li>
+                            <li><a href="#"><img src="img/sns_naver.png" alt=""></a></li>
+                            <li><a href="#"><img src="img/sns_instar.png" alt=""></a></li>
+                            <li><a href="#"><img src="img/sns_youtube.png" alt=""></a></li>
+                        </ul>
+                        <p class="copyright">COPYRIGHT &copy; REDBIT. All Right Reserved.</p>
+                    </div>
+                </div> <!-- end f-info -->
+                <div class="f-support cm-foot">
+                    <p>고객지원</p>
+                    <ul>
+                        <li><a href="#">이용가이드</a></li>
+                        <li><a href="#">자주묻는질문</a></li>
+                        <li><a href="#">1:1 문의</a></li>
+                        <li><a href="#">공지사항</a></li>
+                        <li><a href="#">상장문의 및 제보 (이메일 주소 입력)</a></li>
+                    </ul>
+                </div> <!-- end cm-foot -->
+                <div class="ad-inquiry">
+                    <p>[ 제휴 및 광고문의 ]</p>
+                    <ul>
+                        <li><a href="#"><img src="img/ad_site_icon.png" alt=""></a></li>
+                        <li><a href="#"><img src="img/ad_site_icon2.png" alt=""></a></li>
+                        <li><a href="#"><img src="img/ad_site_icon3.png" alt=""></a></li>
+                    </ul>
+                </div> <!-- end ad-inquiry -->
+            </div> <!-- end content -->
+        </footer>
+        <div id="m-fixed-footer">
+            <ul class="flex-container align-center">
+                <li>
+                    <a href="index.html">
+                        <img src="img/m_market_icon.png" alt="">
+                        <p>홈</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="m_exchange.html">
+                        <img src="img/m_wallet_icon.png" alt="">
+                        <p>거래소</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="m_asset_status.html">
+                        <img src="img/m_invest_icon.png" alt="">
+                        <p>자산현황</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="m_balance.html">
+                        <img src="img/m_trans_icon.png" alt="">
+                        <p>입출금</p>
+                    </a>
+                </li>
+            </ul>
+        </div> <!-- end m-fixed-footer -->
+    </div> <!-- end wrap -->
+</body>
+
+</html>

@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>:: RED BIT ::</title>
+    <!-- favicon -->
+    <link href="img/favicon.png" rel="shortcut icon">
+    <link href="img/favicon.png" rel="apple-touch-icon">
+    <!-- font -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <!-- css -->
+    <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+    <!-- jQuery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- js -->
+    <script src="js/main.js"></script>
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="m-open-menu">
+            <div class="menu-container">
+                <div class="user-input">
+                    <div class="greeting-box">
+                        <p><span class="user-name">홍길동</span>님 환영합니다.</p>
+                        <a class="close-btn bg-img" href="#"></a>
+                    </div>
+                    <div class="input-group flex-container">
+                        <input class="login" type="button" value="로그인" onclick="location.href='login.html'">
+                        <input class="sign" type="button" value="회원가입" onclick="location.href='m_sign_up01.html'">
+                    </div> <!-- end input-group -->
+                </div> <!-- end user-input -->
+                <div class="menu-list">
+                    <ul>
+                        <li><a href="market.html">거래소</a></li>
+                        <li><a href="wallet.html">지갑관리</a></li>
+                        <li><a href="customer_support_index.html">고객센터</a></li>
+                        <li><a href="#">ISO</a></li>
+                    </ul>
+                </div> <!-- end menu-list -->
+                <div class="lang-select">
+                    <ul>
+                        <li class="on">
+                            <p>한국어</p>
+                        </li>
+                        <li>
+                            <p>영어</p>
+                        </li>
+                    </ul>
+                </div> <!-- end lang-select -->
+                <div class="cs-area align-center">
+                    <p>고객센터 상담시간</p>
+                    <h3>09 : 00 ~ 18 : 00</h3>
+                </div> <!-- end cs-area -->
+            </div> <!-- end menu-container -->
+        </div> <!-- end m-open-menu -->
+        <div id="m-header">
+            <a class="home-icon bg-img" href="index.html"></a>
+            <h1 class="page-title">회원정보수정</h1>
+            <a class="m-menu bg-img" href="#"></a>
+        </div> <!-- end m-header -->
+        <header id="main-header" class="sub">
+            <div class="container">
+                <a href="index.html" class="logo"><img src="img/logo.png" alt=""></a>
+                <nav class="left-mu">
+                    <ul>
+                        <li><a href="exchange.html">거래소</a></li>
+                        <li><a href="wallet_mgr.html">입출금</a></li>
+                        <li><a href="event_board.html">이벤트</a></li>
+                        <li><a href="customer_support_guide.html">고객센터</a></li>
+                    </ul>
+                </nav>
+                <nav class="right-mu">
+                    <ul>
+                        <li><a href="login.html">로그인</a></li>
+                        <li><a href="sign_up.html">회원가입</a></li>
+                        <li class="lang">
+                            <div class="sel-container">
+                                <div class="sel-head">
+                                    <p>English</p>
+                                </div>
+                                <ul class="sel-list">
+                                    <li class="on">
+                                        <p>English</p>
+                                    </li>
+                                    <li>
+                                        <p>Korea</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div> <!-- end container -->
+        </header> <!-- end main-header -->
+
+        <div id="mypage">
+            <div class="content">
+                <aside id="aside-menu">
+                    <div class="mu-head">
+                        <h1>My page</h1>
+                    </div> <!-- end mu-head -->
+                    <nav>
+                        <ul>
+                            <li class="on"><a href="mypage_modify_member _Info.html">Modify Member Info</a></li>
+                            <li><a href="mypage_my_asset.html">My Assets</a></li>
+                            <li><a href="mypage_my_transaction.html">My Transaction</a></li>
+                        </ul>
+                    </nav>
+                </aside> <!-- end aside-menu -->
+                <div class="mp-area cm-area mem-info">
+                    <div class="location align-right">
+                        <ul>
+                            <li class="home">Home</li>
+                            <li class="route">></li>
+                            <li>Customer Support</li>
+                            <li class="route">></li>
+                            <li>Modify Member Info</li>
+                        </ul>
+                    </div> <!-- end location -->
+                    <h1>Modify Member Info</h1>
+                    <div class="edit-form">
+                        <div class="enter-info ">
+                            <div class="persent">
+                                <img src="img/persent_70.png" alt="">
+                                <div class="txt-box">
+                                    <span>정보입력</span>
+                                <p>70%</p> 
+                                </div> <!-- end txt-box -->
+                            </div> <!-- end persent -->
+                            <div class="info-att">
+                                <ul>
+                                    <li>신분증 사본</li>
+                                    <li>통장 사본</li>
+                                    <li>코인 출금 상태</li>
+                                    <li>원화 출금 상태</li>
+                                    <li>거래 가능 상태</li>
+                                </ul>
+                                <ul>
+                                    <li class="on">검증완료</li>
+                                    <li class="on">검증완료</li>
+                                    <li class="on">활성</li>
+                                    <li>미활성</li>
+                                    <li class="on">활성</li>
+                                </ul>
+                            </div> <!-- end info-att -->
+                        </div> <!-- end enter-info -->
+                        <div class="join-form">
+                            <div class="user-info-area common-fr">
+                                <div class="emoji form-ct">
+                                    <p class="ct-tit">이모티콘 선택</p>
+                                    <div class="sel-emoji">
+                                        <div class="sel-head">
+                                            <p>이모티콘 선택</p>
+                                        </div> <!-- end sel-head -->
+                                        <div class="emoji-list">
+                                            <button><img src="img/emoji(1).png" alt=""></button>
+                                            <button><img src="img/emoji(2).png" alt=""></button>
+                                            <button><img src="img/emoji(3).png" alt=""></button>
+                                            <button><img src="img/emoji(4).png" alt=""></button>
+                                            <button><img src="img/emoji(5).png" alt=""></button>
+                                            <button><img src="img/emoji(6).png" alt=""></button>
+                                            <button><img src="img/emoji(7).png" alt=""></button>
+                                            <button><img src="img/emoji(8).png" alt=""></button>
+                                            <button><img src="img/emoji(9).png" alt=""></button>
+                                            <button><img src="img/emoji(10).png" alt=""></button>
+                                            <button><img src="img/emoji(11).png" alt=""></button>
+                                            <button><img src="img/emoji(12).png" alt=""></button>
+                                            <button><img src="img/emoji(13).png" alt=""></button>
+                                            <button><img src="img/emoji(14).png" alt=""></button>
+                                            <button><img src="img/emoji(15).png" alt=""></button>
+                                            <button><img src="img/emoji(16).png" alt=""></button>
+                                            <button><img src="img/emoji(17).png" alt=""></button>
+                                            <button><img src="img/emoji(18).png" alt=""></button>
+                                            <button><img src="img/emoji(19).png" alt=""></button>
+                                            <button><img src="img/emoji(20).png" alt=""></button>
+                                            <button><img src="img/emoji(21).png" alt=""></button>
+                                            <button><img src="img/emoji(22).png" alt=""></button>
+                                            <button><img src="img/emoji(23).png" alt=""></button>
+                                            <button><img src="img/emoji(24).png" alt=""></button>
+                                            <button><img src="img/emoji(25).png" alt=""></button>
+                                            <button><img src="img/emoji(26).png" alt=""></button>
+                                            <button><img src="img/emoji(27).png" alt=""></button>
+                                        </div> <!-- end emoji-list -->
+                                    </div> <!-- end sel-emoji -->
+                                </div> <!-- end emoji -->
+                                <div class="form-inp">
+                                    <p>이름</p>
+                                    <ul class="sel-radio">
+                                        <li class="option on">Man</li>
+                                        <li class="bar">|</li>
+                                        <li class="option">Woman</li>
+                                    </ul>
+                                    <input type="text" name="" id="" class="width-100" value="홍길동" disabled>
+                                </div> <!-- end form-inp -->
+                                <div class="form-inp email-inp">
+                                    <p>아이디</p>
+                                    <input type="text" name="" id="" class="width-100" value="jksong0206@naver.com"
+                                    disabled>
+                                </div> <!-- end form-inp -->
+                                <div class="form-inp pw-inp">
+                                    <p>비밀번호</p>
+                                    <input type="text" name="" id="" class="width-100" placeholder="비밀번호 입력">
+                                    <input type="text" name="" id="" class="width-100" placeholder="비밀번호 확인">
+                                    <ul class="add-info">
+                                        <li>* 비밀번호는 영문 소문자, 대문자, 특수문자를 포함한 8~20자리 문자여야 합니다.</li>
+                                        <li>* 포털사이트 및 타사이트와 동일하거나 비슷한 암호를 설정하는 것을 삼가해주시기 바랍니다.</li>
+                                        <li>* 타사이트에서 암호와 유출 될 경우 제 3자가 회원님의 계정에 접근할 위험이 있습니다.
+                                        </li>
+                                    </ul>
+                                </div> <!-- end form-inp -->
+                                <div class="form-inp pw-inp">
+                                    <p>Pin번호 (4자리 숫자 입력)</p>
+                                    <input type="text" name="" id="" class="width-100" placeholder="Pin번호 입력">
+                                    <input type="text" name="" id="" class="width-100" placeholder="Pin 번호 확인">
+                                </div> <!-- end form-inp -->
+                                <div class="form-inp">
+                                    <p>휴대전화</p>
+                                    <input type="text" name="" id="" class="width-100" value="010-1234-1234" disabled>
+                                </div> <!-- end form-inp -->
+                                <div class="form-inp">
+                                    <p>이메일</p>
+                                    <input type="text" name="" id="" class="width-100" value="jksong0206@naver.com"
+                                    disabled>
+                                </div> <!-- end form-inp -->
+                                <div class="form-inp birth-inp">
+                                    <p>생년월일</p>
+                                    <ul class="sel-radio">
+                                        <li class="option on">Solar</li>
+                                        <li class="bar">|</li>
+                                        <li class="option">Lunar</li>
+                                    </ul>
+                                    <div class="inp-box font-0">
+                                        <input type="text" name="" id="" placeholder="1990" disabled>
+                                        <input type="text" name="" id="" placeholder="03" disabled>
+                                        <input type="text" name="" id="" placeholder="26" disabled> 
+                                    </div>
+                                </div> <!-- end form-inp -->
+                                <div class="form-inp">
+                                    <p>출금계좌</p>
+                                    <div class="act-inp font-0">
+                                        <select name="" id="">
+                                            <option value="">Bank Select</option>
+                                            <option selected value="">신한은행</option>
+                                            <option value="">우리은행</option>
+                                            <option value="">한국은행</option>
+                                            <option value="">국민은행</option>
+                                            <option value="">농협중앙회</option>
+                                            <option value="">한국시티은행</option>
+                                            <option value="">하나은행</option>
+                                            <option value="">SC제일은행</option>
+                                        </select>
+                                        <input type="text" name="" id="" placeholder="- enter exclusion"
+                                            value="1234567890123" disabled>
+                                    </div> <!-- end act-inp -->
+                                    <ul class="add-info">
+                                        <li>* 회원가입 후 거래 및 입출금을 이용하시려면 통장사본 업로드가 필요합니다. 출금계좌는 업로드 할 통장 사본과 동일해야 합니다.</li>
+                                        <li>* 등록된 이후에는 수정이 어려우니 신중히 입력해주세요.</li>
+                                    </ul>
+                                </div> <!-- end form-inp -->
+                                <div class="form-inp">
+                                    <p>신분증 사본</p>
+                                    <div class="file-inp font-0">
+                                        <div class="op-file">
+                                            <button class="fon-0" onclick="onclick=document.all.file.click()"><img
+                                                    src="img/file_open.png" alt=""><span>Click here</span></button>
+                                            <input type="file" name="file" id="file" style="display: none;">
+                                        </div> <!-- end op-file -->
+                                        <div class="file-nm">
+                                            <p>No files.</p>
+                                        </div> <!-- end file-nm -->
+                                    </div> <!-- end file-inp -->
+                                    <div class="add-info">
+                                        <ul>
+                                            <li>* 주민등록증, 운전 면허증, 여권 등</li>
+                                        </ul>
+                                    </div> <!-- end add-info -->
+                                </div> <!-- end form-inp -->
+                                <div class="form-inp">
+                                    <p>통장 사본</p>
+                                    <div class="file-inp font-0">
+                                        <div class="op-file">
+                                            <button class="fon-0" onclick="onclick=document.all.file.click()"><img
+                                                    src="img/file_open.png" alt=""><span>Click here</span></button>
+                                            <input type="file" name="file" id="file" style="display: none;">
+                                        </div> <!-- end op-file -->
+                                        <div class="file-nm">
+                                            <p>No files.</p>
+                                        </div> <!-- end file-nm -->
+                                    </div> <!-- end file-inp -->
+                                    <div class="add-info">
+                                        <ul>
+                                            <li>* 개인 입금 및 인출이 가능한 통장 사본 업로드.</li>
+                                        </ul>
+                                    </div> <!-- end add-info -->
+                                </div> <!-- end form-inp -->
+                                <div class="form-inp auto-inp">
+                                    <p>자동 변경 방지</p>
+                                    <div class="auto-box font-0">
+                                        <div class="auto-img in-block align-middle">
+                                            <img src="img/simpleCaptcha.png" alt="">
+                                        </div> <!-- end auto-img -->
+                                        <div class="prevent-txt in-block align-middle">
+                                            <div class="reset-box">
+                                                <img src="img/refresh_icon.png" alt="">
+                                                <span>Refresh</span>
+                                            </div>
+                                            <div class="automatic">
+                                                <img src="img/join_auto_default.png" alt="">
+                                                <input type="text" name="" id="" class="width-100 default">
+                                            </div>
+                                        </div> <!-- prevent-txt -->
+                                    </div> <!-- end auto-box -->
+                                </div> <!-- end form-inp -->
+                                <div class="btn-group">
+                                    <input type="button" value="취소하기">
+                                    <input type="button" value="회원가입">
+                                </div>
+                            </div> <!-- end user-info-area -->
+                        </div> <!-- end join-form -->
+                    </div> <!-- end edit-form -->
+                </div> <!-- end mp-area -->
+            </div> <!-- end content -->
+        </div> <!-- end mypage -->
+
+        <div id="m-mypage">
+            <div class="m-mp-ct">
+                <div class="user-info-form">
+                    <div class="m-enter-info">
+                        <div class="persent">
+                            <div class="txt-box">
+                                <span>회원정보 검증</span>
+                                <p>70%</p>
+                            </div> <!-- end txt-box -->
+                            <div class="bar"></div>
+                        </div> <!-- end persent -->
+                        <div class="info-att">
+                            <div class="cm-split">
+                                <ul class="on">
+                                    <li>신분증 사본</li>
+                                    <li>( 검증완료 )</li>
+                                </ul>
+                                <ul class="on">
+                                    <li>통장사본</li>
+                                    <li>( 검증완료 )</li>
+                                </ul>
+                            </div> <!-- end cm-split -->
+                            <div class="cm-split">
+                                <ul class="on">
+                                    <li>코인 출금상태</li>
+                                    <li>( 활성 )</li>
+                                </ul>
+                                <ul>
+                                    <li>원화 출금상태</li>
+                                    <li>( 비활성 )</li>
+                                </ul>
+                                <ul class="on">
+                                    <li>거래 가능상태</li>
+                                    <li>( 활성 )</li>
+                                </ul>
+                            </div> <!-- end cm-split -->
+                        </div> <!-- end info-att-->
+                    </div> <!-- end m-enter-info  -->
+                    <div class="emoji form-ct">
+                        <p class="ct-tit">Select Chatting Imoji</p>
+                        <div class="sel-emoji">
+                            <div class="sel-head">
+                                <p>Select Imoji</p>
+                            </div> <!-- end sel-head -->
+                            <div class="emoji-list">
+                                <button><img src="img/emoji(1).png" alt=""></button>
+                                <button><img src="img/emoji(2).png" alt=""></button>
+                                <button><img src="img/emoji(3).png" alt=""></button>
+                                <button><img src="img/emoji(4).png" alt=""></button>
+                                <button><img src="img/emoji(5).png" alt=""></button>
+                                <button><img src="img/emoji(6).png" alt=""></button>
+                                <button><img src="img/emoji(7).png" alt=""></button>
+                                <button><img src="img/emoji(8).png" alt=""></button>
+                                <button><img src="img/emoji(9).png" alt=""></button>
+                                <button><img src="img/emoji(10).png" alt=""></button>
+                                <button><img src="img/emoji(11).png" alt=""></button>
+                                <button><img src="img/emoji(12).png" alt=""></button>
+                                <button><img src="img/emoji(13).png" alt=""></button>
+                                <button><img src="img/emoji(14).png" alt=""></button>
+                                <button><img src="img/emoji(15).png" alt=""></button>
+                                <button><img src="img/emoji(16).png" alt=""></button>
+                                <button><img src="img/emoji(17).png" alt=""></button>
+                                <button><img src="img/emoji(18).png" alt=""></button>
+                                <button><img src="img/emoji(19).png" alt=""></button>
+                                <button><img src="img/emoji(20).png" alt=""></button>
+                                <button><img src="img/emoji(21).png" alt=""></button>
+                                <button><img src="img/emoji(22).png" alt=""></button>
+                                <button><img src="img/emoji(23).png" alt=""></button>
+                                <button><img src="img/emoji(24).png" alt=""></button>
+                                <button><img src="img/emoji(25).png" alt=""></button>
+                                <button><img src="img/emoji(26).png" alt=""></button>
+                                <button><img src="img/emoji(27).png" alt=""></button>
+                            </div> <!-- end emoji-list -->
+                        </div> <!-- end sel-emoji -->
+                    </div> <!-- end emoji -->
+                    <div class="fixed-info">
+                        <div class="selected">
+                            <ul class="font-0">
+                                <li class="on option">남자</li>
+                                <li class="bar">|</li>
+                                <li class="option">여자</li>
+                            </ul>
+                        </div> <!-- end fixed-info -->
+                        <input type="text" name="" id="" class="width-100" value="홍길동" disabled>
+                    </div> <!-- end mem-name -->
+                    <div class="id-input font-0">
+                        <input type="text" class="width-100" value="happylalala@naver.com" disabled>
+                    </div> <!-- end id-input -->
+                    <div class="pw-input">
+                        <input type="text" name="" id="" class="width-100" placeholder="비밀번호">
+                        <ul class="input-info">
+                            <li>* 비밀번호는 영문 소문자, 대문자, 특수문자를 포함한 8~20자리 문자여야 합니다.</li>
+                            <li>* 포털 사이트나 타 거래소 등 타 사이트와 동일하거나 비슷한 암호를 설정하지 마세요.</li>
+                            <li>* 타 사이트에서 암호가 유출될 경우 제 3자가 회원님의 계정에 접근할 위험이 있습니다.</li>
+                        </ul>
+                    </div> <!-- end pw-input -->
+                    <input type="text" name="" id="" class="width-100" placeholder="비밀번호 확인">
+                    <input type="text" class="width-100" placeholder="PIN 번호(4자리 숫자 입력)">
+                    <input type="text" class="width-100" placeholder="PIN 번호 확인">
+                    <input type="text" class="width-100" value="010-1234-5678" disabled>
+                    <div class="fixed-info">
+                        <div class="selected">
+                            <ul>
+                                <li class="on option">양력</li>
+                                <li class="bar">|</li>
+                                <li class="option">음력</li>
+                            </ul>
+                        </div>
+                        <input type="text" class="width-100" value="900326" disabled>
+                    </div> <!-- end fixed-info -->
+                    <div class="select-info">
+                        <input type="text" name="" id="" class="">
+                    </div> <!-- end -->
+                    <div class="account-input font-0">
+                        <select name="" id="">
+                            <option value="">출금 계좌</option>
+                            <option value="">우리은행</option>
+                            <option value="">SC 제일은행 </option>
+                            <option value="">카카오뱅크</option>
+                            <option value="">신한은행</option>
+                            <option value="">국민은행</option>
+                            <option value="">새마을금고</option>
+                            <option value="">한국은행</option>
+                            <option value="">하나은행</option>
+                        </select>
+                        <input type="text" name="" id="" placeholder="(하이픈 제외 입력)">
+                    </div>
+                    <ul class="account-info">
+                        <li>* 출금계좌는 통장사본 업로드 파일과 동일해야 합니다.</li>
+                        <li>* 등록된 이후에는 수정이 어려우니 신중히 입력해주시길 바랍니다.</li>
+                    </ul>
+                    <div class="update-file">
+                        <p class="tit">신분증 사본 <span>*</span> </p>
+                        <div class="file-inp font-0">
+                            <div class="op-file">
+                                <button class="fon-0" onclick="onclick=document.all.file.click()"><img
+                                        src="img/file_open.png" alt=""></button>
+                                <input type="file" name="file" id="file" style="display: none;">
+                                <span>Click here</span>
+                            </div> <!-- end op-file -->
+                            <div class="file-nm">
+                                <p>No files.</p>
+                            </div> <!-- end file-nm -->
+                        </div> <!-- end file-inp -->
+                    </div> <!-- end update-file -->
+                    <div class="update-file">
+                        <p class="tit">통장 사본 <span>*</span> </p>
+                        <div class="file-inp font-0">
+                            <div class="op-file">
+                                <button class="fon-0" onclick="onclick=document.all.file.click()"><img
+                                        src="img/file_open.png" alt=""></button>
+                                <input type="file" name="file" id="file" style="display: none;">
+                                <span>Click here</span>
+                            </div> <!-- end op-file -->
+                            <div class="file-nm">
+                                <p>No files.</p>
+                            </div> <!-- end file-nm -->
+                        </div> <!-- end file-inp -->
+                    </div> <!-- end update-file -->
+                    <div class="input-info">
+                        <ul>
+                            <li>* Resident registration card, driver's license, passport, etc</li>
+                        </ul>
+                    </div> <!-- end add-info -->
+                    <div class="captcha-input">
+                        <p>자동 입력 방지</p>
+                        <div class="captcha-img">
+                            <img src="img/simpleCaptcha.png" alt="">
+                        </div>
+                        <div class="input-box font-0">
+                            <input type="text" name="" id="">
+                            <input type="button" value="새로고침">
+                        </div>
+                    </div> <!-- end captcha-input -->
+                </div> <!-- end user-info-form -->
+                <div class="btn-group align-center">
+                    <input type="button" value="취소" onclick="location.href='index.html'">
+                    <input type="button" value="변경">
+                </div>
+            </div> <!-- end m-mp-ct -->
+        </div> <!-- end m-mypage -->
+
+        <footer>
+            <div class="content font-0">
+                <div class="f-info cm-foot">
+                    <div class="top-head">
+                        <div class="cp-info-area">
+                            <a class="f-logo" href="index.html"><img src="img/f_logo.png" alt=""></a>
+                            <ul>
+                                <li>고객센터</li>
+                                <li class="bar">|</li>
+                                <li>1688-5886</li>
+                                <li class="bar">|</li>
+                                <li>평일 오전 09:00 ~ 오후 06:00 (토, 일 공휴일 제외)</li>
+                                <li class="bar">|</li>
+                                <li>(주) 월드 코리아</li>
+                                <li class="bar">|</li>
+                                <li>대표 : 정정수</li>
+                                <li class="bar">|</li>
+                                <li>사업자등록번호 : 878-86-01217</li>
+                            </ul>
+                        </div> <!-- end cp-info-area -->
+                        <p>Check out PHOENIX's news on SNS</p>
+                    </div><!-- end top-head -->
+                    <div class="f-btm">
+                        <ul class="sns-icon">
+                            <li><a href="#"><img src="img/sns_twitter.png" alt=""></a></li>
+                            <li><a href="#"><img src="img/sns_facebook.png" alt=""></a></li>
+                            <li><a href="#"><img src="img/sns_naver.png" alt=""></a></li>
+                            <li><a href="#"><img src="img/sns_instar.png" alt=""></a></li>
+                            <li><a href="#"><img src="img/sns_youtube.png" alt=""></a></li>
+                        </ul>
+                        <p class="copyright">COPYRIGHT &copy; REDBIT. All Right Reserved.</p>
+                    </div>
+                </div> <!-- end f-info -->
+                <div class="f-support cm-foot">
+                    <p>고객지원</p>
+                    <ul>
+                        <li><a href="#">이용가이드</a></li>
+                        <li><a href="#">자주묻는질문</a></li>
+                        <li><a href="#">1:1 문의</a></li>
+                        <li><a href="#">공지사항</a></li>
+                        <li><a href="#">상장문의 및 제보 (이메일 주소 입력)</a></li>
+                    </ul>
+                </div> <!-- end cm-foot -->
+                <div class="ad-inquiry">
+                    <p>[ 제휴 및 광고문의 ]</p>
+                    <ul>
+                        <li><a href="#"><img src="img/ad_site_icon.png" alt=""></a></li>
+                        <li><a href="#"><img src="img/ad_site_icon2.png" alt=""></a></li>
+                        <li><a href="#"><img src="img/ad_site_icon3.png" alt=""></a></li>
+                    </ul>
+                </div> <!-- end ad-inquiry -->
+            </div> <!-- end content -->
+        </footer>
+        <div id="m-fixed-footer">
+            <ul class="flex-container align-center">
+                <li>
+                    <a href="index.html">
+                        <img src="img/m_market_icon.png" alt="">
+                        <p>홈</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="m_exchange.html">
+                        <img src="img/m_wallet_icon.png" alt="">
+                        <p>거래소</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="m_asset_status.html">
+                        <img src="img/m_invest_icon.png" alt="">
+                        <p>자산현황</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="m_balance.html">
+                        <img src="img/m_trans_icon.png" alt="">
+                        <p>입출금</p>
+                    </a>
+                </li>
+            </ul>
+        </div> <!-- end m-fixed-footer -->
+    </div> <!-- end wrap -->
+</body>
+
+</html>

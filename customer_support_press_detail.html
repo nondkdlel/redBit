@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>:: RED BIT ::</title>
+    <!-- favicon -->
+    <link href="img/favicon.png" rel="shortcut icon">
+    <link href="img/favicon.png" rel="apple-touch-icon">
+    <!-- font -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <!-- css -->
+    <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+    <!-- jQuery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- js -->
+    <script src="js/main.js"></script>
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="m-open-menu">
+            <div class="menu-container">
+                <div class="user-input">
+                    <div class="greeting-box">
+                        <p><span class="user-name">홍길동</span>님 환영합니다.</p>
+                        <a class="close-btn bg-img" href="#"></a>
+                    </div>
+                    <div class="input-group flex-container">
+                        <input class="login" type="button" value="로그인" onclick="location.href='login.html'">
+                        <input class="sign" type="button" value="회원가입" onclick="location.href='m_sign_up01.html'">
+                    </div> <!-- end input-group -->
+                </div> <!-- end user-input -->
+                <div class="menu-list">
+                    <ul>
+                        <li><a href="market.html">거래소</a></li>
+                        <li><a href="wallet.html">지갑관리</a></li>
+                        <li><a href="event_board.html">이벤트</a></li>
+                        <li><a href="customer_support_index.html">고객센터</a></li>
+                        <li><a href="#">ISO</a></li>
+                    </ul>
+                </div> <!-- end menu-list -->
+                <div class="lang-select">
+                    <ul>
+                        <li class="on">
+                            <p>한국어</p>
+                        </li>
+                        <li>
+                            <p>영어</p>
+                        </li>
+                    </ul>
+                </div> <!-- end lang-select -->
+                <div class="cs-area align-center">
+                    <p>고객센터 상담시간</p>
+                    <h3>09 : 00 ~ 18 : 00</h3>
+                </div> <!-- end cs-area -->
+            </div> <!-- end menu-container -->
+        </div> <!-- end m-open-menu -->
+        <div id="m-header">
+            <a class="home-icon bg-img" href="index.html"></a>
+            <h1 class="page-title">언론보도</h1>
+            <a class="m-menu bg-img" href="#"></a>
+        </div> <!-- end m-header -->
+        <header id="main-header" class="sub">
+            <div class="container">
+                <a href="index.html" class="logo"><img src="img/logo.png" alt=""></a>
+                <nav class="left-mu">
+                    <ul>
+                        <li><a href="exchange.html">거래소</a></li>
+                        <li><a href="wallet_mgr.html">입출금</a></li>
+                        <li><a href="event_board.html">이벤트</a></li>
+                        <li><a href="customer_support_guide.html">고객센터</a></li>
+                    </ul>
+                </nav>
+                <nav class="right-mu">
+                    <ul>
+                        <li><a href="login.html">로그인</a></li>
+                        <li><a href="sign_up.html">회원가입</a></li>
+                        <li class="lang">
+                            <div class="sel-container">
+                                <div class="sel-head">
+                                    <p>English</p>
+                                </div>
+                                <ul class="sel-list">
+                                    <li class="on">
+                                        <p>English</p>
+                                    </li>
+                                    <li>
+                                        <p>Korea</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div> <!-- end container -->
+        </header> <!-- end main-header -->
+
+        <div id="support">
+            <div class="content">
+                <aside id="aside-menu">
+                    <div class="mu-head">
+                        <h1>Customer<br>
+                            Support
+                        </h1>
+                    </div> <!-- end mu-head -->
+                    <nav>
+                        <ul>
+                            <li><a href="customer_support_guide.html">User Guide</a></li>
+                            <li><a href="customer_support_fee_info.html">Fee Info</a></li>
+                            <li><a href="customer_support_conversion.html">Coin Conversion</a></li>
+                            <li><a href="customer_support_inquiry.html">1 : 1 Inquiry</a></li>
+                            <li><a href="customer_support_notice.html">Notice</a></li>
+                            <li><a href="customer_support_faq.html">FAQ</a></li>
+                            <li class="on"><a href="customer_support_press.html">Press Coverage</a></li>
+                        </ul>
+                    </nav>
+                </aside> <!-- end aside-menu -->
+                <div class="cus-area cm-area press">
+                    <div class="location align-right">
+                        <ul>
+                            <li class="home">Home</li>
+                            <li class="route">></li>
+                            <li>Customer Support</li>
+                            <li class="route">></li>
+                            <li>Press Coverage</li>
+                        </ul>
+                    </div> <!-- end location -->
+                    <h1>Press Coverage</h1>
+                    <div class="search-box">
+                        <input type="text" name="" id="" placeholder="Please enter a Title">
+                        <button><img src="img/search_icon.png" alt=""></button>
+                    </div> <!-- end search-box -->
+                    <div class="detail-form">
+                        <div class="form-head">
+                            <p class="head-tit">[asset] How can I check the transaction status of the crypto deposit /
+                                withdrawal on the EtherScan website?</p>
+                            <p class="date">2020-10-10 / 18:03:51</p>
+                        </div> <!-- end form-head -->
+                        <div class="form-ct">
+                            <div class="download align-right">
+                                <img src="img/download.png" alt="">
+                                <div class="file-name">
+                                    <p>notice_file_1601892963571.png</p>
+                                </div>
+                            </div> <!-- end download -->
+                            <div class="textarea">
+                                <img src="img/press_ct_img.png" alt="">
+                                <p>On September 14, KIPF released a report titled “The impact of the introduction of
+                                    local
+                                    currency to the local economy”. In the report, KIPF concluded that “local currency
+                                    does not
+                                    have a significant impact on revitalizing the local economy or protecting small
+                                    businesses
+                                    in the region.”</p>
+                                <p>Regarding vitalizing the local economy, he said, “It is not very effective because
+                                    local
+                                    currency is issued in all neighboring regions.” KIPF said, “There is a short-term
+                                    effect
+                                    that
+                                    local currency may block consuming outside of the regions but it may cost
+                                    contracting the
+                                    economy in neighboring localities. If all local governments issue local currency,
+                                    only side
+                                    effects such as the issuance cost and wasted budget due to subsidies will remain.”
+                                </p>
+
+                                <p>Regarding the effect of protecting small business owners in the region, the local
+                                    currency
+                                    can only be used at affiliated stores operated by small business owners in the
+                                    region, so it
+                                    has been evaluated that some hypermarket sales are transferred to small business
+                                    owners. The
+                                    report mentioned, “However, you can use the ‘Onnuri Gift Certificates’ operated for
+                                    similar
+                                    purposes. Onnuri gift certificates can be used nationwide, which has no side effects
+                                    like
+                                    local currency.”</p>
+
+                                <p>KIPF suggested, “It is good to consider that the central government helps to issue
+                                    local
+                                    currency at a specific time and in a specific region.” For example, in regions with
+                                    a high
+                                    proportion of face-to-face service industries such as tourism, the central
+                                    government can
+                                    support subsidies for issuing local currency as the national treasury because the
+                                    damage
+                                    caused
+                                    by Corona-19 is greater than in other regions.</p>
+
+                                <p>The report said, “Even in this case, since the use of local currency is limited to
+                                    some
+                                    industries, it is necessary to take a supplement to the problem of concentrating
+                                    benefits,
+                                    and
+                                    to consider the advantages of using local currency compared to Onnuri gift
+                                    certificates of
+                                    similar nature.” In addition, he added that because issuance of local currency can
+                                    distort
+                                    various market functions, it is possible to consider a direct support method for
+                                    businesses
+                                    rather than indirect support through local currency.</p>
+
+                                <p>The governor said on Facebook, “In Jeju, we have prepared a new Jeju regional
+                                    currency policy
+                                    after long deliberation with various experts and residents. We will make it with a
+                                    policy.”
+                                </p>
+
+                                <p>번역: 김동우 기자</p>
+
+                            </div> <!-- end textarea -->
+                        </div> <!-- end form-ct -->
+                    </div> <!-- end detail-form -->
+                    <div class="btn-group align-right">
+                        <input type="button" value="List" onclick="location.href='customer_support_press.html'">
+                    </div> <!-- end btn-group -->
+                </div> <!-- end cus-area -->
+            </div> <!-- end content -->
+        </div> <!-- end support -->
+
+        <div id="m-support">
+            <div class="m-cus-ct m-press">
+                <div class="common-dt-fm">
+                    <div class="form-head">
+                        <p class="tit">용원희 제주 지사는 블록 체인 기반 현지 화폐 발행을 검토 중이다.</p>
+                        <p class="date"><span>2020-06-09</span><span>09:45:53</span></p>
+                    </div> <!-- end form-head -->
+                    <div class="form-ct">
+                        <img src="img/press_ct_img.png" alt="">
+                        <div class="form-txt">
+                            <p>On September 14, KIPF released a report titled “The impact of the introduction of local
+                                currency to the local economy”. In the report, KIPF concluded that “local currency does
+                                not have a significant impact on revitalizing the local economy or protecting small
+                                businesses in the region.”</p>
+                            <br>
+                            <p>Regarding vitalizing the local economy, he said, “It is not very effective because local
+                                currency is issued in all neighboring regions.” KIPF said, “There is a short-term effect
+                                that local currency may block consuming outside of the regions but it may cost
+                                contracting the economy in neighboring localities. If all local governments issue local
+                                currency, only side effects such as the issuance cost and wasted budget due to subsidies
+                                will remain.”</p>
+                            <br>
+                            <p>Regarding the effect of protecting small business owners in the region, the local
+                                currency can only be used at affiliated stores operated by small business owners in the
+                                region, so it has been evaluated that some hypermarket sales are transferred to small
+                                business owners. The report mentioned, “However, you can use the ‘Onnuri Gift
+                                Certificates’ operated for similar purposes. Onnuri gift certificates can be used
+                                nationwide, which has no side effects like local currency.”</p>
+                            <br>
+                            <p>KIPF suggested, “It is good to consider that the central government helps to issue local
+                                currency at a specific time and in a specific region.” For example, in regions with a
+                                high proportion of face-to-face service industries such as tourism, the central
+                                government can support subsidies for issuing local currency as the national treasury
+                                because the damage caused by Corona-19 is greater than in other regions.</p>
+                            <br>
+                            <p>The report said, “Even in this case, since the use of local currency is limited to some
+                                industries, it is necessary to take a supplement to the problem of concentrating
+                                benefits, and to consider the advantages of using local currency compared to Onnuri gift
+                                certificates of similar nature.” In addition, he added that because issuance of local
+                                currency can distort various market functions, it is possible to consider a direct
+                                support method for businesses rather than indirect support through local currency.</p>
+                            <br>
+                            <p>The report said, “Even in this case, since the use of local currency is limited to some
+                                industries, it is necessary to take a supplement to the problem of concentrating
+                                benefits, and to consider the advantages of using local currency compared to Onnuri gift
+                                certificates of similar nature.” In addition, he added that because issuance of local
+                                currency can distort various market functions, it is possible to consider a direct
+                                support method for businesses rather than indirect support through local currency.</p>
+                            <br>
+                            <p>번역: 김동우 기자</p>
+                        </div>
+                    </div>
+                    <div class="btn-group">
+                        <input class="width-100" type="button" value="목록보기"
+                            onclick="location.href='customer_support_press.html'">
+                    </div>
+                </div> <!-- end common-dt-fm -->
+            </div> <!-- m-press -->
+        </div> <!-- end m-support -->
+
+        <footer>
+            <div class="content font-0">
+                <div class="f-info cm-foot">
+                    <div class="top-head">
+                        <div class="cp-info-area">
+                            <a class="f-logo" href="index.html"><img src="img/f_logo.png" alt=""></a>
+                            <ul>
+                                <li>고객센터</li>
+                                <li class="bar">|</li>
+                                <li>1688-5886</li>
+                                <li class="bar">|</li>
+                                <li>평일 오전 09:00 ~ 오후 06:00 (토, 일 공휴일 제외)</li>
+                                <li class="bar">|</li>
+                                <li>(주) 월드 코리아</li>
+                                <li class="bar">|</li>
+                                <li>대표 : 정정수</li>
+                                <li class="bar">|</li>
+                                <li>사업자등록번호 : 878-86-01217</li>
+                            </ul>
+                        </div> <!-- end cp-info-area -->
+                        <p>Check out PHOENIX's news on SNS</p>
+                    </div><!-- end top-head -->
+                    <div class="f-btm">
+                        <ul class="sns-icon">
+                            <li><a href="#"><img src="img/sns_twitter.png" alt=""></a></li>
+                            <li><a href="#"><img src="img/sns_facebook.png" alt=""></a></li>
+                            <li><a href="#"><img src="img/sns_naver.png" alt=""></a></li>
+                            <li><a href="#"><img src="img/sns_instar.png" alt=""></a></li>
+                            <li><a href="#"><img src="img/sns_youtube.png" alt=""></a></li>
+                        </ul>
+                        <p class="copyright">COPYRIGHT &copy; REDBIT. All Right Reserved.</p>
+                    </div>
+                </div> <!-- end f-info -->
+                <div class="f-support cm-foot">
+                    <p>고객지원</p>
+                    <ul>
+                        <li><a href="#">이용가이드</a></li>
+                        <li><a href="#">자주묻는질문</a></li>
+                        <li><a href="#">1:1 문의</a></li>
+                        <li><a href="#">공지사항</a></li>
+                        <li><a href="#">상장문의 및 제보 (이메일 주소 입력)</a></li>
+                    </ul>
+                </div> <!-- end cm-foot -->
+                <div class="ad-inquiry">
+                    <p>[ 제휴 및 광고문의 ]</p>
+                    <ul>
+                        <li><a href="#"><img src="img/ad_site_icon.png" alt=""></a></li>
+                        <li><a href="#"><img src="img/ad_site_icon2.png" alt=""></a></li>
+                        <li><a href="#"><img src="img/ad_site_icon3.png" alt=""></a></li>
+                    </ul>
+                </div> <!-- end ad-inquiry -->
+            </div> <!-- end content -->
+        </footer>
+        <div id="m-fixed-footer">
+            <ul class="flex-container align-center">
+                <li>
+                    <a href="index.html">
+                        <img src="img/m_market_icon.png" alt="">
+                        <p>홈</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="m_exchange.html">
+                        <img src="img/m_wallet_icon.png" alt="">
+                        <p>거래소</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="m_asset_status.html">
+                        <img src="img/m_invest_icon.png" alt="">
+                        <p>자산현황</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="m_balance.html">
+                        <img src="img/m_trans_icon.png" alt="">
+                        <p>입출금</p>
+                    </a>
+                </li>
+            </ul>
+        </div> <!-- end m-fixed-footer -->
+    </div> <!-- end wrap -->
+</body>
+
+</html>

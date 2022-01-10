@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>:: RED BIT ::</title>
+    <!-- font -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <!-- css -->
+    <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+    <!-- jQuery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- js -->
+    <script src="js/main.js"></script>
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="m-open-menu">
+            <div class="menu-container">
+                <div class="user-input">
+                    <div class="greeting-box">
+                        <p><span class="user-name">홍길동</span>님 환영합니다.</p>
+                        <a class="close-btn bg-img" href="#"></a>
+                    </div>
+                    <div class="input-group flex-container">
+                        <input class="login" type="button" value="로그인" onclick="location.href='login.html'">
+                        <input class="sign" type="button" value="회원가입" onclick="location.href='m_sign_up01.html'">
+                    </div> <!-- end input-group -->
+                </div> <!-- end user-input -->
+                <div class="menu-list">
+                    <ul>
+                        <li><a href="market.html">거래소</a></li>
+                        <li><a href="wallet.html">지갑관리</a></li>
+                        <li><a href="event_board.html">이벤트</a></li>
+                        <li><a href="customer_support_index.html">고객센터</a></li>
+                        <li><a href="#">ISO</a></li>
+                    </ul>
+                </div> <!-- end menu-list -->
+                <div class="lang-select">
+                    <ul>
+                        <li class="on">
+                            <p>한국어</p>
+                        </li>
+                        <li>
+                            <p>영어</p>
+                        </li>
+                    </ul>
+                </div> <!-- end lang-select -->
+                <div class="cs-area align-center">
+                    <p>고객센터 상담시간</p>
+                    <h3>09 : 00 ~ 18 : 00</h3>
+                </div> <!-- end cs-area -->
+            </div> <!-- end menu-container -->
+        </div> <!-- end m-open-menu -->
+        <div id="m-header">
+            <a class="home-icon bg-img" href="index.html"></a>
+            <h1 class="page-title">문의작성</h1>
+            <a class="m-menu bg-img" href="#"></a>
+        </div> <!-- end m-header -->
+        <header id="main-header" class="sub">
+            <div class="container">
+                <a href="index.html" class="logo"><img src="img/logo.png" alt=""></a>
+                <nav class="left-mu">
+                    <ul>
+                        <li><a href="exchange.html">거래소</a></li>
+                        <li><a href="wallet_mgr.html">입출금</a></li>
+                        <li><a href="event_board.html">이벤트</a></li>
+                        <li><a href="customer_support_guide.html">고객센터</a></li>
+                    </ul>
+                </nav>
+                <nav class="right-mu">
+                    <ul>
+                        <li><a href="login.html">로그인</a></li>
+                        <li><a href="sign_up.html">회원가입</a></li>
+                        <li class="lang">
+                            <div class="sel-container">
+                                <div class="sel-head">
+                                    <p>English</p>
+                                </div>
+                                <ul class="sel-list">
+                                    <li class="on">
+                                        <p>English</p>
+                                    </li>
+                                    <li>
+                                        <p>Korea</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div> <!-- end container -->
+        </header> <!-- end main-header -->
+
+        <div id="support">
+            <div class="content">
+                <aside id="aside-menu">
+                    <div class="mu-head">
+                        <h1>Customer<br>
+                            Support
+                        </h1>
+                    </div> <!-- end mu-head -->
+                    <nav>
+                        <ul>
+                            <li><a href="customer_support_guide.html">User Guide</a></li>
+                            <li><a href="customer_support_fee_info.html">Fee Info</a></li>
+                            <li><a href="customer_support_conversion.html">Coin Conversion</a></li>
+                            <li class="on"><a href="customer_support_inquiry.html">1 : 1 Inquiry</a></li>
+                            <li><a href="customer_support_notice.html">Notice</a></li>
+                            <li><a href="customer_support_faq.html">FAQ</a></li>
+                            <li><a href="customer_support_press.html">Press Coverage</a></li>
+                        </ul>
+                    </nav>
+                </aside> <!-- end aside-menu -->
+                <div class="cus-area cm-area inquiry">
+                    <div class="location align-right">
+                        <ul>
+                            <li class="home">Home</li>
+                            <li class="route">></li>
+                            <li>Customer Support</li>
+                            <li class="route">></li>
+                            <li>1 : 1 Inquiry</li>
+                        </ul>
+                    </div> <!-- end location -->
+                    <h1>1 : 1 Inquiry</h1>
+                    <div class="inquiry-form">
+                        <div class="fr-box">
+                            <p>Counseling classification <span>*</span></p>
+                            <select class="width-100" name="inquiry_url" id="inquiry_url"
+                                onchange="javascript:inquiry(this);">
+                                <option value=" ">Please select an inquiry</option>
+                                <option value="service_propose_en">[service] service propose</option>
+                                <option value="etc_inquiry_en">[service] Other Inquiries</option>
+                                <option value="member_del_en">[Join] Membership Withdrawal</option>
+                                <option value="coin_invalid_withdraw_en">[deposit and withdrawal] coin invalid withdraw
+                                    Request</option>
+                                <option value="coin_invalid_deposit_recovery_en">[deposit and withdrawal] coin invalid
+                                    deposit Request</option>
+                                <option value="coin_invalid_deposit_en">[deposit and withdrawal] coin invalid deposit
+                                    recovery</option>
+                                <option value="cash_invalid_deposit_en">[deposit and withdrawal] cash_invalid_deposit
+                                    Request</option>
+                                <option value="cash_invalid_withdraw_en">[deposit and withdrawal] cash invalid withdraw
+                                    Request</option>
+                                <option value="phone_modify_en">[Certified] phone modify Request</option>
+                                <option value="email_modify_en">[Certified] email modify Request</option>
+                                <option value="bank_modify_en">[Certified] bank modify Request</option>
+                            </select>
+                        </div> <!-- end fr-box -->
+                        <div class="fr-box">
+                            <p>ID <span>*</span></p>
+                            <input type="text" name="" id="" class="width-100">
+                        </div>
+                        <div class="fr-box">
+                            <p>Name <span>*</span></p>
+                            <input type="text" name="" id="" class="width-100" placeholder="홍길동">
+                        </div>
+                        <div class="fr-box">
+                            <p>Consultation details <span>*</span></p>
+                            <textarea name="" id=""></textarea>
+                        </div>
+                        <div class="fr-box">
+                            <p>Upload file</p>
+                            <div class="upload font-0">
+                                <div class="file-open in-block align-top" onclick="document.all.file.click()">
+                                    <button><img src="img/file_open.png" alt=""></button>
+                                    <input type="button" value="Click here">
+                                    <input type="file" name="file" id="file" style="display: none;">
+                                </div>
+                                <div class="file-name in-block align-top">
+                                    <p>Test File Name.pdf</p>
+                                    <p>Mandoo communication test file.jpg </p>
+                                </div>
+                            </div> <!-- end upload -->
+                        </div> <!-- end fr-box -->
+                    </div> <!-- end inquiry-form -->
+                    <div class="btn-group align-right">
+                        <input type="button" value="Cancle" onclick="location.href='customer_support_inquiry.html'">
+                        <input type="button" value="Write">
+                    </div>
+                </div> <!-- end cus-area -->
+            </div> <!-- end content -->
+        </div> <!-- end support -->
+
+        <div id="m-support">
+            <div class="m-cus-ct m-inq-detail">
+                <ul>
+                    <li class="thead">상담분류</li>
+                    <li class="tbody">
+                        <select name="" id="" class="width-100">
+                            <option value="">--- 문의유형 선택 ---</option>
+                            <option value="">[ 입출금 ] 원화 출금 누락 확인 요청</option>
+                            <option value="">[ 입출금 ] 원화 입금 누락 확인 요청</option>
+                            <option value="">[ 입출금 ] 암호화폐 출금 누락 확인 요청</option>
+                            <option value="">[ 입출금 ] 암호화폐 입금 누락 확인 요청</option>
+                            <option value="">[ 입출금 ] 암호화폐 오입금 복구 요청</option>
+                            <option value="">[ 인증 ] 휴대전화번호 변경 요청</option>
+                            <option value="">[ 인증 ] 이메일 변경 요청</option>
+                            <option value="">[ 인증 ] 은행명, 계좌번호, 통장사본 정보 변경 요청</option>
+                            <option value="">[ 서비스 ] 자산 이전 신청 요청</option>
+                            <option value="">[ 서비스 ] 아질로원 서비스 개선 제안</option>
+                            <option value="">[ 서비스 ] 기타 문의 사항</option>
+                            <option value="">[ 가입 ] 회원탈퇴 요청</option>
+                        </select>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="thead">아이디</li>
+                    <li class="tbody"><input type="text" name="" id="" class="width-100"></li>
+                </ul>
+                <ul>
+                    <li class="thead">이름</li>
+                    <li class="tbody"><input type="text" name="" id="" class="width-100"></li>
+                </ul>
+                <ul>
+                    <li class="thead">상담내용</li>
+                    <li class="tbody">
+                        <textarea name="" id="" placeholder="문의사항을 입력해주세요."></textarea>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="thead">첨부파일 업로드</li>
+                    <li class="tbody"><input type="file" name="" id="" class="width-100"></li>
+                </ul>
+                <div class="btn-group align-center">
+                    <input type="button" class="b1" value="요청">
+                    <input type="button" class="b2" value="취소" onclick="location.href='customer_support_inquiry.html'">
+                </div>
+            </div> <!-- m-inq-detail -->
+        </div> <!-- end m-support -->
+
+        <footer>
+            <div class="content font-0">
+                <a class="top-icon align-center" href="#main-header">
+                    <img src="img/top_icon.png" alt="">
+                    <p>TOP</p>
+                </a>
+                <div class="f-logo foot-ct">
+                    <h3><img src="img/f_logo.png" alt=""></h3>
+                    <p>Check out REDBIT's news on SNS</p>
+                </div>
+                <div class="navi foot-ct">
+                    <h3>Navigation</h3>
+                    <ul>
+                        <li><a href="#">free Guide <span>></span></a></li>
+                    </ul>
+                </div>
+                <div class="cs-center foot-ct">
+                    <h3>CS Center</h3>
+                    <ul class="le-txt">
+                        <li>Inquiry for Listing</li>
+                        <li>Customer Support</li>
+                    </ul>
+                    <ul class="rg-txt">
+                        <li>master@redbiter.com</li>
+                        <li>Is this day incorporated In Hong Kong under the Companies Ordinance (Chapter 622 of the Laws
+                            of Hong Kong), and that this company is a limited company</li>
+                        <li>Operating hours: 9:00 a.m. to 6:00 p.m. on weekdays (excluding Saturdays and Sundays
+                            holidays)</li>
+                    </ul>
+                </div>
+            </div> <!-- end content -->
+            <p class="copyright">COPYRIGHT &copy; REDBIT. All Right Reserved.</p>
+        </footer>
+        <div id="m-fixed-footer">
+            <ul class="flex-container align-center">
+                <li>
+                    <a href="index.html">
+                        <img src="img/m_market_icon.png" alt="">
+                        <p>홈</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="m_exchange.html">
+                        <img src="img/m_wallet_icon.png" alt="">
+                        <p>거래소</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="m_asset_status.html">
+                        <img src="img/m_invest_icon.png" alt="">
+                        <p>자산현황</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="m_balance.html">
+                        <img src="img/m_trans_icon.png" alt="">
+                        <p>입출금</p>
+                    </a>
+                </li>
+            </ul>
+        </div> <!-- end m-fixed-footer -->
+    </div> <!-- end wrap -->
+</body>
+
+</html>

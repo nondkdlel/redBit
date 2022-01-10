@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>:: REDBIT ::</title>
+    <!-- 외부 CSS -->
+    <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+    <!-- jQuery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- main.js -->
+    <script src="js/main.js"></script>
+    <!-- slick-slider -->
+    <link rel="stylesheet" type="text/css" href="/plugin/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="/plugin/slick/slick-theme.css" />
+    <script type="text/javascript" src="/js/jquery.js"></script>
+    <script type="text/javascript" src="/plugin/slick/slick.js"></script>
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="m-open-menu">
+            <div class="menu-container">
+                <div class="user-input">
+                    <div class="greeting-box">
+                        <p><span class="user-name">홍길동</span>님 환영합니다.</p>
+                        <a class="close-btn bg-img" href="#"></a>
+                    </div>
+                    <div class="input-group flex-container">
+                        <input class="login" type="button" value="로그인" onclick="location.href='login.html'">
+                        <input class="sign" type="button" value="회원가입" onclick="location.href='m_sign_up01.html'">
+                    </div> <!-- end input-group -->
+                </div> <!-- end user-input -->
+                <div class="menu-list">
+                    <ul>
+                        <li><a href="market.html">거래소</a></li>
+                        <li><a href="wallet.html">지갑관리</a></li>
+                        <li><a href="customer_support_index.html">고객센터</a></li>
+                        <li><a href="#">ISO</a></li>
+                    </ul>
+                </div> <!-- end menu-list -->
+                <div class="lang-select">
+                    <ul>
+                        <li class="on">
+                            <p>한국어</p>
+                        </li>
+                        <li>
+                            <p>영어</p>
+                        </li>
+                    </ul>
+                </div> <!-- end lang-select -->
+                <div class="cs-area align-center">
+                    <p>고객센터 상담시간</p>
+                    <h3>09 : 00 ~ 18 : 00</h3>
+                </div> <!-- end cs-area -->
+            </div> <!-- end menu-container -->
+        </div> <!-- end m-open-menu -->
+        <div id="m-header">
+            <a class="home-icon bg-img" href="index.html"></a>
+            <h1 class="page-title">입출금 내역</h1>
+            <a class="m-menu bg-img" href="#"></a>
+        </div> <!-- end m-header -->
+        <div id="trans-list">
+            <div class="total-assets">
+                <ul class="flex-container">
+                    <li>총 자산 환산</li>
+                    <li class="align-right">
+                        <p class="total-amount">0 <span class="unit">KRW</span></p>
+                    </li>
+                </ul>
+            </div> <!-- end total-assets -->
+           <div class="sel-btn-group flex-container">
+               <input class="on" type="button" value="전체">
+               <input type="button" value="입금">
+               <input type="button" value="출금">
+               <input type="button" value="기타">
+           </div>
+           <div class="tr-list-area">
+               <table>
+                <colgroup>
+                    <col width="25%"> 
+                    <col width="60%">
+                    <col width="15%">  
+                </colgroup>
+                <tr>
+                    <th>코인명</th>
+                    <th>금액</th>
+                    <th>상태</th>
+                </tr>
+                <tr>
+                    <td class="none" colspan="3">내역이 존재하지 않습니다.</td>
+                </tr>
+               </table>
+           </div> <!-- end tr-list-area -->
+        </div> <!-- end trans-list -->
+        <footer>
+            <div class="container">
+                <div class="f-ct sns">
+                    <h3><a class="f-logo bg-img" href="index.html"><img src="img/logo.png" alt=""></a></h3>
+                    <p>Check out REDBIT's news on SNS</p>
+                    <ul class="align-center">
+                        <li><a href="#"><img src="img/facebook_icon.png" alt=""></a></li>
+                        <li><a href="#"><img src="img/ins_icon.png" alt=""></a></li>
+                        <li><a href="#"><img src="img/twitter_icon.png" alt=""></a></li>
+                        <li><a href="#"><img src="img/telegram_icon.png" alt=""></a></li>
+                    </ul>
+                </div> <!-- end sns -->
+                <div class="f-ct nav">
+                    <h3>NAVIGATION</h3>
+                    <a class="align-middle" href="#">수수료 안내<img class="align-middle" src="img/page_move-icon.png"
+                            alt=""></a>
+                </div> <!-- end nav -->
+                <div class="f-ct cs-center font-0">
+                    <h3>CS CENTER</h3>
+                    <ul class="width-20 align-top">
+                        <li>전화상담</li>
+                        <li>상장문의</li>
+                        <li>고객센터</li>
+                    </ul>
+                    <ul class="width-80 align-top">
+                        <li>02-867-8118 ( AM 09 : 00 ~ PM 06 : 00 )</li>
+                        <li>master@azilowon.io</li>
+                        <li>
+                            <p>서울 특별시 강남구 테헤란로 53길 22,2층</p>
+                            <p>제주도 제주시 복지로 복길 33 3층(원경빌딩)</p>
+                            <p>운영시간 : 평일 AM 09 : 00 ~ PM 06 : 00 ( 주말 및 공휴일 제외 )</p>
+                        </li>
+                    </ul>
+                </div> <!-- end cs-center -->
+                <div class="f-ct lang">
+                    <h3>LANGUAGE</h3>
+                    <ul>
+                        <li>한국어 <img class="align-middle" src="img/page_move-icon.png" alt=""></li>
+                        <li>영어 <img class="align-middle" src="img/page_move-icon.png" alt=""></li>
+                    </ul>
+                </div> <!-- end lang -->
+            </div> <!-- end container -->
+        </footer>
+        <div id="m-fixed-footer">
+            <ul class="flex-container align-center">
+                <li>
+                    <a href="index.html">
+                        <img src="img/m_market_icon.png" alt="">
+                        <p>홈</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="m_exchange.html">
+                        <img src="img/m_wallet_icon.png" alt="">
+                        <p>거래소</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="m_asset_status.html">
+                        <img src="img/m_invest_icon.png" alt="">
+                        <p>자산현황</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="m_balance.html">
+                        <img src="img/m_trans_icon.png" alt="">
+                        <p>입출금</p>
+                    </a>
+                </li>
+            </ul>
+        </div> <!-- end m-fixed-footer -->
+    </div> <!-- end wrap -->
+</body>
+
+</html>

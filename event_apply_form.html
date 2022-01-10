@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>:: Red Bit ::</title>
+    <!-- favicon -->
+    <link href="img/favicon.png" rel="shortcut icon">
+    <link href="img/favicon.png" rel="apple-touch-icon">
+    <!-- font -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <!-- css -->
+    <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+    <!-- jQuery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- js -->
+    <script src="js/main.js"></script>
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="m-open-menu">
+            <div class="menu-container">
+                <div class="user-input">
+                    <div class="greeting-box">
+                        <p><span class="user-name">홍길동</span>님 환영합니다.</p>
+                        <a class="close-btn bg-img" href="#"></a>
+                    </div>
+                    <div class="input-group flex-container">
+                        <input class="login" type="button" value="로그인" onclick="location.href='login.html'">
+                        <input class="sign" type="button" value="회원가입" onclick="location.href='m_sign_up01.html'">
+                    </div> <!-- end input-group -->
+                </div> <!-- end user-input -->
+                <div class="menu-list">
+                    <ul>
+                        <li><a href="m_exchange.html">거래소</a></li>
+                        <li><a href="m_balance.html">입출금</a></li>
+                        <li><a href="event_board.html">이벤트</a></li>
+                        <li><a href="customer_support_index.html">고객센터</a></li>
+                        <li><a href="#">ISO</a></li>
+                    </ul>
+                </div> <!-- end menu-list -->
+                <div class="lang-select">
+                    <ul>
+                        <li class="on">
+                            <p>한국어</p>
+                        </li>
+                        <li>
+                            <p>영어</p>
+                        </li>
+                    </ul>
+                </div> <!-- end lang-select -->
+                <div class="cs-area align-center">
+                    <p>고객센터 상담시간</p>
+                    <h3>09 : 00 ~ 18 : 00</h3>
+                </div> <!-- end cs-area -->
+            </div> <!-- end menu-container -->
+        </div> <!-- end m-open-menu -->
+        <div id="m-header">
+            <a class="home-icon bg-img" href="index.html"></a>
+            <h1 class="page-title">이벤트</h1>
+            <a class="m-menu bg-img" href="#"></a>
+        </div> <!-- end m-header -->
+        <header id="main-header" class="sub">
+            <div class="container">
+                <a href="index.html" class="logo"><img src="img/logo.png" alt=""></a>
+                <nav class="left-mu">
+                    <ul>
+                        <li><a href="exchange.html">거래소</a></li>
+                        <li><a href="wallet_mgr.html">입출금</a></li>
+                        <li><a href="event_board.html">이벤트</a></li>
+                        <li><a href="customer_support_guide.html">고객센터</a></li>
+                    </ul>
+                </nav>
+                <nav class="right-mu">
+                    <ul>
+                        <li><a href="login.html">로그인</a></li>
+                        <li><a href="sign_up.html">회원가입</a></li>
+                        <li class="lang">
+                            <div class="sel-container">
+                                <div class="sel-head">
+                                    <p>English</p>
+                                </div>
+                                <ul class="sel-list">
+                                    <li class="on">
+                                        <p>English</p>
+                                    </li>
+                                    <li>
+                                        <p>Korea</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div> <!-- end container -->
+        </header> <!-- end main-header -->
+
+        <div id="event">
+            <div class="content cm-area">
+                <div class="location align-right">
+                    <ul>
+                        <li class="home">Home</li>
+                        <li class="route">&gt;</li>
+                        <li>고객센터</li>
+                        <li class="route">&gt;</li>
+                        <li class="sub-title">이벤트</li>
+                    </ul>
+                </div> <!-- end location -->
+                <div class="e-board apply-fr">
+                    <h1>신청서</h1>
+                    <table>
+                        <colgroup>
+                            <col width="25%">
+                            <col width="75%">
+                        </colgroup>
+                        <tr>
+                            <th class="thead" colspan="2">
+                                <p class="tit">1차 사전판매</p>
+                                <ul class="inner-td">
+                                    <li>참여금</li>
+                                    <li>6,000 원</li>
+                                </ul>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>ID (회원아이디)</th>
+                            <td><input type="text" name="" id=""></td>
+                        </tr>
+                        <tr>
+                            <th>입금금액</th>
+                            <td><input type="text" name="" id=""></td>
+                        </tr>
+                        <tr>
+                            <th>은행 계좌번호 (신청자)</th>
+                            <td><input type="text" name="" id=""></td>
+                        </tr>
+                        <tr>
+                            <th>코인 입금 계좌 (거래소)</th>
+                            <td><input type="text" name="" id=""></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <a class="tos-btn" href="#">구매 이용약관 자세히 보기</a>
+                                <div class="box-line">
+                                    <div class="fr-noti">
+                                        <p class="">[ 투자 유의사항 ]</p>
+                                        <ul>
+                                            <li> * 레드비트는 이벤트 (사전판매)와 관련된 매매 거래 당사자가 아닙니다.</li>
+                                            <li> * 레드비트는 이벤트 참여 회원의 어떠한 행위 및 결과에 대한 책임을 지지 않습니다.</li>
+                                            <li> * 해당 이벤트의 모든 책임과 권한은 발행사 (재단)에 있습니다.</li>
+                                            <li> * 본 이벤트 진행 중 법적으로 문제가 될 수 있는 요소가 있다고 판단되거나, 시장 상황 고려 및 투자자 보호를 위해 레드비트는
+                                                해당 이벤트를 수정 및 중단 할 권리가 있습니다.</li>
+                                            <li> * 환불은 구매 후 24시간 이내에만 가능하고, 이후 환불이 불가능하여 구매를 변경하거나 취소 할 수 있습니다. <br> ( 그
+                                                외에는 토큰을 발행한 발행사 (재단)의 정책을 따릅니다. )</li>
+                                            <li> * 코인 분배 시기는 발행사(재단) 에서 정한 일정을 따릅니다.</li>
+                                        </ul>
+                                        <div class="ag-radio">
+                                            <p>코인 구매를 동의합니다.</p>
+                                            <input type="radio" name="cm_ag" id="ag_btn"><label for="ag_btn">동의</label>
+                                            <input type="radio" name="cm_ag" id="no_ag_btn"><label
+                                                for="no_ag_btn">미동의</label>
+                                        </div> <!-- end ag-radio -->
+                                    </div> <!-- end fr-noti -->
+                                </div> <!-- end box-line -->
+                            </td>
+                        </tr>
+                    </table>
+                    <div class="btm-group">
+                        <input class="cancel-btn" type="button" value="취소" onclick="location.href='event_details.html'">
+                        <input class="apply-btn" type="button" value="신청">
+                    </div> <!-- end btm-group -->
+                </div> <!-- end apply-fr -->
+            </div> <!-- end content -->
+        </div> <!-- end event -->
+
+        <div id="m-event">
+            <div class="m-apply-fr">
+                <h1>신청서</h1>
+                <div class="thead">
+                    <p class="tit">1차 사전판매</p>
+                    <ul>
+                        <li>참여금</li>
+                        <li>6,000 원</li>
+                    </ul>
+                </div> <!-- end thead -->
+                <div class="inp-area">
+                    <div class="fr-inp">
+                        <p>ID (회원아이디)</p>
+                        <input type="text" name="" id="">
+                    </div> <!-- end fr-inp -->
+                    <div class="fr-inp">
+                        <p>입금금액</p>
+                        <input type="text" name="" id="">
+                    </div> <!-- end fr-inp -->
+                    <div class="fr-inp">
+                        <p>은행 계좌번호 (신청자)</p>
+                        <input type="text" name="" id="">
+                    </div> <!-- end fr-inp -->
+                    <div class="fr-inp">
+                        <p>코인 입금 계좌 (거래소)</p>
+                        <input type="text" name="" id="">
+                    </div> <!-- end fr-inp -->
+                </div> <!-- end inp-area -->
+                <div class="noti-area">
+                    <a class="tos-btn" href="#">구매 이용약관 자세히 보기</a>
+                    <div class="fr-noti">
+                        <p class="">[ 투자 유의사항 ]</p>
+                        <ul>
+                            <li> * 레드비트는 이벤트 (사전판매)와 관련된 매매 거래 당사자가 아닙니다.</li>
+                            <li> * 레드비트는 이벤트 참여 회원의 어떠한 행위 및 결과에 대한 책임을 지지 않습니다.</li>
+                            <li> * 해당 이벤트의 모든 책임과 권한은 발행사 (재단)에 있습니다.</li>
+                            <li> * 본 이벤트 진행 중 법적으로 문제가 될 수 있는 요소가 있다고 판단되거나, 시장 상황 고려 및 투자자 보호를 위해 레드비트는 해당 이벤트를 수정 및 중단
+                                할 권리가 있습니다.</li>
+                            <li> * 환불은 구매 후 24시간 이내에만 가능하고, 이후 환불이 불가능하여 구매를 변경하거나 취소 할 수 있습니다. <br> ( 그 외에는 토큰을 발행한 발행사
+                                (재단)의 정책을 따릅니다. )</li>
+                            <li> * 코인 분배 시기는 발행사(재단) 에서 정한 일정을 따릅니다.</li>
+                        </ul>
+                        <div class="ag-radio">
+                            <p>코인 구매를 동의합니다.</p>
+                            <input type="radio" name="m_cm_ag" id="m_ag"><label for="m_ag">동의</label>
+                            <input type="radio" name="m_cm_ag" id="m_no_ag"><label for="m_no_ag">미동의</label>
+                        </div> <!-- end ag-radio -->
+                    </div> <!-- end fr-noti -->
+                </div> <!-- end noti-area -->
+                <div class="btm-group flex-container">
+                    <input class="cancel-btn" type="button" value="취소" onclick="location.href='event_details.html'">
+                    <input class="apply-btn" type="button" value="신청">
+                </div> <!-- end btm-group -->
+            </div> <!-- end apply-fr -->
+        </div> <!-- end m-event -->
+
+        <footer>
+            <div class="content font-0">
+                <div class="f-info cm-foot">
+                    <div class="top-head">
+                        <div class="cp-info-area">
+                            <a class="f-logo" href="index.html"><img src="img/f_logo.png" alt=""></a>
+                            <ul>
+                                <li>고객센터</li>
+                                <li class="bar">|</li>
+                                <li>1688-5886</li>
+                                <li class="bar">|</li>
+                                <li>평일 오전 09:00 ~ 오후 06:00 (토, 일 공휴일 제외)</li>
+                                <li class="bar">|</li>
+                                <li>(주) 월드 코리아</li>
+                                <li class="bar">|</li>
+                                <li>대표 : 정정수</li>
+                                <li class="bar">|</li>
+                                <li>사업자등록번호 : 878-86-01217</li>
+                            </ul>
+                        </div> <!-- end cp-info-area -->
+                        <p>Check out PHOENIX's news on SNS</p>
+                    </div><!-- end top-head -->
+                    <div class="f-btm">
+                        <ul class="sns-icon">
+                            <li><a href="#"><img src="img/sns_twitter.png" alt=""></a></li>
+                            <li><a href="#"><img src="img/sns_facebook.png" alt=""></a></li>
+                            <li><a href="#"><img src="img/sns_naver.png" alt=""></a></li>
+                            <li><a href="#"><img src="img/sns_instar.png" alt=""></a></li>
+                            <li><a href="#"><img src="img/sns_youtube.png" alt=""></a></li>
+                        </ul>
+                        <p class="copyright">COPYRIGHT &copy; REDBIT. All Right Reserved.</p>
+                    </div>
+                </div> <!-- end f-info -->
+                <div class="f-support cm-foot">
+                    <p>고객지원</p>
+                    <ul>
+                        <li><a href="#">이용가이드</a></li>
+                        <li><a href="#">자주묻는질문</a></li>
+                        <li><a href="#">1:1 문의</a></li>
+                        <li><a href="#">공지사항</a></li>
+                        <li><a href="#">상장문의 및 제보 (이메일 주소 입력)</a></li>
+                    </ul>
+                </div> <!-- end cm-foot -->
+                <div class="ad-inquiry">
+                    <p>[ 제휴 및 광고문의 ]</p>
+                    <ul>
+                        <li><a href="#"><img src="img/ad_site_icon.png" alt=""></a></li>
+                        <li><a href="#"><img src="img/ad_site_icon2.png" alt=""></a></li>
+                        <li><a href="#"><img src="img/ad_site_icon3.png" alt=""></a></li>
+                    </ul>
+                </div> <!-- end ad-inquiry -->
+            </div> <!-- end content -->
+        </footer>
+        <div id="m-fixed-footer">
+            <ul class="flex-container align-center">
+                <li>
+                    <a href="index.html">
+                        <img src="img/m_market_icon.png" alt="">
+                        <p>홈</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="m_exchange.html">
+                        <img src="img/m_wallet_icon.png" alt="">
+                        <p>거래소</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="m_asset_status.html">
+                        <img src="img/m_invest_icon.png" alt="">
+                        <p>자산현황</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="m_balance.html">
+                        <img src="img/m_trans_icon.png" alt="">
+                        <p>입출금</p>
+                    </a>
+                </li>
+            </ul>
+        </div> <!-- end m-fixed-footer -->
+    </div> <!-- end wrap -->
+</body>
+
+</html>

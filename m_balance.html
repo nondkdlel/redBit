@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>:: Red Bit ::</title>
+    <!-- favicon -->
+    <link href="img/favicon.png" rel="shortcut icon">
+    <link href="img/favicon.png" rel="apple-touch-icon">
+    <!-- 외부 CSS -->
+    <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+    <!-- jQuery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- main.js -->
+    <script src="js/main.js"></script>
+    <!-- slick-slider -->
+    <link rel="stylesheet" type="text/css" href="/plugin/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="/plugin/slick/slick-theme.css" />
+    <script type="text/javascript" src="/js/jquery.js"></script>
+    <script type="text/javascript" src="/plugin/slick/slick.js"></script>
+
+    <script>
+        jQuery(document).ready(function ($) {
+
+            var body_height = $("body").outerHeight();
+            var m_head_height = $("#m-header.m-trans-head").outerHeight();
+            var foot_height = $("#m-fixed-footer").outerHeight();
+
+            var content_height = body_height - m_head_height - - foot_height
+
+            $("#m-balance").css("height", content_height);
+
+        });
+    </script>
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="m-open-menu">
+            <div class="menu-container">
+                <div class="user-input">
+                    <div class="greeting-box">
+                        <p><span class="user-name">홍길동</span>님 환영합니다.</p>
+                        <a class="close-btn bg-img" href="#"></a>
+                    </div>
+                    <div class="input-group flex-container">
+                        <input class="login" type="button" value="로그인" onclick="location.href='login.html'">
+                        <input class="sign" type="button" value="회원가입" onclick="location.href='m_sign_up01.html'">
+                    </div> <!-- end input-group -->
+                </div> <!-- end user-input -->
+                <div class="menu-list">
+                    <ul>
+                        <li><a href="m_exchange.html">거래소</a></li>
+                        <li><a href="m_balance.html">입출금</a></li>
+                        <li><a href="customer_support_index.html">고객센터</a></li>
+                        <li><a href="#">ISO</a></li>
+                    </ul>
+                </div> <!-- end menu-list -->
+                <div class="lang-select">
+                    <ul>
+                        <li class="on">
+                            <p>한국어</p>
+                        </li>
+                        <li>
+                            <p>영어</p>
+                        </li>
+                    </ul>
+                </div> <!-- end lang-select -->
+                <div class="cs-area align-center">
+                    <p>고객센터 상담시간</p>
+                    <h3>09 : 00 ~ 18 : 00</h3>
+                </div> <!-- end cs-area -->
+            </div> <!-- end menu-container -->
+        </div> <!-- end m-open-menu -->
+        <div id="m-header" class="m-trans-head">
+            <a class="back-icon bg-img" href="index.html"></a>
+            <h1>입출금</h1>
+            <a class="home-icon bg-img" href="index.html"></a>
+            <a class="m-menu bg-img" href="#"></a>
+        </div> <!-- end m-header -->
+        <div id="m-balance">
+            <div class="cm-hold-wallet">
+                <div class="user-function">
+                    <div class="hold-check in-block align-middle">
+                        <input type="radio" name="hold_on" id="hold_on">
+                        <label for="hold_on">보유코인만 보기</label>
+                    </div> <!-- end hold-check -->
+                    <div class="sch-box in-block align-middle">
+                        <input type="text" name="" id="" placeholder="검색">
+                        <a class="sch-icon" href="#"><img src="img/ex_sch_icon.png" alt=""></a>
+                    </div> <!-- end sch-box -->
+                </div> <!-- end user-function -->
+                <div class="wrap-thead">
+                    <table>
+                        <colgroup>
+                            <col width="50%">
+                            <col width="50%">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>자산</th>
+                                <th>보유잔고</th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div> <!-- end wrap-thead -->
+                <div class="wrap-tbody">
+                    <table>
+                        <colgroup>
+                            <col width="50%">
+                            <col width="50%">
+                        </colgroup>
+                        <tbody>
+                            <tr onclick="location.href='m_balance_detail.html'">
+                                <td class="coin-info">
+                                    <img src="img/red_coin_icon.png" alt="">
+                                    <p>레드코인</p>
+                                </td>
+                                <td class="coin-wallet">
+                                    <p>0.00000000</p>
+                                </td>
+                            </tr>
+                            <tr onclick="location.href='m_balance_detail.html'">
+                                <td class="coin-info">
+                                    <img src="img/red_coin_icon.png" alt="">
+                                    <p>레드코인</p>
+                                </td>
+                                <td class="coin-wallet">
+                                    <p>0.00000000</p>
+                                </td>
+                            </tr>
+                            <tr onclick="location.href='m_balance_detail.html'">
+                                <td class="coin-info">
+                                    <img src="img/bit_coin_icon.png" alt="">
+                                    <p>비트코인</p>
+                                </td>
+                                <td class="coin-wallet">
+                                    <p>0.00000000</p>
+                                </td>
+                            </tr>
+                            <tr onclick="location.href='m_balance_detail.html'">
+                                <td class="coin-info">
+                                    <img src="img/eth_coin_icon.png" alt="">
+                                    <p>이더리움</p>
+                                </td>
+                                <td class="coin-wallet">
+                                    <p>0.00000000</p>
+                                </td>
+                            </tr>
+                            <tr onclick="location.href='m_balance_detail.html'">
+                                <td class="coin-info">
+                                    <img src="img/bit_coin_icon.png" alt="">
+                                    <p>비트코인</p>
+                                </td>
+                                <td class="coin-wallet">
+                                    <p>0.00000000</p>
+                                </td>
+                            </tr>
+                            <tr onclick="location.href='m_balance_detail.html'">
+                                <td class="coin-info">
+                                    <img src="img/eth_coin_icon.png" alt="">
+                                    <p>이더리움</p>
+                                </td>
+                                <td class="coin-wallet">
+                                    <p>0.00000000</p>
+                                </td>
+                            </tr>
+                            <tr onclick="location.href='m_balance_detail.html'">
+                                <td class="coin-info">
+                                    <img src="img/bit_coin_icon.png" alt="">
+                                    <p>비트코인</p>
+                                </td>
+                                <td class="coin-wallet">
+                                    <p>0.00000000</p>
+                                </td>
+                            </tr>
+                            <tr onclick="location.href='m_balance_detail.html'">
+                                <td class="coin-info">
+                                    <img src="img/eth_coin_icon.png" alt="">
+                                    <p>이더리움</p>
+                                </td>
+                                <td class="coin-wallet">
+                                    <p>0.00000000</p>
+                                </td>
+                            </tr>
+                            <tr onclick="location.href='m_balance_detail.html'">
+                                <td class="coin-info">
+                                    <img src="img/red_coin_icon.png" alt="">
+                                    <p>레드코인</p>
+                                </td>
+                                <td class="coin-wallet">
+                                    <p>0.00000000</p>
+                                </td>
+                            </tr>
+                            <tr onclick="location.href='m_balance_detail.html'">
+                                <td class="coin-info">
+                                    <img src="img/red_coin_icon.png" alt="">
+                                    <p>레드코인</p>
+                                </td>
+                                <td class="coin-wallet">
+                                    <p>0.00000000</p>
+                                </td>
+                            </tr>
+                            <tr onclick="location.href='m_balance_detail.html'">
+                                <td class="coin-info">
+                                    <img src="img/bit_coin_icon.png" alt="">
+                                    <p>비트코인</p>
+                                </td>
+                                <td class="coin-wallet">
+                                    <p>0.00000000</p>
+                                </td>
+                            </tr>
+                            <tr onclick="location.href='m_balance_detail.html'">
+                                <td class="coin-info">
+                                    <img src="img/eth_coin_icon.png" alt="">
+                                    <p>이더리움</p>
+                                </td>
+                                <td class="coin-wallet">
+                                    <p>0.00000000</p>
+                                </td>
+                            </tr>
+                            <tr onclick="location.href='m_balance_detail.html'">
+                                <td class="coin-info">
+                                    <img src="img/bit_coin_icon.png" alt="">
+                                    <p>비트코인</p>
+                                </td>
+                                <td class="coin-wallet">
+                                    <p>0.00000000</p>
+                                </td>
+                            </tr>
+                            <tr onclick="location.href='m_balance_detail.html'">
+                                <td class="coin-info">
+                                    <img src="img/eth_coin_icon.png" alt="">
+                                    <p>이더리움</p>
+                                </td>
+                                <td class="coin-wallet">
+                                    <p>0.00000000</p>
+                                </td>
+                            </tr>
+                            <tr onclick="location.href='m_balance_detail.html'">
+                                <td class="coin-info">
+                                    <img src="img/bit_coin_icon.png" alt="">
+                                    <p>비트코인</p>
+                                </td>
+                                <td class="coin-wallet">
+                                    <p>0.00000000</p>
+                                </td>
+                            </tr>
+                            <tr onclick="location.href='m_balance_detail.html'">
+                                <td class="coin-info">
+                                    <img src="img/eth_coin_icon.png" alt="">
+                                    <p>이더리움</p>
+                                </td>
+                                <td class="coin-wallet">
+                                    <p>0.00000000</p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div> <!-- end wrap-tbody -->
+            </div> <!-- end cm-hold-wallet -->
+        </div> <!-- end m-balance -->
+        <div id="m-fixed-noti">
+            <div class="noti-icon align-center"><span>NOTICE</span></div>
+            <p>[공지사항] 금융사기 주의 안내</p>
+            <button><img src="img/close-btn.png" alt=""></button>
+        </div> <!-- end fixed-noti -->
+        <div id="m-fixed-footer">
+            <ul class="flex-container align-center">
+                <li>
+                    <a href="index.html">
+                        <img src="img/m_market_icon.png" alt="">
+                        <p>홈</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="m_exchange.html">
+                        <img src="img/m_wallet_icon.png" alt="">
+                        <p>거래소</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="m_asset_status.html">
+                        <img src="img/m_invest_icon.png" alt="">
+                        <p>자산현황</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="m_balance.html">
+                        <img src="img/m_trans_icon.png" alt="">
+                        <p>입출금</p>
+                    </a>
+                </li>
+            </ul>
+        </div> <!-- end m-fixed-footer -->
+    </div> <!-- end wrap -->
+</body>
+
+</html>

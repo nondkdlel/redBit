@@ -1,0 +1,1653 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>:: RED BIT ::</title>
+    <!-- favicon -->
+    <link href="img/favicon.png" rel="shortcut icon">
+    <link href="img/favicon.png" rel="apple-touch-icon">
+    <!-- font -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <!-- css -->
+    <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+    <!-- jQuery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- js -->
+    <script src="js/main.js"></script>
+    <!-- scrollbar -->
+    <link rel="stylesheet" href="plugin/scrollbar/jquery.mCustomScrollbar.css">
+    <script src="plugin/scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script>
+        $("#exchange .fixed-mode-btn p").on("click", function () {
+            $("#exchange").toggleClass("light");
+        });
+    </script>
+</head>
+
+<body>
+    <div id="wrap" class="wrap-bg">
+        <header id="main-header" class="sub">
+            <div class="container">
+                <a href="index.html" class="logo"><img src="img/logo.png" alt=""></a>
+                <nav class="left-mu">
+                    <ul>
+                        <li><a href="exchange.html">거래소</a></li>
+                        <li><a href="wallet_mgr.html">입출금</a></li>
+                        <li><a href="event_board.html">이벤트</a></li>
+                        <li><a href="customer_support_guide.html">고객센터</a></li>
+                    </ul>
+                </nav>
+                <nav class="right-mu">
+                    <ul>
+                        <li><a href="login.html">로그인</a></li>
+                        <li><a href="sign_up.html">회원가입</a></li>
+                        <li class="lang">
+                            <div class="sel-container">
+                                <div class="sel-head">
+                                    <p>English</p>
+                                </div>
+                                <ul class="sel-list">
+                                    <li class="on">
+                                        <p>English</p>
+                                    </li>
+                                    <li>
+                                        <p>Korea</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div> <!-- end container -->
+        </header> <!-- end main-header -->
+
+        <div id="exchange">
+            <div class="ex-container">
+                <button class="fixed-mode-btn" onclick="mode_Btn"><p>라이트 모드</p></button>
+                <div class="le-area">
+                    <div class="noti-area common-ct">
+                        <p><span>[Notice]</span>Redbit International Exchange Inspection Guide</p>
+                        <button><img src="img/noti_close_btn.png" alt=""></button>
+                    </div> <!-- end noti-area -->
+                    <div class="tr-chart-info common-ct font-0">
+                        <div class="coin-info in-block align-middle font-0">
+                            <div class="coin-img in-block align-middle"><img src="img/bit_coin_icon.png" alt=""></div>
+                            <div class="coin-nm in-block align-middle">
+                                <p>BTC/USDT</p>
+                                <span>Bitcoin</span>
+                            </div>
+                        </div> <!-- end coin-info -->
+                        <div class="fluct-price in-block align-middle">
+                            <p>1,312,526.3 USDT</p>
+                            <ul class="font-0">
+                                <li>13,906,000 KRW</li>
+                                <li class="updown Up"><span>▲</span>+1.3%(+155,705.42)</li>
+                            </ul>
+                        </div> <!-- end fluct-price -->
+                        <div class="dt-tr-wrap in-block align-middle">
+                            <div class="dt-price flex-container">
+                                <div class="high-price common-box">
+                                    <span>high</span>
+                                    <ul>
+                                        <li class="usdt">1,327,111.89 USDT</li>
+                                        <li>13,906,000 KRW</li>
+                                    </ul>
+                                </div> <!-- end high-price -->
+                                <div class="low-price common-box">
+                                    <span>Low</span>
+                                    <ul>
+                                        <li class="usdt">1,127,123.3 USDT</li>
+                                        <li>9,926,000 KRW</li>
+                                    </ul>
+                                </div><!--  end low-price  -->
+                            </div> <!-- end dt-price -->
+                            <div class="tr-add-info">
+                                <ul>
+                                    <li>거래량</li>
+                                    <li>1,650 BTC</li>
+                                </ul>
+                                <ul>
+                                    <li>거래대금</li>
+                                    <li>24,286,833,618 KRW</li>
+                                </ul>
+                            </div> <!-- end tr-add-info -->
+                        </div> <!-- end dt-tr-wrap -->
+                    </div> <!-- end tr-chart-info -->
+                    <div class="trade-chart common-ct">
+                        <img src="img/coin_chart_img.png" alt="">
+                    </div>
+                    <div class="ex-share-wrap">
+                        <div class="contract-dt common-ct">
+                            <table>
+                                <colgroup>
+                                    <col width="42%">
+                                    <col width="30%">
+                                    <col width="28%">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th>Time</th>
+                                        <th>Price(USDT)</th>
+                                        <th>Amount</th>
+                                    </tr>
+                                </thead>
+                            </table>
+                            <div class="t-scroll mCustomScrollbar" data-mcs-theme="minimal">
+                                <table>
+                                    <colgroup>
+                                        <col width="42%">
+                                        <col width="30%">
+                                        <col width="28%">
+                                    </colgroup>
+                                    <tbody>
+                                        <tr class="Up-area">
+                                            <td class="trans-tm">
+                                                <span class="date">10.16</span>
+                                                <span class="time">01:44</span>
+                                            </td>
+                                            <td class="p-updown Up">11526.82</td>
+                                            <td class="amount">2.32</td>
+                                        </tr>
+                                        <tr class="Up-area">
+                                            <td class="trans-tm">
+                                                <span class="date">10.16</span>
+                                                <span class="time">01:44</span>
+                                            </td>
+                                            <td class="p-updown Up">11526.82</td>
+                                            <td class="amount">2.32</td>
+                                        </tr>
+                                        <tr class="Down-area">
+                                            <td class="trans-tm">
+                                                <span class="date">10.16</span>
+                                                <span class="time">01:44</span>
+                                            </td>
+                                            <td class="p-updown Down">11526.72</td>
+                                            <td class="amount">2.32</td>
+                                        </tr>
+                                        <tr class="Down-area">
+                                            <td class="trans-tm">
+                                                <span class="date">10.16</span>
+                                                <span class="time">01:44</span>
+                                            </td>
+                                            <td class="p-updown Down">11526.72</td>
+                                            <td class="amount">2.32</td>
+                                        </tr>
+                                        <tr class="Up-area">
+                                            <td class="trans-tm">
+                                                <span class="date">10.16</span>
+                                                <span class="time">01:44</span>
+                                            </td>
+                                            <td class="p-updown Up">11526.82</td>
+                                            <td class="amount">2.32</td>
+                                        </tr>
+                                        <tr class="Up-area">
+                                            <td class="trans-tm">
+                                                <span class="date">10.16</span>
+                                                <span class="time">01:44</span>
+                                            </td>
+                                            <td class="p-updown Up">11526.82</td>
+                                            <td class="amount">2.32</td>
+                                        </tr>
+                                        <tr class="Up-area">
+                                            <td class="trans-tm">
+                                                <span class="date">10.16</span>
+                                                <span class="time">01:44</span>
+                                            </td>
+                                            <td class="p-updown Up">11526.82</td>
+                                            <td class="amount">2.32</td>
+                                        </tr>
+                                        <tr class="Down-area">
+                                            <td class="trans-tm">
+                                                <span class="date">10.16</span>
+                                                <span class="time">01:44</span>
+                                            </td>
+                                            <td class="p-updown Down">11526.72</td>
+                                            <td class="amount">2.32</td>
+                                        </tr>
+                                        <tr class="Down-area">
+                                            <td class="trans-tm">
+                                                <span class="date">10.16</span>
+                                                <span class="time">01:44</span>
+                                            </td>
+                                            <td class="p-updown Down">11526.72</td>
+                                            <td class="amount">2.32</td>
+                                        </tr>
+                                        <tr class="Up-area">
+                                            <td class="trans-tm">
+                                                <span class="date">10.16</span>
+                                                <span class="time">01:44</span>
+                                            </td>
+                                            <td class="p-updown Up">11526.82</td>
+                                            <td class="amount">2.32</td>
+                                        </tr>
+                                        <tr class="Up-area">
+                                            <td class="trans-tm">
+                                                <span class="date">10.16</span>
+                                                <span class="time">01:44</span>
+                                            </td>
+                                            <td class="p-updown Up">11526.82</td>
+                                            <td class="amount">2.32</td>
+                                        </tr>
+                                        <tr class="Up-area">
+                                            <td class="trans-tm">
+                                                <span class="date">10.16</span>
+                                                <span class="time">01:44</span>
+                                            </td>
+                                            <td class="p-updown Up">11526.82</td>
+                                            <td class="amount">2.32</td>
+                                        </tr>
+                                        <tr class="Down-area">
+                                            <td class="trans-tm">
+                                                <span class="date">10.16</span>
+                                                <span class="time">01:44</span>
+                                            </td>
+                                            <td class="p-updown Down">11526.72</td>
+                                            <td class="amount">2.32</td>
+                                        </tr>
+                                        <tr class="Down-area">
+                                            <td class="trans-tm">
+                                                <span class="date">10.16</span>
+                                                <span class="time">01:44</span>
+                                            </td>
+                                            <td class="p-updown Down">11526.72</td>
+                                            <td class="amount">2.32</td>
+                                        </tr>
+                                        <tr class="Up-area">
+                                            <td class="trans-tm">
+                                                <span class="date">10.16</span>
+                                                <span class="time">01:44</span>
+                                            </td>
+                                            <td class="p-updown Up">11526.82</td>
+                                            <td class="amount">2.32</td>
+                                        </tr>
+                                        <tr class="Up-area">
+                                            <td class="trans-tm">
+                                                <span class="date">10.16</span>
+                                                <span class="time">01:44</span>
+                                            </td>
+                                            <td class="p-updown Up">11526.82</td>
+                                            <td class="amount">2.32</td>
+                                        </tr>
+                                        <tr class="Up-area">
+                                            <td class="trans-tm">
+                                                <span class="date">10.16</span>
+                                                <span class="time">01:44</span>
+                                            </td>
+                                            <td class="p-updown Up">11526.82</td>
+                                            <td class="amount">2.32</td>
+                                        </tr>
+                                        <tr class="Down-area">
+                                            <td class="trans-tm">
+                                                <span class="date">10.16</span>
+                                                <span class="time">01:44</span>
+                                            </td>
+                                            <td class="p-updown Down">11526.72</td>
+                                            <td class="amount">2.32</td>
+                                        </tr>
+                                        <tr class="Down-area">
+                                            <td class="trans-tm">
+                                                <span class="date">10.16</span>
+                                                <span class="time">01:44</span>
+                                            </td>
+                                            <td class="p-updown Down">11526.72</td>
+                                            <td class="amount">2.32</td>
+                                        </tr>
+                                        <tr class="Up-area">
+                                            <td class="trans-tm">
+                                                <span class="date">10.16</span>
+                                                <span class="time">01:44</span>
+                                            </td>
+                                            <td class="p-updown Up">11526.82</td>
+                                            <td class="amount">2.32</td>
+                                        </tr>
+                                        <tr class="Up-area">
+                                            <td class="trans-tm">
+                                                <span class="date">10.16</span>
+                                                <span class="time">01:44</span>
+                                            </td>
+                                            <td class="p-updown Up">11526.82</td>
+                                            <td class="amount">2.32</td>
+                                        </tr>
+                                        <tr class="Up-area">
+                                            <td class="trans-tm">
+                                                <span class="date">10.16</span>
+                                                <span class="time">01:44</span>
+                                            </td>
+                                            <td class="p-updown Up">11526.82</td>
+                                            <td class="amount">2.32</td>
+                                        </tr>
+                                        <tr class="Down-area">
+                                            <td class="trans-tm">
+                                                <span class="date">10.16</span>
+                                                <span class="time">01:44</span>
+                                            </td>
+                                            <td class="p-updown Down">11526.72</td>
+                                            <td class="amount">2.32</td>
+                                        </tr>
+                                        <tr class="Down-area">
+                                            <td class="trans-tm">
+                                                <span class="date">10.16</span>
+                                                <span class="time">01:44</span>
+                                            </td>
+                                            <td class="p-updown Down">11526.72</td>
+                                            <td class="amount">2.32</td>
+                                        </tr>
+                                        <tr class="Up-area">
+                                            <td class="trans-tm">
+                                                <span class="date">10.16</span>
+                                                <span class="time">01:44</span>
+                                            </td>
+                                            <td class="p-updown Up">11526.82</td>
+                                            <td class="amount">2.32</td>
+                                        </tr>
+                                        <tr class="Up-area">
+                                            <td class="trans-tm">
+                                                <span class="date">10.16</span>
+                                                <span class="time">01:44</span>
+                                            </td>
+                                            <td class="p-updown Up">11526.82</td>
+                                            <td class="amount">2.32</td>
+                                        </tr>
+                                        <tr class="Up-area">
+                                            <td class="trans-tm">
+                                                <span class="date">10.16</span>
+                                                <span class="time">01:44</span>
+                                            </td>
+                                            <td class="p-updown Up">11526.82</td>
+                                            <td class="amount">2.32</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div> <!-- end contract-dt -->
+                        <div class="trade-order common-ct">
+                            <table>
+                                <colgroup>
+                                    <col width="25%">
+                                    <col width="50%">
+                                    <col width="25%">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th>Price(USDT)</th>
+                                        <th>Amount</th>
+                                        <th>Change</th>
+                                    </tr>
+                                </thead>
+                            </table>
+                            <div class="t-scroll mCustomScrollbar" data-mcs-theme="minimal">
+                                <table>
+                                    <colgroup>
+                                        <col width="25%">
+                                        <col width="50%">
+                                        <col width="25%">
+                                    </colgroup>
+                                    <tbody>
+                                        <tr class="sell-gp">
+                                            <td class="p-usdt">11,829.3</td>
+                                            <td class="amount">
+                                                <div class="am-graph">
+                                                    <div class="graph">
+                                                        <span>5.23</span>
+                                                    </div>
+                                                </div> <!-- end am-graph -->
+                                            </td>
+                                            <td class="chg-Down">-0.48%</td>
+                                        </tr>
+                                        <tr class="sell-gp">
+                                            <td class="p-usdt">11,829.3</td>
+                                            <td class="amount">
+                                                <div class="am-graph">
+                                                    <div class="graph">
+                                                        <span>5.23</span>
+                                                    </div>
+                                                </div> <!-- end am-graph -->
+                                            </td>
+                                            <td class="chg-Up">+0.01%</td>
+                                        </tr>
+                                        <tr class="sell-gp">
+                                            <td class="p-usdt">11,829.3</td>
+                                            <td class="amount">
+                                                <div class="am-graph">
+                                                    <div class="graph">
+                                                        <span>5.23</span>
+                                                    </div>
+                                                </div> <!-- end am-graph -->
+                                            </td>
+                                            <td class="chg-Up">+0.01%</td>
+                                        </tr>
+                                        <tr class="sell-gp">
+                                            <td class="p-usdt">11,829.3</td>
+                                            <td class="amount">
+                                                <div class="am-graph">
+                                                    <div class="graph">
+                                                        <span>5.23</span>
+                                                    </div>
+                                                </div> <!-- end am-graph -->
+                                            </td>
+                                            <td class="chg-Up">+0.01%</td>
+                                        </tr>
+                                        <tr class="sell-gp">
+                                            <td class="p-usdt">11,829.3</td>
+                                            <td class="amount">
+                                                <div class="am-graph">
+                                                    <div class="graph">
+                                                        <span>5.23</span>
+                                                    </div>
+                                                </div> <!-- end am-graph -->
+                                            </td>
+                                            <td class="chg-Down">-0.48%</td>
+                                        </tr>
+                                        <tr class="sell-gp">
+                                            <td class="p-usdt">11,829.3</td>
+                                            <td class="amount">
+                                                <div class="am-graph">
+                                                    <div class="graph">
+                                                        <span>5.23</span>
+                                                    </div>
+                                                </div> <!-- end am-graph -->
+                                            </td>
+                                            <td class="chg-Up">+0.01%</td>
+                                        </tr>
+                                        <tr class="sell-gp">
+                                            <td class="p-usdt">11,829.3</td>
+                                            <td class="amount">
+                                                <div class="am-graph">
+                                                    <div class="graph">
+                                                        <span>5.23</span>
+                                                    </div>
+                                                </div> <!-- end am-graph -->
+                                            </td>
+                                            <td class="chg-Up">+0.01%</td>
+                                        </tr>
+                                        <tr class="sell-gp">
+                                            <td class="p-usdt">11,829.3</td>
+                                            <td class="amount">
+                                                <div class="am-graph">
+                                                    <div class="graph">
+                                                        <span>5.23</span>
+                                                    </div>
+                                                </div> <!-- end am-graph -->
+                                            </td>
+                                            <td class="chg-Down">-0.48%</td>
+                                        </tr>
+                                        <tr class="sell-gp">
+                                            <td class="p-usdt">11,829.3</td>
+                                            <td class="amount">
+                                                <div class="am-graph">
+                                                    <div class="graph">
+                                                        <span>5.23</span>
+                                                    </div>
+                                                </div> <!-- end am-graph -->
+                                            </td>
+                                            <td class="chg-Up">+0.01%</td>
+                                        </tr>
+                                        <tr class="sell-gp">
+                                            <td class="p-usdt">11,829.3</td>
+                                            <td class="amount">
+                                                <div class="am-graph">
+                                                    <div class="graph">
+                                                        <span>5.23</span>
+                                                    </div>
+                                                </div> <!-- end am-graph -->
+                                            </td>
+                                            <td class="chg-Up">+0.01%</td>
+                                        </tr>
+                                        <tr class="sell-gp">
+                                            <td class="p-usdt">11,829.3</td>
+                                            <td class="amount">
+                                                <div class="am-graph">
+                                                    <div class="graph">
+                                                        <span>5.23</span>
+                                                    </div>
+                                                </div> <!-- end am-graph -->
+                                            </td>
+                                            <td class="chg-Up">+0.48%</td>
+                                        </tr>
+                                        <tr class="sell-gp">
+                                            <td class="p-usdt">11,829.3</td>
+                                            <td class="amount">
+                                                <div class="am-graph">
+                                                    <div class="graph">
+                                                        <span>5.23</span>
+                                                    </div>
+                                                </div> <!-- end am-graph -->
+                                            </td>
+                                            <td class="chg-Up">+0.48%</td>
+                                        </tr>
+                                        <tr class="sell-gp">
+                                            <td class="p-usdt">11,829.3</td>
+                                            <td class="amount">
+                                                <div class="am-graph">
+                                                    <div class="graph">
+                                                        <span>5.23</span>
+                                                    </div>
+                                                </div> <!-- end am-graph -->
+                                            </td>
+                                            <td class="chg-Down">-0.48%</td>
+                                        </tr>
+                                        <tr class="sell-gp">
+                                            <td class="p-usdt">11,829.3</td>
+                                            <td class="amount">
+                                                <div class="am-graph">
+                                                    <div class="graph">
+                                                        <span>5.23</span>
+                                                    </div>
+                                                </div> <!-- end am-graph -->
+                                            </td>
+                                            <td class="chg-Up">+0.48%</td>
+                                        </tr>
+                                        <tr class="buy-gp">
+                                            <td class="p-usdt">11,829.3</td>
+                                            <td class="amount">
+                                                <div class="am-graph">
+                                                    <div class="graph">
+                                                        <span>5.23</span>
+                                                    </div>
+                                                </div> <!-- end am-graph -->
+                                            </td>
+                                            <td class="chg-Down">-0.48%</td>
+                                        </tr>
+                                        <tr class="buy-gp">
+                                            <td class="p-usdt">11,829.3</td>
+                                            <td class="amount">
+                                                <div class="am-graph">
+                                                    <div class="graph">
+                                                        <span>5.23</span>
+                                                    </div>
+                                                </div> <!-- end am-graph -->
+                                            </td>
+                                            <td class="chg-Down">-0.48%</td>
+                                        </tr>
+                                        <tr class="buy-gp">
+                                            <td class="p-usdt">11,829.3</td>
+                                            <td class="amount">
+                                                <div class="am-graph">
+                                                    <div class="graph">
+                                                        <span>5.23</span>
+                                                    </div>
+                                                </div> <!-- end am-graph -->
+                                            </td>
+                                            <td class="chg-Up">+0.48%</td>
+                                        </tr>
+                                        <tr class="buy-gp">
+                                            <td class="p-usdt">11,829.3</td>
+                                            <td class="amount">
+                                                <div class="am-graph">
+                                                    <div class="graph">
+                                                        <span>5.23</span>
+                                                    </div>
+                                                </div> <!-- end am-graph -->
+                                            </td>
+                                            <td class="chg-Down">-0.48%</td>
+                                        </tr>
+                                        <tr class="buy-gp">
+                                            <td class="p-usdt">11,829.3</td>
+                                            <td class="amount">
+                                                <div class="am-graph">
+                                                    <div class="graph">
+                                                        <span>5.23</span>
+                                                    </div>
+                                                </div> <!-- end am-graph -->
+                                            </td>
+                                            <td class="chg-Down">-0.48%</td>
+                                        </tr>
+                                        <tr class="buy-gp">
+                                            <td class="p-usdt">11,829.3</td>
+                                            <td class="amount">
+                                                <div class="am-graph">
+                                                    <div class="graph">
+                                                        <span>5.23</span>
+                                                    </div>
+                                                </div> <!-- end am-graph -->
+                                            </td>
+                                            <td class="chg-Down">-0.48%</td>
+                                        </tr>
+                                        <tr class="buy-gp">
+                                            <td class="p-usdt">11,829.3</td>
+                                            <td class="amount">
+                                                <div class="am-graph">
+                                                    <div class="graph">
+                                                        <span>5.23</span>
+                                                    </div>
+                                                </div> <!-- end am-graph -->
+                                            </td>
+                                            <td class="chg-Down">-0.48%</td>
+                                        </tr>
+                                        <tr class="buy-gp">
+                                            <td class="p-usdt">11,829.3</td>
+                                            <td class="amount">
+                                                <div class="am-graph">
+                                                    <div class="graph">
+                                                        <span>5.23</span>
+                                                    </div>
+                                                </div> <!-- end am-graph -->
+                                            </td>
+                                            <td class="chg-Down">-0.48%</td>
+                                        </tr>
+                                        <tr class="buy-gp">
+                                            <td class="p-usdt">11,829.3</td>
+                                            <td class="amount">
+                                                <div class="am-graph">
+                                                    <div class="graph">
+                                                        <span>5.23</span>
+                                                    </div>
+                                                </div> <!-- end am-graph -->
+                                            </td>
+                                            <td class="chg-Down">-0.48%</td>
+                                        </tr>
+                                        <tr class="buy-gp">
+                                            <td class="p-usdt">11,829.3</td>
+                                            <td class="amount">
+                                                <div class="am-graph">
+                                                    <div class="graph">
+                                                        <span>5.23</span>
+                                                    </div>
+                                                </div> <!-- end am-graph -->
+                                            </td>
+                                            <td class="chg-Up">+0.48%</td>
+                                        </tr>
+                                        <tr class="buy-gp">
+                                            <td class="p-usdt">11,829.3</td>
+                                            <td class="amount">
+                                                <div class="am-graph">
+                                                    <div class="graph">
+                                                        <span>5.23</span>
+                                                    </div>
+                                                </div> <!-- end am-graph -->
+                                            </td>
+                                            <td class="chg-Down">-0.48%</td>
+                                        </tr>
+                                        <tr class="buy-gp">
+                                            <td class="p-usdt">11,829.3</td>
+                                            <td class="amount">
+                                                <div class="am-graph">
+                                                    <div class="graph">
+                                                        <span>5.23</span>
+                                                    </div>
+                                                </div> <!-- end am-graph -->
+                                            </td>
+                                            <td class="chg-Down">-0.48%</td>
+                                        </tr>
+                                        <tr class="buy-gp">
+                                            <td class="p-usdt">11,829.3</td>
+                                            <td class="amount">
+                                                <div class="am-graph">
+                                                    <div class="graph">
+                                                        <span>5.23</span>
+                                                    </div>
+                                                </div> <!-- end am-graph -->
+                                            </td>
+                                            <td class="chg-Down">-0.48%</td>
+                                        </tr>
+                                        <tr class="buy-gp">
+                                            <td class="p-usdt">11,829.3</td>
+                                            <td class="amount">
+                                                <div class="am-graph">
+                                                    <div class="graph">
+                                                        <span>5.23</span>
+                                                    </div>
+                                                </div> <!-- end am-graph -->
+                                            </td>
+                                            <td class="chg-Up">+0.48%</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div> <!-- end t-scroll -->
+                        </div><!-- end trade-order -->
+                        <div class="in-layer-wr">
+                            <div class="tr-order-fr common-ct">
+                                <ul class="tab-mu flex-container">
+                                    <li class="on">Buy</li>
+                                    <li>Sell</li>
+                                </ul> <!-- end tab-mu -->
+                                <div class="buy-form common-fr show">
+                                    <div class="fr-part">
+                                        <ul>
+                                            <li class="thead">Order</li>
+                                            <li>
+                                                <p class="align-right">0 USTD (Min : 0.01 BTC)</p>
+                                            </li>
+                                        </ul>
+                                    </div> <!-- end fr-part -->
+                                    <div class="fr-part">
+                                        <p class="thead">Price</p>
+                                        <div class="num-inp cm-inp">
+                                            <input type="number" name="" id="" class="width-100" min="0" value="0">
+                                            <span>USDT</span>
+                                            <div class="unit-btn">
+                                                <div class="plus-btn cm-btn">
+                                                    <button><img src="img/buy_price_Up.png" alt=""></button>
+                                                </div>
+                                                <div class="minus-btn cm-btn">
+                                                    <button><img src="img/buy_price_Down.png" alt=""></button>
+                                                </div>
+                                            </div>
+                                        </div> <!-- end num-inp -->
+                                    </div> <!-- end fr-part -->
+                                    <div class="fr-part quantity">
+                                        <p class="thead">Quantity</p>
+                                        <div class="inp-box cm-inp">
+                                            <input type="text" name="" id="" class="width-100">
+                                            <span>BTC</span>
+                                        </div> <!-- end inp-box -->
+                                        <div class="ps-btn flex-container">
+                                            <input type="button" value="10%">
+                                            <input type="button" value="25%">
+                                            <input type="button" value="50%">
+                                            <input type="button" value="75%">
+                                            <input type="button" value="MAX">
+                                        </div> <!-- end ps-btn -->
+                                    </div> <!-- end fr-inp -->
+                                    <div class="fr-part">
+                                        <ul>
+                                            <li class="thead">Amount</li>
+                                            <li>
+                                                <div class="cm-inp">
+                                                    <input type="text" name="" id="" class="width-100" value="0">
+                                                    <span>USDT</span>
+                                                </div> <!-- end cm-inp -->
+                                            </li>
+                                        </ul>
+                                    </div> <!-- end fr-part -->
+                                    <div class="btn-group flex-container">
+                                        <input type="button" value="Reset">
+                                        <input type="button" value="Buy">
+                                    </div> <!-- end btn-group -->
+                                </div> <!-- end buy-form -->
+                                <div class="sell-form common-fr">
+                                    <div class="fr-part">
+                                        <ul>
+                                            <li class="thead">Order</li>
+                                            <li>
+                                                <p class="align-right">0 USTD (Min : 0.01 BTC)</p>
+                                            </li>
+                                        </ul>
+                                    </div> <!-- end fr-part -->
+                                    <div class="fr-part">
+                                        <p class="thead">Price</p>
+                                        <div class="num-inp cm-inp">
+                                            <input type="number" name="" id="" class="width-100" min="0" value="0">
+                                            <span>USDT</span>
+                                            <div class="unit-btn">
+                                                <div class="plus-btn cm-btn">
+                                                    <button><img src="img/sell_price_Up.png" alt=""></button>
+                                                </div>
+                                                <div class="minus-btn cm-btn">
+                                                    <button><img src="img/sell_price_Down.png" alt=""></button>
+                                                </div>
+                                            </div>
+                                        </div> <!-- end num-inp -->
+                                    </div> <!-- end fr-part -->
+                                    <div class="fr-part quantity">
+                                        <p class="thead">Quantity</p>
+                                        <div class="inp-box cm-inp">
+                                            <input type="text" name="" id="" class="width-100">
+                                            <span>BTC</span>
+                                        </div> <!-- end inp-box -->
+                                        <div class="ps-btn flex-container">
+                                            <input type="button" value="10%">
+                                            <input type="button" value="25%">
+                                            <input type="button" value="50%">
+                                            <input type="button" value="75%">
+                                            <input type="button" value="MAX">
+                                        </div> <!-- end ps-btn -->
+                                    </div> <!-- end fr-inp -->
+                                    <div class="fr-part">
+                                        <ul>
+                                            <li class="thead">Amount</li>
+                                            <li>
+                                                <div class="cm-inp">
+                                                    <input type="text" name="" id="" class="width-100" value="0">
+                                                    <span>USDT</span>
+                                                </div> <!-- end cm-inp -->
+                                            </li>
+                                        </ul>
+                                    </div> <!-- end fr-part -->
+                                    <div class="btn-group flex-container">
+                                        <input type="button" value="Reset">
+                                        <input type="button" value="Sell">
+                                    </div> <!-- end btn-group -->
+                                </div> <!-- end sell-form -->
+                            </div> <!-- end tr-order-fr -->
+                            <div class="chat-area common-ct mCustomScrollbar" data-mcs-theme="minimal">
+                                <div class="head">
+                                    <p>Chatting</p>
+                                </div> <!-- end head -->
+                                <div class="chat-history">
+                                    <div class="user-chat">
+                                        <div class="emoji in-block align-top"><img src="img/emoji(6).png" alt=""></div>
+                                        <div class="user-id in-block align-top"><p>system</p></div>
+                                        <div class="user-mes in-block align-top">
+                                            <p>This is an article written by user. Please note that we are avoiding
+                                                offensive words and actions such as slander, verbal abuse, threats, or
+                                                verbal abuse for your pleasant chatting and proper exchange of
+                                                information.</p>
+                                        </div> <!-- end user-mes -->
+                                    </div> <!-- end user-chat -->
+                                    <div class="user-chat">
+                                        <div class="emoji in-block align-top"><img src="img/emoji(6).png" alt=""></div>
+                                        <div class="user-id in-block align-top"><p>system</p></div>
+                                        <div class="user-mes in-block align-top">
+                                            <p>This is an article written by user. Please note that we are avoiding
+                                                offensive words and actions such as slander, verbal abuse, threats, or
+                                                verbal abuse for your pleasant chatting and proper exchange of
+                                                information.</p>
+                                        </div> <!-- end user-mes -->
+                                    </div> <!-- end user-chat -->
+                                    <div class="user-chat">
+                                        <div class="emoji in-block align-top"><img src="img/emoji(6).png" alt=""></div>
+                                        <div class="user-id in-block align-top"><p>system</p></div>
+                                        <div class="user-mes in-block align-top">
+                                            <p>This is an article written by user. Please note that we are avoiding
+                                                offensive words and actions such as slander, verbal abuse, threats, or
+                                                verbal abuse for your pleasant chatting and proper exchange of
+                                                information.</p>
+                                        </div> <!-- end user-mes -->
+                                    </div> <!-- end user-chat -->
+                                </div> <!-- end chat-history -->
+                                <div class="chat-inp font-0">
+                                    <div class="txt-inp in-block align-middle"><input type="text" name="" id=""
+                                            class="width-100" placeholder="Available after logging in"></div>
+                                    <div class="login-btn in-block align-middle"><input type="button" value="Log in"
+                                            class="width-100"></div>
+                                </div> <!-- end chat-inp -->
+
+                            </div> <!-- end chat-area -->
+                        </div> <!-- end inner-wrap -->
+                    </div> <!-- end ex-share-wrap -->
+                </div> <!-- end le-area -->
+                <div class="rg-area">
+                    <div class="tr-coin-list common-ct">
+                        <div class="head font-0">
+                            <div class="sch-box">
+                                <input type="text" name="" id="" class="width-100" placeholder="Coin Name Search">
+                                <button><img src="img/ex_sch_icon.png" alt=""></button>
+                            </div> <!-- end head -->
+                            <div class="recommend">
+                                <span>Recommend</span>
+                                <img src="img/star_icon_un.png" alt="">
+                            </div> <!-- end recommend -->
+                        </div> <!-- end head -->
+                        <ul class="tab-mu flex-container align-center">
+                            <li class="on">USDT</li>
+                            <li>BTC</li>
+                            <li>RDC</li>
+                            <li>KRW</li>
+                        </ul> <!-- end tab-mu -->
+                        <table>
+                            <colgroup>
+                                <col width="28%">
+                                <col width="28%">
+                                <col width="16%">
+                                <col width="28%">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <p>Coin Name</p>
+                                    </th>
+                                    <th>
+                                        <p>Price</p>
+                                    </th>
+                                    <th>
+                                        <p>Change</p>
+                                    </th>
+                                    <th>
+                                        <p>Volume</p>
+                                    </th>
+                                </tr>
+                            </thead>
+                        </table>
+                        <div class="t-scroll mCustomScrollbar" data-mcs-theme="minimal">
+                            <table>
+                                <colgroup>
+                                    <col width="28%">
+                                    <col width="28%">
+                                    <col width="16%">
+                                    <col width="28%">
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <td class="coin-info font-0">
+                                            <div class="coin-img">
+                                                <img src="img/bit_coin_icon.png" alt="">
+                                            </div> <!-- end coin-img -->
+                                            <div class="coin-nm">
+                                                <p>Bitcoin</p>
+                                                <span>BTC/USDT</span>
+                                            </div> <!-- end coin-nm -->
+                                        </td> <!-- end coin-info -->
+                                        <td class="coin-pr">
+                                            <p class="up-pr">11643.82</p>
+                                            <span>13,906,000 KRW</span>
+                                        </td> <!-- end coin-pr -->
+                                        <td class="coin-chg">
+                                            <p class="up-chg">+ 10.02%</p>
+                                        </td> <!-- end coin-chg -->
+                                        <td class="coin-vol">
+                                            <p>2,740,403,552</p>
+                                        </td> <!-- end coin-vol -->
+                                    </tr>
+                                    <tr>
+                                        <td class="coin-info font-0">
+                                            <div class="coin-img">
+                                                <img src="img/eth_coin_icon.png" alt="">
+                                            </div> <!-- end coin-img -->
+                                            <div class="coin-nm">
+                                                <p>Bitcoin</p>
+                                                <span>BTC/USDT</span>
+                                            </div> <!-- end coin-nm -->
+                                        </td> <!-- end coin-info -->
+                                        <td class="coin-pr">
+                                            <p class="up-pr">11643.82</p>
+                                            <span>13,906,000 KRW</span>
+                                        </td> <!-- end coin-pr -->
+                                        <td class="coin-chg">
+                                            <p class="up-chg">+ 10.02%</p>
+                                        </td> <!-- end coin-chg -->
+                                        <td class="coin-vol">
+                                            <p>2,740,403,552</p>
+                                        </td> <!-- end coin-vol -->
+                                    </tr>
+                                    <tr>
+                                        <td class="coin-info font-0">
+                                            <div class="coin-img">
+                                                <img src="img/bit_coin_icon.png" alt="">
+                                            </div> <!-- end coin-img -->
+                                            <div class="coin-nm">
+                                                <p>Bitcoin</p>
+                                                <span>BTC/USDT</span>
+                                            </div> <!-- end coin-nm -->
+                                        </td> <!-- end coin-info -->
+                                        <td class="coin-pr">
+                                            <p class="dm-pr">643.2</p>
+                                            <span>13,906,000 KRW</span>
+                                        </td> <!-- end coin-pr -->
+                                        <td class="coin-chg">
+                                            <p class="dm-chg">- 9.15%</p>
+                                        </td> <!-- end coin-chg -->
+                                        <td class="coin-vol">
+                                            <p>2,740,403,552</p>
+                                        </td> <!-- end coin-vol -->
+                                    </tr>
+                                    <tr>
+                                        <td class="coin-info font-0">
+                                            <div class="coin-img">
+                                                <img src="img/eth_coin_icon.png" alt="">
+                                            </div> <!-- end coin-img -->
+                                            <div class="coin-nm">
+                                                <p>Bitcoin</p>
+                                                <span>BTC/USDT</span>
+                                            </div> <!-- end coin-nm -->
+                                        </td> <!-- end coin-info -->
+                                        <td class="coin-pr">
+                                            <p class="up-pr">11643.82</p>
+                                            <span>13,906,000 KRW</span>
+                                        </td> <!-- end coin-pr -->
+                                        <td class="coin-chg">
+                                            <p class="up-chg">+ 10.02%</p>
+                                        </td> <!-- end coin-chg -->
+                                        <td class="coin-vol">
+                                            <p>2,740,403,552</p>
+                                        </td> <!-- end coin-vol -->
+                                    </tr>
+                                    <tr>
+                                        <td class="coin-info font-0">
+                                            <div class="coin-img">
+                                                <img src="img/red_coin_icon.png" alt="">
+                                            </div> <!-- end coin-img -->
+                                            <div class="coin-nm">
+                                                <p>Bitcoin</p>
+                                                <span>BTC/USDT</span>
+                                            </div> <!-- end coin-nm -->
+                                        </td> <!-- end coin-info -->
+                                        <td class="coin-pr">
+                                            <p class="up-pr">11643.82</p>
+                                            <span>13,906,000 KRW</span>
+                                        </td> <!-- end coin-pr -->
+                                        <td class="coin-chg">
+                                            <p class="up-chg">+ 10.02%</p>
+                                        </td> <!-- end coin-chg -->
+                                        <td class="coin-vol">
+                                            <p>2,740,403,552</p>
+                                        </td> <!-- end coin-vol -->
+                                    </tr>
+                                    <tr>
+                                        <td class="coin-info font-0">
+                                            <div class="coin-img">
+                                                <img src="img/bit_coin_icon.png" alt="">
+                                            </div> <!-- end coin-img -->
+                                            <div class="coin-nm">
+                                                <p>Bitcoin</p>
+                                                <span>BTC/USDT</span>
+                                            </div> <!-- end coin-nm -->
+                                        </td> <!-- end coin-info -->
+                                        <td class="coin-pr">
+                                            <p class="up-pr">11643.82</p>
+                                            <span>13,906,000 KRW</span>
+                                        </td> <!-- end coin-pr -->
+                                        <td class="coin-chg">
+                                            <p class="up-chg">+ 10.02%</p>
+                                        </td> <!-- end coin-chg -->
+                                        <td class="coin-vol">
+                                            <p>2,740,403,552</p>
+                                        </td> <!-- end coin-vol -->
+                                    </tr>
+                                    <tr>
+                                        <td class="coin-info font-0">
+                                            <div class="coin-img">
+                                                <img src="img/bit_coin_icon.png" alt="">
+                                            </div> <!-- end coin-img -->
+                                            <div class="coin-nm">
+                                                <p>Bitcoin</p>
+                                                <span>BTC/USDT</span>
+                                            </div> <!-- end coin-nm -->
+                                        </td> <!-- end coin-info -->
+                                        <td class="coin-pr">
+                                            <p class="up-pr">11643.82</p>
+                                            <span>13,906,000 KRW</span>
+                                        </td> <!-- end coin-pr -->
+                                        <td class="coin-chg">
+                                            <p class="up-chg">+ 10.02%</p>
+                                        </td> <!-- end coin-chg -->
+                                        <td class="coin-vol">
+                                            <p>2,740,403,552</p>
+                                        </td> <!-- end coin-vol -->
+                                    </tr>
+                                    <tr>
+                                        <td class="coin-info font-0">
+                                            <div class="coin-img">
+                                                <img src="img/bit_coin_icon.png" alt="">
+                                            </div> <!-- end coin-img -->
+                                            <div class="coin-nm">
+                                                <p>Bitcoin</p>
+                                                <span>BTC/USDT</span>
+                                            </div> <!-- end coin-nm -->
+                                        </td> <!-- end coin-info -->
+                                        <td class="coin-pr">
+                                            <p class="up-pr">11643.82</p>
+                                            <span>13,906,000 KRW</span>
+                                        </td> <!-- end coin-pr -->
+                                        <td class="coin-chg">
+                                            <p class="up-chg">+ 10.02%</p>
+                                        </td> <!-- end coin-chg -->
+                                        <td class="coin-vol">
+                                            <p>2,740,403,552</p>
+                                        </td> <!-- end coin-vol -->
+                                    </tr>
+                                    <tr>
+                                        <td class="coin-info font-0">
+                                            <div class="coin-img">
+                                                <img src="img/eth_coin_icon.png" alt="">
+                                            </div> <!-- end coin-img -->
+                                            <div class="coin-nm">
+                                                <p>Bitcoin</p>
+                                                <span>BTC/USDT</span>
+                                            </div> <!-- end coin-nm -->
+                                        </td> <!-- end coin-info -->
+                                        <td class="coin-pr">
+                                            <p class="dm-pr">643.2</p>
+                                            <span>13,906,000 KRW</span>
+                                        </td> <!-- end coin-pr -->
+                                        <td class="coin-chg">
+                                            <p class="dm-chg">- 9.15%</p>
+                                        </td> <!-- end coin-chg -->
+                                        <td class="coin-vol">
+                                            <p>2,740,403,552</p>
+                                        </td> <!-- end coin-vol -->
+                                    </tr>
+                                    <tr>
+                                        <td class="coin-info font-0">
+                                            <div class="coin-img">
+                                                <img src="img/red_coin_icon.png" alt="">
+                                            </div> <!-- end coin-img -->
+                                            <div class="coin-nm">
+                                                <p>Bitcoin</p>
+                                                <span>BTC/USDT</span>
+                                            </div> <!-- end coin-nm -->
+                                        </td> <!-- end coin-info -->
+                                        <td class="coin-pr">
+                                            <p class="up-pr">11643.82</p>
+                                            <span>13,906,000 KRW</span>
+                                        </td> <!-- end coin-pr -->
+                                        <td class="coin-chg">
+                                            <p class="up-chg">+ 10.02%</p>
+                                        </td> <!-- end coin-chg -->
+                                        <td class="coin-vol">
+                                            <p>2,740,403,552</p>
+                                        </td> <!-- end coin-vol -->
+                                    </tr>
+                                    <tr>
+                                        <td class="coin-info font-0">
+                                            <div class="coin-img">
+                                                <img src="img/bit_coin_icon.png" alt="">
+                                            </div> <!-- end coin-img -->
+                                            <div class="coin-nm">
+                                                <p>Bitcoin</p>
+                                                <span>BTC/USDT</span>
+                                            </div> <!-- end coin-nm -->
+                                        </td> <!-- end coin-info -->
+                                        <td class="coin-pr">
+                                            <p class="up-pr">11643.82</p>
+                                            <span>13,906,000 KRW</span>
+                                        </td> <!-- end coin-pr -->
+                                        <td class="coin-chg">
+                                            <p class="up-chg">+ 10.02%</p>
+                                        </td> <!-- end coin-chg -->
+                                        <td class="coin-vol">
+                                            <p>2,740,403,552</p>
+                                        </td> <!-- end coin-vol -->
+                                    </tr>
+                                    <tr>
+                                        <td class="coin-info font-0">
+                                            <div class="coin-img">
+                                                <img src="img/bit_coin_icon.png" alt="">
+                                            </div> <!-- end coin-img -->
+                                            <div class="coin-nm">
+                                                <p>Bitcoin</p>
+                                                <span>BTC/USDT</span>
+                                            </div> <!-- end coin-nm -->
+                                        </td> <!-- end coin-info -->
+                                        <td class="coin-pr">
+                                            <p class="dm-pr">643.2</p>
+                                            <span>13,906,000 KRW</span>
+                                        </td> <!-- end coin-pr -->
+                                        <td class="coin-chg">
+                                            <p class="dm-chg">- 9.15%</p>
+                                        </td> <!-- end coin-chg -->
+                                        <td class="coin-vol">
+                                            <p>2,740,403,552</p>
+                                        </td> <!-- end coin-vol -->
+                                    </tr>
+                                    <tr>
+                                        <td class="coin-info font-0">
+                                            <div class="coin-img">
+                                                <img src="img/eth_coin_icon.png" alt="">
+                                            </div> <!-- end coin-img -->
+                                            <div class="coin-nm">
+                                                <p>Bitcoin</p>
+                                                <span>BTC/USDT</span>
+                                            </div> <!-- end coin-nm -->
+                                        </td> <!-- end coin-info -->
+                                        <td class="coin-pr">
+                                            <p class="up-pr">11643.82</p>
+                                            <span>13,906,000 KRW</span>
+                                        </td> <!-- end coin-pr -->
+                                        <td class="coin-chg">
+                                            <p class="up-chg">+ 10.02%</p>
+                                        </td> <!-- end coin-chg -->
+                                        <td class="coin-vol">
+                                            <p>2,740,403,552</p>
+                                        </td> <!-- end coin-vol -->
+                                    </tr>
+                                    <tr>
+                                        <td class="coin-info font-0">
+                                            <div class="coin-img">
+                                                <img src="img/bit_coin_icon.png" alt="">
+                                            </div> <!-- end coin-img -->
+                                            <div class="coin-nm">
+                                                <p>Bitcoin</p>
+                                                <span>BTC/USDT</span>
+                                            </div> <!-- end coin-nm -->
+                                        </td> <!-- end coin-info -->
+                                        <td class="coin-pr">
+                                            <p class="up-pr">11643.82</p>
+                                            <span>13,906,000 KRW</span>
+                                        </td> <!-- end coin-pr -->
+                                        <td class="coin-chg">
+                                            <p class="up-chg">+ 10.02%</p>
+                                        </td> <!-- end coin-chg -->
+                                        <td class="coin-vol">
+                                            <p>2,740,403,552</p>
+                                        </td> <!-- end coin-vol -->
+                                    </tr>
+                                    <tr>
+                                        <td class="coin-info font-0">
+                                            <div class="coin-img">
+                                                <img src="img/bit_coin_icon.png" alt="">
+                                            </div> <!-- end coin-img -->
+                                            <div class="coin-nm">
+                                                <p>Bitcoin</p>
+                                                <span>BTC/USDT</span>
+                                            </div> <!-- end coin-nm -->
+                                        </td> <!-- end coin-info -->
+                                        <td class="coin-pr">
+                                            <p class="up-pr">11643.82</p>
+                                            <span>13,906,000 KRW</span>
+                                        </td> <!-- end coin-pr -->
+                                        <td class="coin-chg">
+                                            <p class="up-chg">+ 10.02%</p>
+                                        </td> <!-- end coin-chg -->
+                                        <td class="coin-vol">
+                                            <p>2,740,403,552</p>
+                                        </td> <!-- end coin-vol -->
+                                    </tr>
+                                    <tr>
+                                        <td class="coin-info font-0">
+                                            <div class="coin-img">
+                                                <img src="img/eth_coin_icon.png" alt="">
+                                            </div> <!-- end coin-img -->
+                                            <div class="coin-nm">
+                                                <p>Bitcoin</p>
+                                                <span>BTC/USDT</span>
+                                            </div> <!-- end coin-nm -->
+                                        </td> <!-- end coin-info -->
+                                        <td class="coin-pr">
+                                            <p class="up-pr">11643.82</p>
+                                            <span>13,906,000 KRW</span>
+                                        </td> <!-- end coin-pr -->
+                                        <td class="coin-chg">
+                                            <p class="up-chg">+ 10.02%</p>
+                                        </td> <!-- end coin-chg -->
+                                        <td class="coin-vol">
+                                            <p>2,740,403,552</p>
+                                        </td> <!-- end coin-vol -->
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div> <!-- end t-scroll-->
+                    </div> <!-- end tr-coin-list -->
+                    <div class="tr-order-his common-ct">
+                        <ul class="tab-mu flex-container">
+                            <li class="on">Trade History</li>
+                            <li>Active Orders</li>
+                        </ul> <!-- end tab-mu -->
+                        <div class="trade-ht history-cm show">
+                            <table>
+                                <colgroup>
+                                    <col width="20%">
+                                    <col width="15%">
+                                    <col width="25%">
+                                    <col width="15%">
+                                    <col width="25%">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th>Time</th>
+                                        <th>Type</th>
+                                        <th>Unit price<br>(USDT)</th>
+                                        <th>Quantity<br>(BTC)</th>
+                                        <th>Amount<br>(USTD)</th>
+                                    </tr>
+                                </thead>
+                            </table>
+                            <div class="t-scroll mCustomScrollbar" data-mcs-theme="minimal">
+                                <table>
+                                    <colgroup>
+                                        <col width="20%">
+                                        <col width="15%">
+                                        <col width="25%">
+                                        <col width="15%">
+                                        <col width="25%">
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <td>01:27:44</td>
+                                            <td>Buy</td>
+                                            <td>11516.54</td>
+                                            <td>4.92</td>
+                                            <td>56661.3748</td>
+                                        </tr>
+                                        <tr>
+                                            <td>01:27:44</td>
+                                            <td>Buy</td>
+                                            <td>11516.54</td>
+                                            <td>4.92</td>
+                                            <td>56661.3748</td>
+                                        </tr>
+                                        <tr>
+                                            <td>01:27:44</td>
+                                            <td>Buy</td>
+                                            <td>11516.54</td>
+                                            <td>4.92</td>
+                                            <td>56661.3748</td>
+                                        </tr>
+                                        <tr>
+                                            <td>01:27:44</td>
+                                            <td>Buy</td>
+                                            <td>11516.54</td>
+                                            <td>4.92</td>
+                                            <td>56661.3748</td>
+                                        </tr>
+                                        <tr>
+                                            <td>01:27:44</td>
+                                            <td>Buy</td>
+                                            <td>11516.54</td>
+                                            <td>4.92</td>
+                                            <td>56661.3748</td>
+                                        </tr>
+                                        <tr>
+                                            <td>01:27:44</td>
+                                            <td>Buy</td>
+                                            <td>11516.54</td>
+                                            <td>4.92</td>
+                                            <td>56661.3748</td>
+                                        </tr>
+                                        <tr>
+                                            <td>01:27:44</td>
+                                            <td>Buy</td>
+                                            <td>11516.54</td>
+                                            <td>4.92</td>
+                                            <td>56661.3748</td>
+                                        </tr>
+                                        <tr>
+                                            <td>01:27:44</td>
+                                            <td>Buy</td>
+                                            <td>11516.54</td>
+                                            <td>4.92</td>
+                                            <td>56661.3748</td>
+                                        </tr>
+                                        <tr>
+                                            <td>01:27:44</td>
+                                            <td>Buy</td>
+                                            <td>11516.54</td>
+                                            <td>4.92</td>
+                                            <td>56661.3748</td>
+                                        </tr>
+                                        <tr>
+                                            <td>01:27:44</td>
+                                            <td>Buy</td>
+                                            <td>11516.54</td>
+                                            <td>4.92</td>
+                                            <td>56661.3748</td>
+                                        </tr>
+                                        <tr>
+                                            <td>01:27:44</td>
+                                            <td>Buy</td>
+                                            <td>11516.54</td>
+                                            <td>4.92</td>
+                                            <td>56661.3748</td>
+                                        </tr>
+                                        <tr>
+                                            <td>01:27:44</td>
+                                            <td>Buy</td>
+                                            <td>11516.54</td>
+                                            <td>4.92</td>
+                                            <td>56661.3748</td>
+                                        </tr>
+                                        <tr>
+                                            <td>01:27:44</td>
+                                            <td>Buy</td>
+                                            <td>11516.54</td>
+                                            <td>4.92</td>
+                                            <td>56661.3748</td>
+                                        </tr>
+                                        <tr>
+                                            <td>01:27:44</td>
+                                            <td>Buy</td>
+                                            <td>11516.54</td>
+                                            <td>4.92</td>
+                                            <td>56661.3748</td>
+                                        </tr>
+                                        <tr>
+                                            <td>01:27:44</td>
+                                            <td>Buy</td>
+                                            <td>11516.54</td>
+                                            <td>4.92</td>
+                                            <td>56661.3748</td>
+                                        </tr>
+                                        <tr>
+                                            <td>01:27:44</td>
+                                            <td>Buy</td>
+                                            <td>11516.54</td>
+                                            <td>4.92</td>
+                                            <td>56661.3748</td>
+                                        </tr>
+                                        <tr>
+                                            <td>01:27:44</td>
+                                            <td>Buy</td>
+                                            <td>11516.54</td>
+                                            <td>4.92</td>
+                                            <td>56661.3748</td>
+                                        </tr>
+                                        <tr>
+                                            <td>01:27:44</td>
+                                            <td>Buy</td>
+                                            <td>11516.54</td>
+                                            <td>4.92</td>
+                                            <td>56661.3748</td>
+                                        </tr>
+                                        <tr>
+                                            <td>01:27:44</td>
+                                            <td>Buy</td>
+                                            <td>11516.54</td>
+                                            <td>4.92</td>
+                                            <td>56661.3748</td>
+                                        </tr>
+                                        <tr>
+                                            <td>01:27:44</td>
+                                            <td>Buy</td>
+                                            <td>11516.54</td>
+                                            <td>4.92</td>
+                                            <td>56661.3748</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div> <!-- end trade-ht -->
+                        <div class="active-od history-cm">
+                            <table>
+                                <colgroup>
+                                    <col width="15%">
+                                    <col width="12%">
+                                    <col width="13%">
+                                    <col width="21%">
+                                    <col width="21%">
+                                    <col width="18%">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th>Time</th>
+                                        <th>Type</th>
+                                        <th>Quantity</th>
+                                        <th>Unit price</th>
+                                        <th>Undecied</th>
+                                        <th>Cancel</th>
+                                    </tr>
+                                </thead>
+                            </table>
+                            <div class="t-scroll mCustomScrollbar" data-mcs-theme="minimal">
+                                <table>
+                                    <colgroup>
+                                        <col width="15%">
+                                        <col width="12%">
+                                        <col width="13%">
+                                        <col width="21%">
+                                        <col width="21%">
+                                        <col width="18%">
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <td>01:27:44</td>
+                                            <td>Sell</td>
+                                            <td>4.8</td>
+                                            <td>11548.32</td>
+                                            <td>56661.374</td>
+                                            <td><input type="button" value="Cancel"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>01:27:44</td>
+                                            <td>Sell</td>
+                                            <td>4.8</td>
+                                            <td>11548.32</td>
+                                            <td>56661.374</td>
+                                            <td><input type="button" value="Cancel"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>01:27:44</td>
+                                            <td>Sell</td>
+                                            <td>4.8</td>
+                                            <td>11548.32</td>
+                                            <td>56661.374</td>
+                                            <td><input type="button" value="Cancel"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>01:27:44</td>
+                                            <td>Sell</td>
+                                            <td>4.8</td>
+                                            <td>11548.32</td>
+                                            <td>56661.374</td>
+                                            <td><input type="button" value="Cancel"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>01:27:44</td>
+                                            <td>Sell</td>
+                                            <td>4.8</td>
+                                            <td>11548.32</td>
+                                            <td>56661.374</td>
+                                            <td><input type="button" value="Cancel"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>01:27:44</td>
+                                            <td>Sell</td>
+                                            <td>4.8</td>
+                                            <td>11548.32</td>
+                                            <td>56661.374</td>
+                                            <td><input type="button" value="Cancel"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>01:27:44</td>
+                                            <td>Sell</td>
+                                            <td>4.8</td>
+                                            <td>11548.32</td>
+                                            <td>56661.374</td>
+                                            <td><input type="button" value="Cancel"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>01:27:44</td>
+                                            <td>Sell</td>
+                                            <td>4.8</td>
+                                            <td>11548.32</td>
+                                            <td>56661.374</td>
+                                            <td><input type="button" value="Cancel"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>01:27:44</td>
+                                            <td>Sell</td>
+                                            <td>4.8</td>
+                                            <td>11548.32</td>
+                                            <td>56661.374</td>
+                                            <td><input type="button" value="Cancel"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>01:27:44</td>
+                                            <td>Sell</td>
+                                            <td>4.8</td>
+                                            <td>11548.32</td>
+                                            <td>56661.374</td>
+                                            <td><input type="button" value="Cancel"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>01:27:44</td>
+                                            <td>Sell</td>
+                                            <td>4.8</td>
+                                            <td>11548.32</td>
+                                            <td>56661.374</td>
+                                            <td><input type="button" value="Cancel"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>01:27:44</td>
+                                            <td>Sell</td>
+                                            <td>4.8</td>
+                                            <td>11548.32</td>
+                                            <td>56661.374</td>
+                                            <td><input type="button" value="Cancel"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>01:27:44</td>
+                                            <td>Sell</td>
+                                            <td>4.8</td>
+                                            <td>11548.32</td>
+                                            <td>56661.374</td>
+                                            <td><input type="button" value="Cancel"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>01:27:44</td>
+                                            <td>Sell</td>
+                                            <td>4.8</td>
+                                            <td>11548.32</td>
+                                            <td>56661.374</td>
+                                            <td><input type="button" value="Cancel"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>01:27:44</td>
+                                            <td>Sell</td>
+                                            <td>4.8</td>
+                                            <td>11548.32</td>
+                                            <td>56661.374</td>
+                                            <td><input type="button" value="Cancel"></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div> <!-- end trade-ht -->
+                    </div> <!-- end tr-oder-his -->
+                </div> <!-- end rg-area -->
+            </div> <!-- end ex-container -->
+        </div> <!-- end exchange -->
+
+        <footer>
+            <div class="content font-0">
+                <div class="f-info cm-foot">
+                    <div class="top-head">
+                        <div class="cp-info-area">
+                            <a class="f-logo" href="index.html"><img src="img/f_logo.png" alt=""></a>
+                            <ul>
+                                <li>고객센터</li>
+                                <li class="bar">|</li>
+                                <li>1688-5886</li>
+                                <li class="bar">|</li>
+                                <li>평일 오전 09:00 ~ 오후 06:00 (토, 일 공휴일 제외)</li>
+                                <li class="bar">|</li>
+                                <li>(주) 월드 코리아</li>
+                                <li class="bar">|</li>
+                                <li>대표 : 정정수</li>
+                                <li class="bar">|</li>
+                                <li>사업자등록번호 : 878-86-01217</li>
+                            </ul>
+                        </div> <!-- end cp-info-area -->
+                        <p>Check out PHOENIX's news on SNS</p>
+                    </div><!-- end top-head -->
+                    <div class="f-btm">
+                        <ul class="sns-icon">
+                            <li><a href="#"><img src="img/sns_twitter.png" alt=""></a></li>
+                            <li><a href="#"><img src="img/sns_facebook.png" alt=""></a></li>
+                            <li><a href="#"><img src="img/sns_naver.png" alt=""></a></li>
+                            <li><a href="#"><img src="img/sns_instar.png" alt=""></a></li>
+                            <li><a href="#"><img src="img/sns_youtube.png" alt=""></a></li>
+                        </ul>
+                        <p class="copyright">COPYRIGHT &copy; REDBIT. All Right Reserved.</p>
+                    </div>
+                </div> <!-- end f-info -->
+                <div class="f-support cm-foot">
+                    <p>고객지원</p>
+                    <ul>
+                        <li><a href="#">이용가이드</a></li>
+                        <li><a href="#">자주묻는질문</a></li>
+                        <li><a href="#">1:1 문의</a></li>
+                        <li><a href="#">공지사항</a></li>
+                        <li><a href="#">상장문의 및 제보 (이메일 주소 입력)</a></li>
+                    </ul>
+                </div> <!-- end cm-foot -->
+                <div class="ad-inquiry">
+                    <p>[ 제휴 및 광고문의 ]</p>
+                    <ul>
+                        <li><a href="#"><img src="img/ad_site_icon.png" alt=""></a></li>
+                        <li><a href="#"><img src="img/ad_site_icon2.png" alt=""></a></li>
+                        <li><a href="#"><img src="img/ad_site_icon3.png" alt=""></a></li>
+                    </ul>
+                </div> <!-- end ad-inquiry -->
+            </div> <!-- end content -->
+        </footer>
+    </div> <!-- end wrap -->
+</body>
+
+</html>

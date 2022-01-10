@@ -1,0 +1,2036 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>:: RED BIT ::</title>
+    <!-- favicon -->
+    <link href="img/favicon.png" rel="shortcut icon">
+    <link href="img/favicon.png" rel="apple-touch-icon">
+    <!-- 외부 CSS -->
+    <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+    <!-- jQuery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- main.js -->
+    <script src="js/main.js"></script>
+    <!-- slick-slider -->
+    <link rel="stylesheet" type="text/css" href="/plugin/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="/plugin/slick/slick-theme.css" />
+    <script type="text/javascript" src="/js/jquery.js"></script>
+    <script type="text/javascript" src="/plugin/slick/slick.js"></script>
+
+    <script>
+        jQuery(document).ready(function ($) {
+
+            var body_height = $("body").outerHeight();
+            var m_eh_head = $("#m-eh-head").outerHeight();
+            var fixed_eh_head = $("#m-exchange .eh-head").outerHeight();
+            var fixed_table_tab = $("#m-exchange .market-price .pr-time-tab").outerHeight();
+            var table_head_height = $("#m-exchange .market-price .t-head").outerHeight();
+            var popup_head_height = $("#coin-list-popup .head").outerHeight();
+            var popup_thead_height = $("#coin-list-popup .t-head").outerHeight();
+            var foot_height = $("#m-fixed-footer").outerHeight();
+
+
+            var content_height = body_height - m_eh_head - fixed_eh_head - foot_height
+            var table_ct_height = body_height - m_eh_head - fixed_eh_head - fixed_table_tab - table_head_height - foot_height
+            var coin_list_height = body_height - m_eh_head - popup_head_height - popup_thead_height
+
+            // 2020/11/13 line 40 수정
+            $("#m-exchange .trade-ct").css("height", content_height);
+            $(".askprice").css("height", content_height);
+            $(".chart-area").css("height", content_height);
+            $(".market-price .market-pr-ct .mk-pr-list").css("height", table_ct_height);
+            $("#coin-list-popup .scroll-list").css("height", coin_list_height);
+
+        });
+    </script>
+
+
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="m-open-menu">
+            <div class="menu-container">
+                <div class="user-input">
+                    <div class="greeting-box">
+                        <p><span class="user-name">홍길동</span>님 환영합니다.</p>
+                        <a class="close-btn bg-img" href="#"></a>
+                    </div>
+                    <div class="input-group flex-container">
+                        <input class="login" type="button" value="로그인" onclick="location.href='login.html'">
+                        <input class="sign" type="button" value="회원가입" onclick="location.href='m_sign_up01.html'">
+                    </div> <!-- end input-group -->
+                </div> <!-- end user-input -->
+                <div class="menu-list">
+                    <ul>
+                        <li><a href="market.html">거래소</a></li>
+                        <li><a href="wallet.html">지갑관리</a></li>
+                        <li><a href="customer_support_index.html">고객센터</a></li>
+                        <li><a href="#">ISO</a></li>
+                    </ul>
+                </div> <!-- end menu-list -->
+                <div class="lang-select">
+                    <ul>
+                        <li class="on">
+                            <p>한국어</p>
+                        </li>
+                        <li>
+                            <p>영어</p>
+                        </li>
+                    </ul>
+                </div> <!-- end lang-select -->
+                <div class="cs-area align-center">
+                    <p>고객센터 상담시간</p>
+                    <h3>09 : 00 ~ 18 : 00</h3>
+                </div> <!-- end cs-area -->
+            </div> <!-- end menu-container -->
+        </div> <!-- end m-open-menu -->
+        <div id="m-eh-head">
+            <a class="back-icon bg-img" href="index.html"></a>
+            <div class="coin-info">
+                <p>비트코인 <span>(BTC/KRW)</span></p>
+            </div> <!-- end coin-info -->
+            <button class="favorit-icon"></button>
+            <button class="set-icon"></button>
+            <a class="m-menu bg-img" href="#"></a>
+        </div> <!-- end m-eh-head -->
+        <div id="m-exchange">
+            <div id="screen-setting">
+                <div class="inner-wrap">
+                    <div class="head">
+                        <p>거래화면 설정</p>
+                    </div>
+                    <div class="set-ct">
+                        <span class="le-tit">나이트 모드</span>
+                        <a class="mode-select" href="#"></a>
+                    </div> <!-- end set-ct -->
+                    <input type="button" value="확인" class="width-100">
+                </div> <!-- end inner-wrap -->
+            </div> <!-- end screen-setting -->
+            <div class="eh-head">
+                <div class="head-chart">
+                    <div class="coin-info">
+                        <p class="pr-Down">17,125,000</p>
+                        <ul>
+                            <li class="persent pr-Down">-0.24%</li>
+                            <li class="change pr-Down">-42,000</li>
+                        </ul>
+                    </div> <!-- end coin-info -->
+                    <div class="today-chart bg-img">
+                    </div>
+                </div> <!-- end head-chart -->
+                <div class="rolling-coin-list">
+                    <ul>
+                        <li>Bitcoin</li>
+                        <li>17,101,000원($15378.95)</li>
+                    </ul>
+                </div> <!-- end rolling-coin-list -->
+                <ul class="tab-mu">
+                    <li class="on">주문</li>
+                    <li>호가</li>
+                    <li>차트</li>
+                    <li>시세</li>
+                </ul> <!-- end tab-mu -->
+            </div> <!-- end eh-head -->
+            <div class="order-ct tab-ct show">
+                <div class="flex-container" style="z-index: 8;">
+                    <div class="order-left-ct trade-ct">
+                        <div class="sell-group">
+                            <div class="sell-gh tr-gh">
+                                <div class="le-ct cm-ct">
+                                    <p>17,200,000</p>
+                                    <span>-0.72%</span>
+                                </div> <!-- end le-ct -->
+                                <div class="rg-ct cm-ct">
+                                    <div class="amount-gh"></div> <!-- end amount-gh -->
+                                    <span>0.0030</span>
+                                </div> <!-- end rg-ct -->
+                            </div> <!-- end sell-gh -->
+                            <div class="sell-gh tr-gh">
+                                <div class="le-ct cm-ct">
+                                    <p>17,200,000</p>
+                                    <span>-0.72%</span>
+                                </div> <!-- end le-ct -->
+                                <div class="rg-ct cm-ct">
+                                    <div class="amount-gh"></div> <!-- end amount-gh -->
+                                    <span>0.0030</span>
+                                </div> <!-- end rg-ct -->
+                            </div> <!-- end sell-gh -->
+                            <div class="sell-gh tr-gh">
+                                <div class="le-ct cm-ct">
+                                    <p>17,200,000</p>
+                                    <span>-0.72%</span>
+                                </div> <!-- end le-ct -->
+                                <div class="rg-ct cm-ct">
+                                    <div class="amount-gh"></div> <!-- end amount-gh -->
+                                    <span>0.0030</span>
+                                </div> <!-- end rg-ct -->
+                            </div> <!-- end sell-gh -->
+                            <div class="sell-gh tr-gh">
+                                <div class="le-ct cm-ct">
+                                    <p>17,200,000</p>
+                                    <span>-0.72%</span>
+                                </div> <!-- end le-ct -->
+                                <div class="rg-ct cm-ct">
+                                    <div class="amount-gh"></div> <!-- end amount-gh -->
+                                    <span>0.0030</span>
+                                </div> <!-- end rg-ct -->
+                            </div> <!-- end sell-gh -->
+                            <div class="sell-gh tr-gh">
+                                <div class="le-ct cm-ct">
+                                    <p>17,200,000</p>
+                                    <span>-0.72%</span>
+                                </div> <!-- end le-ct -->
+                                <div class="rg-ct cm-ct">
+                                    <div class="amount-gh"></div> <!-- end amount-gh -->
+                                    <span>0.0030</span>
+                                </div> <!-- end rg-ct -->
+                            </div> <!-- end sell-gh -->
+                            <div class="sell-gh tr-gh">
+                                <div class="le-ct cm-ct">
+                                    <p>17,200,000</p>
+                                    <span>-0.72%</span>
+                                </div> <!-- end le-ct -->
+                                <div class="rg-ct cm-ct">
+                                    <div class="amount-gh"></div> <!-- end amount-gh -->
+                                    <span>0.0030</span>
+                                </div> <!-- end rg-ct -->
+                            </div> <!-- end sell-gh -->
+                            <div class="sell-gh tr-gh">
+                                <div class="le-ct cm-ct">
+                                    <p>17,200,000</p>
+                                    <span>-0.72%</span>
+                                </div> <!-- end le-ct -->
+                                <div class="rg-ct cm-ct">
+                                    <div class="amount-gh"></div> <!-- end amount-gh -->
+                                    <span>0.0030</span>
+                                </div> <!-- end rg-ct -->
+                            </div> <!-- end sell-gh -->
+                            <div class="sell-gh tr-gh">
+                                <div class="le-ct cm-ct">
+                                    <p>17,200,000</p>
+                                    <span>-0.72%</span>
+                                </div> <!-- end le-ct -->
+                                <div class="rg-ct cm-ct">
+                                    <div class="amount-gh"></div> <!-- end amount-gh -->
+                                    <span>0.0030</span>
+                                </div> <!-- end rg-ct -->
+                            </div> <!-- end sell-gh -->
+                            <div class="sell-gh tr-gh">
+                                <div class="le-ct cm-ct">
+                                    <p>17,200,000</p>
+                                    <span>-0.72%</span>
+                                </div> <!-- end le-ct -->
+                                <div class="rg-ct cm-ct">
+                                    <div class="amount-gh"></div> <!-- end amount-gh -->
+                                    <span>0.0030</span>
+                                </div> <!-- end rg-ct -->
+                            </div> <!-- end sell-gh -->
+                            <div class="sell-gh tr-gh">
+                                <div class="le-ct cm-ct">
+                                    <p>17,200,000</p>
+                                    <span>-0.72%</span>
+                                </div> <!-- end le-ct -->
+                                <div class="rg-ct cm-ct">
+                                    <div class="amount-gh"></div> <!-- end amount-gh -->
+                                    <span>0.0030</span>
+                                </div> <!-- end rg-ct -->
+                            </div> <!-- end sell-gh -->
+                        </div> <!-- end sell-group -->
+                        <div class="buy-group">
+                            <div class="buy-gh tr-gh">
+                                <div class="le-ct cm-ct">
+                                    <p>17,200,000</p>
+                                    <span>-0.72%</span>
+                                </div> <!-- end le-ct -->
+                                <div class="rg-ct cm-ct">
+                                    <div class="amount-gh"></div> <!-- end amount-gh -->
+                                    <span>0.0030</span>
+                                </div> <!-- end rg-ct -->
+                            </div> <!-- end buy-gh -->
+                            <div class="buy-gh tr-gh">
+                                <div class="le-ct cm-ct">
+                                    <p>17,200,000</p>
+                                    <span>-0.72%</span>
+                                </div> <!-- end le-ct -->
+                                <div class="rg-ct cm-ct">
+                                    <div class="amount-gh"></div> <!-- end amount-gh -->
+                                    <span>0.0030</span>
+                                </div> <!-- end rg-ct -->
+                            </div> <!-- end buy-gh -->
+                            <div class="buy-gh tr-gh">
+                                <div class="le-ct cm-ct">
+                                    <p>17,200,000</p>
+                                    <span>-0.72%</span>
+                                </div> <!-- end le-ct -->
+                                <div class="rg-ct cm-ct">
+                                    <div class="amount-gh"></div> <!-- end amount-gh -->
+                                    <span>0.0030</span>
+                                </div> <!-- end rg-ct -->
+                            </div> <!-- end buy-gh -->
+                            <div class="buy-gh tr-gh">
+                                <div class="le-ct cm-ct">
+                                    <p>17,200,000</p>
+                                    <span>-0.72%</span>
+                                </div> <!-- end le-ct -->
+                                <div class="rg-ct cm-ct">
+                                    <div class="amount-gh"></div> <!-- end amount-gh -->
+                                    <span>0.0030</span>
+                                </div> <!-- end rg-ct -->
+                            </div> <!-- end buy-gh -->
+                            <div class="buy-gh tr-gh">
+                                <div class="le-ct cm-ct">
+                                    <p>17,200,000</p>
+                                    <span>-0.72%</span>
+                                </div> <!-- end le-ct -->
+                                <div class="rg-ct cm-ct">
+                                    <div class="amount-gh"></div> <!-- end amount-gh -->
+                                    <span>0.0030</span>
+                                </div> <!-- end rg-ct -->
+                            </div> <!-- end buy-gh -->
+                            <div class="buy-gh tr-gh">
+                                <div class="le-ct cm-ct">
+                                    <p>17,200,000</p>
+                                    <span>-0.72%</span>
+                                </div> <!-- end le-ct -->
+                                <div class="rg-ct cm-ct">
+                                    <div class="amount-gh"></div> <!-- end amount-gh -->
+                                    <span>0.0030</span>
+                                </div> <!-- end rg-ct -->
+                            </div> <!-- end buy-gh -->
+                            <div class="buy-gh tr-gh">
+                                <div class="le-ct cm-ct">
+                                    <p>17,200,000</p>
+                                    <span>-0.72%</span>
+                                </div> <!-- end le-ct -->
+                                <div class="rg-ct cm-ct">
+                                    <div class="amount-gh"></div> <!-- end amount-gh -->
+                                    <span>0.0030</span>
+                                </div> <!-- end rg-ct -->
+                            </div> <!-- end buy-gh -->
+                            <div class="buy-gh tr-gh">
+                                <div class="le-ct cm-ct">
+                                    <p>17,200,000</p>
+                                    <span>-0.72%</span>
+                                </div> <!-- end le-ct -->
+                                <div class="rg-ct cm-ct">
+                                    <div class="amount-gh"></div> <!-- end amount-gh -->
+                                    <span>0.0030</span>
+                                </div> <!-- end rg-ct -->
+                            </div> <!-- end buy-gh -->
+                            <div class="buy-gh tr-gh">
+                                <div class="le-ct cm-ct">
+                                    <p>17,200,000</p>
+                                    <span>-0.72%</span>
+                                </div> <!-- end le-ct -->
+                                <div class="rg-ct cm-ct">
+                                    <div class="amount-gh"></div> <!-- end amount-gh -->
+                                    <span>0.0030</span>
+                                </div> <!-- end rg-ct -->
+                            </div> <!-- end buy-gh -->
+                            <div class="buy-gh tr-gh">
+                                <div class="le-ct cm-ct">
+                                    <p>17,200,000</p>
+                                    <span>-0.72%</span>
+                                </div> <!-- end le-ct -->
+                                <div class="rg-ct cm-ct">
+                                    <div class="amount-gh"></div> <!-- end amount-gh -->
+                                    <span>0.0030</span>
+                                </div> <!-- end rg-ct -->
+                            </div> <!-- end buy-gh -->
+                            <div class="buy-gh tr-gh">
+                                <div class="le-ct cm-ct">
+                                    <p>17,200,000</p>
+                                    <span>-0.72%</span>
+                                </div> <!-- end le-ct -->
+                                <div class="rg-ct cm-ct">
+                                    <div class="amount-gh"></div> <!-- end amount-gh -->
+                                    <span>0.0030</span>
+                                </div> <!-- end rg-ct -->
+                            </div> <!-- end buy-gh -->
+                        </div> <!-- end buy-group -->
+                    </div> <!-- end order-left-ct -->
+                    <div class="order-right-ct trade-ct">
+                        <div class="tr-order-fr">
+                            <ul class="tab-form">
+                                <li class="on">매수</li>
+                                <li>매도</li>
+                                <li>미체결</li>
+                            </ul> <!-- end tab-form -->
+                            <div class="common-fr buy-fr show">
+                                <ul class="cm-inp">
+                                    <li class="thead">주문가능</li>
+                                    <li class="tbody">
+                                        <p>0 <span>USTD</span></p>
+                                    </li>
+                                </ul> <!-- end cm-inp -->
+                                <div class="cm-inp pr-inp">
+                                    <input type="text" name="" id="" class="width-100" placeholder="0">
+                                    <span class="tit">가격</span>
+                                    <span class="fix-unit">USDT</span>
+                                </div> <!-- end cm-inp -->
+                                <div class="cm-inp unit-inp">
+                                    <div class="unit-wr">
+                                        <input type="text" name="" id="" class="width-100">
+                                        <span class="tit">수량</span>
+                                        <span class="fix-unit">BTC</span>
+                                    </div> <!-- end unit-wr-->
+                                    <div class="unit-select">
+                                        <select name="" id="" class="width-100">
+                                            <option value="">비율</option>
+                                            <option value="">10%</option>
+                                            <option value="">25%</option>
+                                            <option value="">50%</option>
+                                            <option value="">75%</option>
+                                            <option value="">MAX</option>
+                                        </select>
+                                    </div> <!-- end unit-select-->
+                                </div> <!-- end cm-inp -->
+                                <ul class="cm-inp fix-total">
+                                    <li class="thead">주문총액</li>
+                                    <li class="tbody">
+                                        <p>0 <span>USDT</span></p>
+                                    </li>
+                                </ul> <!-- end fix-total -->
+                                <div class="btn-group">
+                                    <input type="button" value="초기화">
+                                    <input type="button" value="매수">
+                                </div>
+                                <div class="tr-add-info">
+                                    <p>수수료(부가세포함)0.25%</p>
+                                    <p>최소주문금액 : 0.01 BTC</p>
+                                </div> <!-- end tr-add-info -->
+                            </div> <!-- end buy-fr -->
+                            <div class="common-fr sell-fr">
+                                <ul class="cm-inp">
+                                    <li class="thead">주문가능</li>
+                                    <li class="tbody">
+                                        <p>0 <span>USTD</span></p>
+                                    </li>
+                                </ul> <!-- end cm-inp -->
+                                <div class="cm-inp pr-inp">
+                                    <input type="text" name="" id="" class="width-100" placeholder="0">
+                                    <span class="tit">가격</span>
+                                    <span class="fix-unit">USDT</span>
+                                </div> <!-- end cm-inp -->
+                                <div class="cm-inp unit-inp">
+                                    <div class="unit-wr">
+                                        <input type="text" name="" id="" class="width-100">
+                                        <span class="tit">수량</span>
+                                        <span class="fix-unit">BTC</span>
+                                    </div> <!-- end unit-wr-->
+                                    <div class="unit-select">
+                                        <select name="" id="" class="width-100">
+                                            <option value="">비율</option>
+                                            <option value="">10%</option>
+                                            <option value="">25%</option>
+                                            <option value="">50%</option>
+                                            <option value="">75%</option>
+                                            <option value="">MAX</option>
+                                        </select>
+                                    </div> <!-- end unit-select-->
+                                </div> <!-- end cm-inp -->
+                                <ul class="cm-inp fix-total">
+                                    <li class="thead">주문총액</li>
+                                    <li class="tbody">
+                                        <p>0 <span>USDT</span></p>
+                                    </li>
+                                </ul> <!-- end fix-total -->
+                                <div class="btn-group">
+                                    <input type="button" value="초기화">
+                                    <input type="button" value="매도">
+                                </div>
+                                <div class="tr-add-info">
+                                    <p>수수료(부가세포함)0.25%</p>
+                                    <p>최소주문금액 : 0.01 BTC</p>
+                                </div> <!-- end tr-add-info -->
+                            </div> <!-- end sell-fr -->
+                            <!-- 2020/11/13 line 451 no-trans-fr content add -->
+                            <div class="common-fr no-trans-fr"> 
+                                <div class="no-tr-order">
+                                    <p>미체결 주문 0건</p>
+                                    <a class="all-view-btn" href="">전체보기</a>
+                                </div> <!-- end no-tr-order -->
+                                <div class="no-tr-list">
+                                    <div class="not-tr-ct">
+                                        <ul>
+                                            <li>
+                                                <p class="tr-type sell">매도 <span class="coin-nm">EOS/KRW</span></p>
+                                            </li>
+                                            <li>
+                                                <p class="time">10:08:54</p>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <li>주문가격<span class="unit">(KRW)</span>
+                                            </li>
+                                            <li>3,000</li>
+                                        </ul>
+                                        <ul>
+                                            <li>주문수량<span class="unit">(EOS)</span></li>
+                                            <li>50.040000000</li>
+                                        </ul>
+                                        <ul>
+                                            <li>미체결량</li>
+                                            <li>50.040000000</li>
+                                        </ul>
+                                        <input class="order-cancel width-100" type="button" value="주문취소">
+                                    </div> <!-- end not-tr-ct -->
+                                    <div class="not-tr-ct">
+                                        <ul>
+                                            <li>
+                                                <p class="tr-type buy">매수 <span class="coin-nm">EOS/KRW</span></p>
+                                            </li>
+                                            <li>
+                                                <p class="time">10:08:54</p>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <li>주문가격<span class="unit">(KRW)</span>
+                                            </li>
+                                            <li>3,000</li>
+                                        </ul>
+                                        <ul>
+                                            <li>주문수량<span class="unit">(EOS)</span></li>
+                                            <li>50.040000000</li>
+                                        </ul>
+                                        <ul>
+                                            <li>미체결량</li>
+                                            <li>50.040000000</li>
+                                        </ul>
+                                        <input class="order-cancel width-100" type="button" value="주문취소">
+                                    </div> <!-- end not-tr-ct -->
+
+                                    <div class="not-tr-ct">
+                                        <ul>
+                                            <li>
+                                                <p class="tr-type sell">매도 <span class="coin-nm">EOS/KRW</span></p>
+                                            </li>
+                                            <li>
+                                                <p class="time">10:08:54</p>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <li>주문가격<span class="unit">(KRW)</span>
+                                            </li>
+                                            <li>3,000</li>
+                                        </ul>
+                                        <ul>
+                                            <li>주문수량<span class="unit">(EOS)</span></li>
+                                            <li>50.040000000</li>
+                                        </ul>
+                                        <ul>
+                                            <li>미체결량</li>
+                                            <li>50.040000000</li>
+                                        </ul>
+                                        <input class="order-cancel width-100" type="button" value="주문취소">
+                                    </div> <!-- end not-tr-ct -->
+                                    <div class="not-tr-ct">
+                                        <ul>
+                                            <li>
+                                                <p class="tr-type buy">매수 <span class="coin-nm">EOS/KRW</span></p>
+                                            </li>
+                                            <li>
+                                                <p class="time">10:08:54</p>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <li>주문가격<span class="unit">(KRW)</span>
+                                            </li>
+                                            <li>3,000</li>
+                                        </ul>
+                                        <ul>
+                                            <li>주문수량<span class="unit">(EOS)</span></li>
+                                            <li>50.040000000</li>
+                                        </ul>
+                                        <ul>
+                                            <li>미체결량</li>
+                                            <li>50.040000000</li>
+                                        </ul>
+                                        <input class="order-cancel width-100" type="button" value="주문취소">
+                                    </div> <!-- end not-tr-ct -->
+                                </div> <!-- end no-tr-list -->
+                            </div> <!-- end common-fr -->
+                        </div> <!-- end tr-order-fr -->
+                    </div> <!-- end order-right-ct -->
+                </div> <!-- end flex-container -->
+            </div> <!-- end tab-ct -->
+            <div class="askprice tab-ct">
+                <div class="sell-area">
+                    <div class="sell-group common-ct list-gp">
+                        <div class="sell-ap cm-ap">
+                            <div class="pr-graph sell-box">
+                                <div class="graph-box">
+                                    <span>0.1781</span>
+                                </div>
+                            </div> <!-- end pr-graph -->
+                            <div class="coin-amount">
+                                <p class="pr-Up">17,218,000</p>
+                                <span class="pr-Up">+0.67</span>
+                            </div> <!-- end coin-amount -->
+                        </div> <!-- end sell-ap -->
+                        <div class="sell-ap cm-ap">
+                            <div class="pr-graph sell-box">
+                                <div class="graph-box">
+                                    <span>0.1781</span>
+                                </div>
+                            </div> <!-- end pr-graph -->
+                            <div class="coin-amount">
+                                <p class="pr-Up">17,218,000</p>
+                                <span class="pr-Up">+0.67</span>
+                            </div> <!-- end coin-amount -->
+                        </div> <!-- end sell-ap -->
+                        <div class="sell-ap cm-ap">
+                            <div class="pr-graph sell-box">
+                                <div class="graph-box">
+                                    <span>0.1781</span>
+                                </div>
+                            </div> <!-- end pr-graph -->
+                            <div class="coin-amount">
+                                <p class="pr-Up">17,218,000</p>
+                                <span class="pr-Up">+0.67</span>
+                            </div> <!-- end coin-amount -->
+                        </div> <!-- end sell-ap -->
+                        <div class="sell-ap cm-ap">
+                            <div class="pr-graph sell-box">
+                                <div class="graph-box">
+                                    <span>0.1781</span>
+                                </div>
+                            </div> <!-- end pr-graph -->
+                            <div class="coin-amount">
+                                <p class="pr-Up">17,218,000</p>
+                                <span class="pr-Up">+0.67</span>
+                            </div> <!-- end coin-amount -->
+                        </div> <!-- end sell-ap -->
+                        <div class="sell-ap cm-ap">
+                            <div class="pr-graph sell-box">
+                                <div class="graph-box">
+                                    <span>0.1781</span>
+                                </div>
+                            </div> <!-- end pr-graph -->
+                            <div class="coin-amount">
+                                <p class="pr-Up">17,218,000</p>
+                                <span class="pr-Up">+0.67</span>
+                            </div> <!-- end coin-amount -->
+                        </div> <!-- end sell-ap -->
+                        <div class="sell-ap cm-ap">
+                            <div class="pr-graph sell-box">
+                                <div class="graph-box">
+                                    <span>0.1781</span>
+                                </div>
+                            </div> <!-- end pr-graph -->
+                            <div class="coin-amount">
+                                <p class="pr-Up">17,218,000</p>
+                                <span class="pr-Up">+0.67</span>
+                            </div> <!-- end coin-amount -->
+                        </div> <!-- end sell-ap -->
+                        <div class="sell-ap cm-ap">
+                            <div class="pr-graph sell-box">
+                                <div class="graph-box">
+                                    <span>0.1781</span>
+                                </div>
+                            </div> <!-- end pr-graph -->
+                            <div class="coin-amount">
+                                <p class="pr-Up">17,218,000</p>
+                                <span class="pr-Up">+0.67</span>
+                            </div> <!-- end coin-amount -->
+                        </div> <!-- end sell-ap -->
+                        <div class="sell-ap cm-ap">
+                            <div class="pr-graph sell-box">
+                                <div class="graph-box">
+                                    <span>0.1781</span>
+                                </div>
+                            </div> <!-- end pr-graph -->
+                            <div class="coin-amount">
+                                <p class="pr-Up">17,218,000</p>
+                                <span class="pr-Up">+0.67</span>
+                            </div> <!-- end coin-amount -->
+                        </div> <!-- end sell-ap -->
+                        <div class="sell-ap cm-ap">
+                            <div class="pr-graph sell-box">
+                                <div class="graph-box">
+                                    <span>0.1781</span>
+                                </div>
+                            </div> <!-- end pr-graph -->
+                            <div class="coin-amount">
+                                <p class="pr-Up">17,218,000</p>
+                                <span class="pr-Up">+0.67</span>
+                            </div> <!-- end coin-amount -->
+                        </div> <!-- end sell-ap -->
+                        <div class="sell-ap cm-ap">
+                            <div class="pr-graph sell-box">
+                                <div class="graph-box">
+                                    <span>0.1781</span>
+                                </div>
+                            </div> <!-- end pr-graph -->
+                            <div class="coin-amount">
+                                <p class="pr-Up">17,218,000</p>
+                                <span class="pr-Up">+0.67</span>
+                            </div> <!-- end coin-amount -->
+                        </div> <!-- end sell-ap -->
+                        <div class="sell-ap cm-ap">
+                            <div class="pr-graph sell-box">
+                                <div class="graph-box">
+                                    <span>0.1781</span>
+                                </div>
+                            </div> <!-- end pr-graph -->
+                            <div class="coin-amount">
+                                <p class="pr-Up">17,218,000</p>
+                                <span class="pr-Up">+0.67</span>
+                            </div> <!-- end coin-amount -->
+                        </div> <!-- end sell-ap -->
+                        <div class="sell-ap cm-ap">
+                            <div class="pr-graph sell-box">
+                                <div class="graph-box">
+                                    <span>0.1781</span>
+                                </div>
+                            </div> <!-- end pr-graph -->
+                            <div class="coin-amount">
+                                <p class="pr-Up">17,218,000</p>
+                                <span class="pr-Up">+0.67</span>
+                            </div> <!-- end coin-amount -->
+                        </div> <!-- end sell-ap -->
+                        <div class="sell-ap cm-ap">
+                            <div class="pr-graph sell-box">
+                                <div class="graph-box">
+                                    <span>0.1781</span>
+                                </div>
+                            </div> <!-- end pr-graph -->
+                            <div class="coin-amount">
+                                <p class="pr-Up">17,218,000</p>
+                                <span class="pr-Up">+0.67</span>
+                            </div> <!-- end coin-amount -->
+                        </div> <!-- end sell-ap -->
+                        <div class="sell-ap cm-ap">
+                            <div class="pr-graph sell-box">
+                                <div class="graph-box">
+                                    <span>0.1781</span>
+                                </div>
+                            </div> <!-- end pr-graph -->
+                            <div class="coin-amount">
+                                <p class="pr-Up">17,218,000</p>
+                                <span class="pr-Up">+0.67</span>
+                            </div> <!-- end coin-amount -->
+                        </div> <!-- end sell-ap -->
+                        <div class="sell-ap cm-ap">
+                            <div class="pr-graph sell-box">
+                                <div class="graph-box">
+                                    <span>0.1781</span>
+                                </div>
+                            </div> <!-- end pr-graph -->
+                            <div class="coin-amount">
+                                <p class="pr-Up">17,218,000</p>
+                                <span class="pr-Up">+0.67</span>
+                            </div> <!-- end coin-amount -->
+                        </div> <!-- end sell-ap -->
+                        <div class="sell-ap cm-ap">
+                            <div class="pr-graph sell-box">
+                                <div class="graph-box">
+                                    <span>0.1781</span>
+                                </div>
+                            </div> <!-- end pr-graph -->
+                            <div class="coin-amount">
+                                <p class="pr-Up">17,218,000</p>
+                                <span class="pr-Up">+0.67</span>
+                            </div> <!-- end coin-amount -->
+                        </div> <!-- end sell-ap -->
+                        <div class="sell-ap cm-ap">
+                            <div class="pr-graph sell-box">
+                                <div class="graph-box">
+                                    <span>0.1781</span>
+                                </div>
+                            </div> <!-- end pr-graph -->
+                            <div class="coin-amount">
+                                <p class="pr-Up">17,218,000</p>
+                                <span class="pr-Up">+0.67</span>
+                            </div> <!-- end coin-amount -->
+                        </div> <!-- end sell-ap -->
+                        <div class="sell-ap cm-ap">
+                            <div class="pr-graph sell-box">
+                                <div class="graph-box">
+                                    <span>0.1781</span>
+                                </div>
+                            </div> <!-- end pr-graph -->
+                            <div class="coin-amount">
+                                <p class="pr-Up">17,218,000</p>
+                                <span class="pr-Up">+0.67</span>
+                            </div> <!-- end coin-amount -->
+                        </div> <!-- end sell-ap -->
+                        <div class="sell-ap cm-ap">
+                            <div class="pr-graph sell-box">
+                                <div class="graph-box">
+                                    <span>0.1781</span>
+                                </div>
+                            </div> <!-- end pr-graph -->
+                            <div class="coin-amount">
+                                <p class="pr-Up">17,218,000</p>
+                                <span class="pr-Up">+0.67</span>
+                            </div> <!-- end coin-amount -->
+                        </div> <!-- end sell-ap -->
+                        <div class="sell-ap cm-ap">
+                            <div class="pr-graph sell-box">
+                                <div class="graph-box">
+                                    <span>0.1781</span>
+                                </div>
+                            </div> <!-- end pr-graph -->
+                            <div class="coin-amount">
+                                <p class="pr-Up">17,218,000</p>
+                                <span class="pr-Up">+0.67</span>
+                            </div> <!-- end coin-amount -->
+                        </div> <!-- end sell-ap -->
+                    </div> <!-- end sell-group -->
+                    <div class="sell-status common-ct status-ct">
+                        <div class="tr-info tr-status">
+                            <ul>
+                                <li>거래량</li>
+                                <li>
+                                    <p class="price">4,050,27779 <span>BTC</span></p>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li>거래금</li>
+                                <li>
+                                    <p class="price">692.9 <span>억</span></p>
+                                </li>
+                            </ul>
+                        </div> <!-- end tr-info -->
+                        <div class="tr-info am-average">
+                            <ul>
+                                <li>고가(52주)</li>
+                                <li>
+                                    <p class="price pr-Up">17,780,000</p>
+                                    <p class="date">2020-11-06</p>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li>저가(52주)</li>
+                                <li>
+                                    <p class="price pr-Down">5,494,000</p>
+                                    <p class="date">2020-09-13</p>
+                                </li>
+                            </ul>
+                        </div> <!-- end tr-info -->
+                        <div class="tr-info am-today">
+                            <ul>
+                                <li>고가(당일)</li>
+                                <li>
+                                    <p class="price pr-Up">17,300,000</p>
+                                    <p class="persent pr-Up">2.67%</p>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li>저가(당일)</li>
+                                <li>
+                                    <p class="price pr-Down">15,674,000</p>
+                                    <p class="persent pr-Down">-1.04%</p>
+                                </li>
+                            </ul>
+                        </div> <!-- end tr-info -->
+                    </div> <!-- end sell-status -->
+                </div> <!-- end sell-area -->
+                <div class="buy-area">
+                    <div class="buy-status common-ct status-ct">
+                        <div class="thead">
+                            <ul>
+                                <li>체결강도</li>
+                                <li>96.57%</li>
+                            </ul>
+                        </div> <!-- end thead -->
+                        <div class="tbody">
+                            <ul class="pr-Up">
+                                <li>17,176,000</li>
+                                <li>0.0023</li>
+                            </ul>
+                            <ul class="pr-Up">
+                                <li>17,176,000</li>
+                                <li>0.0023</li>
+                            </ul>
+                            <ul class="pr-Down">
+                                <li>17,176,000</li>
+                                <li>0.0023</li>
+                            </ul>
+                            <ul class="pr-Down">
+                                <li>17,176,000</li>
+                                <li>0.0023</li>
+                            </ul>
+                            <ul class="pr-Up">
+                                <li>17,176,000</li>
+                                <li>0.0023</li>
+                            </ul>
+                            <ul class="pr-Down">
+                                <li>17,176,000</li>
+                                <li>0.0023</li>
+                            </ul>
+                            <ul class="pr-Up">
+                                <li>17,176,000</li>
+                                <li>0.0023</li>
+                            </ul>
+                            <ul class="pr-Up">
+                                <li>17,176,000</li>
+                                <li>0.0023</li>
+                            </ul>
+                            <ul class="pr-Down">
+                                <li>17,176,000</li>
+                                <li>0.0023</li>
+                            </ul>
+                            <ul class="pr-Down">
+                                <li>17,176,000</li>
+                                <li>0.0023</li>
+                            </ul>
+                            <ul class="pr-Up">
+                                <li>17,176,000</li>
+                                <li>0.0023</li>
+                            </ul>
+                            <ul class="pr-Down">
+                                <li>17,176,000</li>
+                                <li>0.0023</li>
+                            </ul>
+                            <ul class="pr-Up">
+                                <li>17,176,000</li>
+                                <li>0.0023</li>
+                            </ul>
+                            <ul class="pr-Up">
+                                <li>17,176,000</li>
+                                <li>0.0023</li>
+                            </ul>
+                            <ul class="pr-Down">
+                                <li>17,176,000</li>
+                                <li>0.0023</li>
+                            </ul>
+                            <ul class="pr-Down">
+                                <li>17,176,000</li>
+                                <li>0.0023</li>
+                            </ul>
+                            <ul class="pr-Up">
+                                <li>17,176,000</li>
+                                <li>0.0023</li>
+                            </ul>
+                            <ul class="pr-Down">
+                                <li>17,176,000</li>
+                                <li>0.0023</li>
+                            </ul>
+                            <ul class="pr-Up">
+                                <li>17,176,000</li>
+                                <li>0.0023</li>
+                            </ul>
+                            <ul class="pr-Up">
+                                <li>17,176,000</li>
+                                <li>0.0023</li>
+                            </ul>
+                            <ul class="pr-Down">
+                                <li>17,176,000</li>
+                                <li>0.0023</li>
+                            </ul>
+                            <ul class="pr-Down">
+                                <li>17,176,000</li>
+                                <li>0.0023</li>
+                            </ul>
+                            <ul class="pr-Up">
+                                <li>17,176,000</li>
+                                <li>0.0023</li>
+                            </ul>
+                            <ul class="pr-Down">
+                                <li>17,176,000</li>
+                                <li>0.0023</li>
+                            </ul>
+                        </div> <!-- end tbody -->
+                    </div> <!-- end buy-status -->
+                    <div class="buy-group common-ct list-gp">
+                        <div class="buy-ap cm-ap">
+                            <div class="coin-amount">
+                                <p class="pr-Up">17,218,000</p>
+                                <span class="pr-Up">+0.67</span>
+                            </div> <!-- end coin-amount -->
+                            <div class="pr-graph buy-box">
+                                <div class="graph-box">
+                                    <span>0.1781</span>
+                                </div>
+                            </div> <!-- end pr-graph -->
+                        </div> <!-- end buy-ap -->
+                        <div class="buy-ap cm-ap">
+                            <div class="coin-amount">
+                                <p class="pr-Up">17,218,000</p>
+                                <span class="pr-Up">+0.67</span>
+                            </div> <!-- end coin-amount -->
+                            <div class="pr-graph buy-box">
+                                <div class="graph-box">
+                                    <span>0.1781</span>
+                                </div>
+                            </div> <!-- end pr-graph -->
+                        </div> <!-- end buy-ap -->
+                        <div class="buy-ap cm-ap">
+                            <div class="coin-amount">
+                                <p class="pr-Up">17,218,000</p>
+                                <span class="pr-Up">+0.67</span>
+                            </div> <!-- end coin-amount -->
+                            <div class="pr-graph buy-box">
+                                <div class="graph-box">
+                                    <span>0.1781</span>
+                                </div>
+                            </div> <!-- end pr-graph -->
+                        </div> <!-- end buy-ap -->
+                        <div class="buy-ap cm-ap">
+                            <div class="coin-amount">
+                                <p class="pr-Up">17,218,000</p>
+                                <span class="pr-Up">+0.67</span>
+                            </div> <!-- end coin-amount -->
+                            <div class="pr-graph buy-box">
+                                <div class="graph-box">
+                                    <span>0.1781</span>
+                                </div>
+                            </div> <!-- end pr-graph -->
+                        </div> <!-- end buy-ap -->
+                        <div class="buy-ap cm-ap">
+                            <div class="coin-amount">
+                                <p class="pr-Up">17,218,000</p>
+                                <span class="pr-Up">+0.67</span>
+                            </div> <!-- end coin-amount -->
+                            <div class="pr-graph buy-box">
+                                <div class="graph-box">
+                                    <span>0.1781</span>
+                                </div>
+                            </div> <!-- end pr-graph -->
+                        </div> <!-- end buy-ap -->
+                        <div class="buy-ap cm-ap">
+                            <div class="coin-amount">
+                                <p class="pr-Up">17,218,000</p>
+                                <span class="pr-Up">+0.67</span>
+                            </div> <!-- end coin-amount -->
+                            <div class="pr-graph buy-box">
+                                <div class="graph-box">
+                                    <span>0.1781</span>
+                                </div>
+                            </div> <!-- end pr-graph -->
+                        </div> <!-- end buy-ap -->
+                        <div class="buy-ap cm-ap">
+                            <div class="coin-amount">
+                                <p class="pr-Up">17,218,000</p>
+                                <span class="pr-Up">+0.67</span>
+                            </div> <!-- end coin-amount -->
+                            <div class="pr-graph buy-box">
+                                <div class="graph-box">
+                                    <span>0.1781</span>
+                                </div>
+                            </div> <!-- end pr-graph -->
+                        </div> <!-- end buy-ap -->
+                        <div class="buy-ap cm-ap">
+                            <div class="coin-amount">
+                                <p class="pr-Up">17,218,000</p>
+                                <span class="pr-Up">+0.67</span>
+                            </div> <!-- end coin-amount -->
+                            <div class="pr-graph buy-box">
+                                <div class="graph-box">
+                                    <span>0.1781</span>
+                                </div>
+                            </div> <!-- end pr-graph -->
+                        </div> <!-- end buy-ap -->
+                        <div class="buy-ap cm-ap">
+                            <div class="coin-amount">
+                                <p class="pr-Up">17,218,000</p>
+                                <span class="pr-Up">+0.67</span>
+                            </div> <!-- end coin-amount -->
+                            <div class="pr-graph buy-box">
+                                <div class="graph-box">
+                                    <span>0.1781</span>
+                                </div>
+                            </div> <!-- end pr-graph -->
+                        </div> <!-- end buy-ap -->
+                        <div class="buy-ap cm-ap">
+                            <div class="coin-amount">
+                                <p class="pr-Up">17,218,000</p>
+                                <span class="pr-Up">+0.67</span>
+                            </div> <!-- end coin-amount -->
+                            <div class="pr-graph buy-box">
+                                <div class="graph-box">
+                                    <span>0.1781</span>
+                                </div>
+                            </div> <!-- end pr-graph -->
+                        </div> <!-- end buy-ap -->
+                        <div class="buy-ap cm-ap">
+                            <div class="coin-amount">
+                                <p class="pr-Up">17,218,000</p>
+                                <span class="pr-Up">+0.67</span>
+                            </div> <!-- end coin-amount -->
+                            <div class="pr-graph buy-box">
+                                <div class="graph-box">
+                                    <span>0.1781</span>
+                                </div>
+                            </div> <!-- end pr-graph -->
+                        </div> <!-- end buy-ap -->
+                        <div class="buy-ap cm-ap">
+                            <div class="coin-amount">
+                                <p class="pr-Up">17,218,000</p>
+                                <span class="pr-Up">+0.67</span>
+                            </div> <!-- end coin-amount -->
+                            <div class="pr-graph buy-box">
+                                <div class="graph-box">
+                                    <span>0.1781</span>
+                                </div>
+                            </div> <!-- end pr-graph -->
+                        </div> <!-- end buy-ap -->
+                        <div class="buy-ap cm-ap">
+                            <div class="coin-amount">
+                                <p class="pr-Up">17,218,000</p>
+                                <span class="pr-Up">+0.67</span>
+                            </div> <!-- end coin-amount -->
+                            <div class="pr-graph buy-box">
+                                <div class="graph-box">
+                                    <span>0.1781</span>
+                                </div>
+                            </div> <!-- end pr-graph -->
+                        </div> <!-- end buy-ap -->
+                        <div class="buy-ap cm-ap">
+                            <div class="coin-amount">
+                                <p class="pr-Up">17,218,000</p>
+                                <span class="pr-Up">+0.67</span>
+                            </div> <!-- end coin-amount -->
+                            <div class="pr-graph buy-box">
+                                <div class="graph-box">
+                                    <span>0.1781</span>
+                                </div>
+                            </div> <!-- end pr-graph -->
+                        </div> <!-- end buy-ap -->
+                        <div class="buy-ap cm-ap">
+                            <div class="coin-amount">
+                                <p class="pr-Up">17,218,000</p>
+                                <span class="pr-Up">+0.67</span>
+                            </div> <!-- end coin-amount -->
+                            <div class="pr-graph buy-box">
+                                <div class="graph-box">
+                                    <span>0.1781</span>
+                                </div>
+                            </div> <!-- end pr-graph -->
+                        </div> <!-- end buy-ap -->
+                        <div class="buy-ap cm-ap">
+                            <div class="coin-amount">
+                                <p class="pr-Up">17,218,000</p>
+                                <span class="pr-Up">+0.67</span>
+                            </div> <!-- end coin-amount -->
+                            <div class="pr-graph buy-box">
+                                <div class="graph-box">
+                                    <span>0.1781</span>
+                                </div>
+                            </div> <!-- end pr-graph -->
+                        </div> <!-- end buy-ap -->
+                        <div class="buy-ap cm-ap">
+                            <div class="coin-amount">
+                                <p class="pr-Up">17,218,000</p>
+                                <span class="pr-Up">+0.67</span>
+                            </div> <!-- end coin-amount -->
+                            <div class="pr-graph buy-box">
+                                <div class="graph-box">
+                                    <span>0.1781</span>
+                                </div>
+                            </div> <!-- end pr-graph -->
+                        </div> <!-- end buy-ap -->
+                        <div class="buy-ap cm-ap">
+                            <div class="coin-amount">
+                                <p class="pr-Up">17,218,000</p>
+                                <span class="pr-Up">+0.67</span>
+                            </div> <!-- end coin-amount -->
+                            <div class="pr-graph buy-box">
+                                <div class="graph-box">
+                                    <span>0.1781</span>
+                                </div>
+                            </div> <!-- end pr-graph -->
+                        </div> <!-- end buy-ap -->
+                        <div class="buy-ap cm-ap">
+                            <div class="coin-amount">
+                                <p class="pr-Up">17,218,000</p>
+                                <span class="pr-Up">+0.67</span>
+                            </div> <!-- end coin-amount -->
+                            <div class="pr-graph buy-box">
+                                <div class="graph-box">
+                                    <span>0.1781</span>
+                                </div>
+                            </div> <!-- end pr-graph -->
+                        </div> <!-- end buy-ap -->
+                        <div class="buy-ap cm-ap">
+                            <div class="coin-amount">
+                                <p class="pr-Up">17,218,000</p>
+                                <span class="pr-Up">+0.67</span>
+                            </div> <!-- end coin-amount -->
+                            <div class="pr-graph buy-box">
+                                <div class="graph-box">
+                                    <span>0.1781</span>
+                                </div>
+                            </div> <!-- end pr-graph -->
+                        </div> <!-- end buy-ap -->
+                        <div class="buy-ap cm-ap">
+                            <div class="coin-amount">
+                                <p class="pr-Up">17,218,000</p>
+                                <span class="pr-Up">+0.67</span>
+                            </div> <!-- end coin-amount -->
+                            <div class="pr-graph buy-box">
+                                <div class="graph-box">
+                                    <span>0.1781</span>
+                                </div>
+                            </div> <!-- end pr-graph -->
+                        </div> <!-- end buy-ap -->
+                    </div> <!-- end buy-group -->
+                </div> <!-- end buy-area -->
+            </div> <!-- end askprice -->
+            <div class="chart-area tab-ct">
+                <img src="img/coin_chart_img.png" alt="">
+            </div> <!-- end chart-area -->
+            <div class="market-price tab-ct">
+                <div class="pr-time-tab">
+                    <input class="on" type="button" value="시간">
+                    <input type="button" value="일별">
+                </div> <!-- end pr-time-tab -->
+                <div class="market-pr-ct show">
+                    <div class="t-head">
+                        <table>
+                            <colgroup>
+                                <col width="20%">
+                                <col width="40%">
+                                <col width="40%">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>시간</th>
+                                    <th>가격(KRW)</th>
+                                    <th>체결량(BTC)</th>
+                                </tr>
+                            </thead>
+                        </table>
+                    </div> <!-- end t-head -->
+                    <div class="mk-pr-list">
+                        <table>
+                            <colgroup>
+                                <col width="20%">
+                                <col width="40%">
+                                <col width="40%">
+                            </colgroup>
+                            <tbody>
+                                <tr class="pr-Up">
+                                    <td>13:32:30</td>
+                                    <td class="price">17,084,000</td>
+                                    <td class="amount">0.002</td>
+                                </tr>
+                                <tr class="pr-Down">
+                                    <td>13:32:30</td>
+                                    <td class="price">17,084,000</td>
+                                    <td class="amount">0.002</td>
+                                </tr>
+                                <tr class="pr-Down">
+                                    <td>13:32:30</td>
+                                    <td class="price">17,084,000</td>
+                                    <td class="amount">0.002</td>
+                                </tr>
+                                <tr class="pr-Up">
+                                    <td>13:32:30</td>
+                                    <td class="price">17,084,000</td>
+                                    <td class="amount">0.002</td>
+                                </tr>
+                                <tr class="pr-Down">
+                                    <td>13:32:30</td>
+                                    <td class="price">17,084,000</td>
+                                    <td class="amount">0.002</td>
+                                </tr>
+                                <tr class="pr-Up">
+                                    <td>13:32:30</td>
+                                    <td class="price">17,084,000</td>
+                                    <td class="amount">0.002</td>
+                                </tr>
+                                <tr class="pr-Down">
+                                    <td>13:32:30</td>
+                                    <td class="price">17,084,000</td>
+                                    <td class="amount">0.002</td>
+                                </tr>
+                                <tr class="pr-Up">
+                                    <td>13:32:30</td>
+                                    <td class="price">17,084,000</td>
+                                    <td class="amount">0.002</td>
+                                </tr>
+                                <tr class="pr-Down">
+                                    <td>13:32:30</td>
+                                    <td class="price">17,084,000</td>
+                                    <td class="amount">0.002</td>
+                                </tr>
+                                <tr class="pr-Down">
+                                    <td>13:32:30</td>
+                                    <td class="price">17,084,000</td>
+                                    <td class="amount">0.002</td>
+                                </tr>
+                                <tr class="pr-Up">
+                                    <td>13:32:30</td>
+                                    <td class="price">17,084,000</td>
+                                    <td class="amount">0.002</td>
+                                </tr>
+                                <tr class="pr-Down">
+                                    <td>13:32:30</td>
+                                    <td class="price">17,084,000</td>
+                                    <td class="amount">0.002</td>
+                                </tr>
+                                <tr class="pr-Up">
+                                    <td>13:32:30</td>
+                                    <td class="price">17,084,000</td>
+                                    <td class="amount">0.002</td>
+                                </tr>
+                                <tr class="pr-Down">
+                                    <td>13:32:30</td>
+                                    <td class="price">17,084,000</td>
+                                    <td class="amount">0.002</td>
+                                </tr>
+                                <tr class="pr-Up">
+                                    <td>13:32:30</td>
+                                    <td class="price">17,084,000</td>
+                                    <td class="amount">0.002</td>
+                                </tr>
+                                <tr class="pr-Down">
+                                    <td>13:32:30</td>
+                                    <td class="price">17,084,000</td>
+                                    <td class="amount">0.002</td>
+                                </tr>
+                                <tr class="pr-Down">
+                                    <td>13:32:30</td>
+                                    <td class="price">17,084,000</td>
+                                    <td class="amount">0.002</td>
+                                </tr>
+                                <tr class="pr-Up">
+                                    <td>13:32:30</td>
+                                    <td class="price">17,084,000</td>
+                                    <td class="amount">0.002</td>
+                                </tr>
+                                <tr class="pr-Down">
+                                    <td>13:32:30</td>
+                                    <td class="price">17,084,000</td>
+                                    <td class="amount">0.002</td>
+                                </tr>
+                                <tr class="pr-Up">
+                                    <td>13:32:30</td>
+                                    <td class="price">17,084,000</td>
+                                    <td class="amount">0.002</td>
+                                </tr>
+                                <tr class="pr-Down">
+                                    <td>13:32:30</td>
+                                    <td class="price">17,084,000</td>
+                                    <td class="amount">0.002</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div> <!-- end mk-pr-list -->
+                </div> <!-- end market-pr-ct-->
+                <div class="market-pr-ct">
+                    <div class="t-head">
+                        <table>
+                            <colgroup>
+                                <col width="20%">
+                                <col width="30%">
+                                <col width="20%">
+                                <col width="30%">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>시간</th>
+                                    <th>증가(KRW)</th>
+                                    <th>전일대비</th>
+                                    <th>거래량(BTC)</th>
+                                </tr>
+                            </thead>
+                        </table>
+                    </div> <!-- end t-head -->
+                    <div class="mk-pr-list">
+                        <table>
+                            <colgroup>
+                                <col width="20%">
+                                <col width="30%">
+                                <col width="20%">
+                                <col width="30%">
+                            </colgroup>
+                            <tbody>
+                                <tr class="pr-Up">
+                                    <td>13:32:30</td>
+                                    <td class="price">17,084,000</td>
+                                    <td class="amount">0.002</td>
+                                    <td>1,173.4943</td>
+                                </tr>
+                                <tr class="pr-Down">
+                                    <td>13:32:30</td>
+                                    <td class="price">17,084,000</td>
+                                    <td class="amount">0.002</td>
+                                    <td>1,173.4943</td>
+                                </tr>
+                                <tr class="pr-Down">
+                                    <td>13:32:30</td>
+                                    <td class="price">17,084,000</td>
+                                    <td class="amount">0.002</td>
+                                    <td>1,173.4943</td>
+                                </tr>
+                                <tr class="pr-Up">
+                                    <td>13:32:30</td>
+                                    <td class="price">17,084,000</td>
+                                    <td class="amount">0.002</td>
+                                    <td>1,173.4943</td>
+                                </tr>
+                                <tr class="pr-Down">
+                                    <td>13:32:30</td>
+                                    <td class="price">17,084,000</td>
+                                    <td class="amount">0.002</td>
+                                    <td>1,173.4943</td>
+                                </tr>
+                                <tr class="pr-Up">
+                                    <td>13:32:30</td>
+                                    <td class="price">17,084,000</td>
+                                    <td class="amount">0.002</td>
+                                    <td>1,173.4943</td>
+                                </tr>
+                                <tr class="pr-Down">
+                                    <td>13:32:30</td>
+                                    <td class="price">17,084,000</td>
+                                    <td class="amount">0.002</td>
+                                    <td>1,173.4943</td>
+                                </tr>
+                                <tr class="pr-Up">
+                                    <td>13:32:30</td>
+                                    <td class="price">17,084,000</td>
+                                    <td class="amount">0.002</td>
+                                    <td>1,173.4943</td>
+                                </tr>
+                                <tr class="pr-Down">
+                                    <td>13:32:30</td>
+                                    <td class="price">17,084,000</td>
+                                    <td class="amount">0.002</td>
+                                    <td>1,173.4943</td>
+                                </tr>
+                                <tr class="pr-Down">
+                                    <td>13:32:30</td>
+                                    <td class="price">17,084,000</td>
+                                    <td class="amount">0.002</td>
+                                    <td>1,173.4943</td>
+                                </tr>
+                                <tr class="pr-Up">
+                                    <td>13:32:30</td>
+                                    <td class="price">17,084,000</td>
+                                    <td class="amount">0.002</td>
+                                    <td>1,173.4943</td>
+                                </tr>
+                                <tr class="pr-Down">
+                                    <td>13:32:30</td>
+                                    <td class="price">17,084,000</td>
+                                    <td class="amount">0.002</td>
+                                    <td>1,173.4943</td>
+                                </tr>
+                                <tr class="pr-Up">
+                                    <td>13:32:30</td>
+                                    <td class="price">17,084,000</td>
+                                    <td class="amount">0.002</td>
+                                    <td>1,173.4943</td>
+                                </tr>
+                                <tr class="pr-Down">
+                                    <td>13:32:30</td>
+                                    <td class="price">17,084,000</td>
+                                    <td class="amount">0.002</td>
+                                    <td>1,173.4943</td>
+                                </tr>
+                                <tr class="pr-Up">
+                                    <td>13:32:30</td>
+                                    <td class="price">17,084,000</td>
+                                    <td class="amount">0.002</td>
+                                    <td>1,173.4943</td>
+                                </tr>
+                                <tr class="pr-Down">
+                                    <td>13:32:30</td>
+                                    <td class="price">17,084,000</td>
+                                    <td class="amount">0.002</td>
+                                    <td>1,173.4943</td>
+                                </tr>
+                                <tr class="pr-Down">
+                                    <td>13:32:30</td>
+                                    <td class="price">17,084,000</td>
+                                    <td class="amount">0.002</td>
+                                    <td>1,173.4943</td>
+                                </tr>
+                                <tr class="pr-Up">
+                                    <td>13:32:30</td>
+                                    <td class="price">17,084,000</td>
+                                    <td class="amount">0.002</td>
+                                    <td>1,173.4943</td>
+                                </tr>
+                                <tr class="pr-Down">
+                                    <td>13:32:30</td>
+                                    <td class="price">17,084,000</td>
+                                    <td class="amount">0.002</td>
+                                    <td>1,173.4943</td>
+                                </tr>
+                                <tr class="pr-Up">
+                                    <td>13:32:30</td>
+                                    <td class="price">17,084,000</td>
+                                    <td class="amount">0.002</td>
+                                    <td>1,173.4943</td>
+                                </tr>
+                                <tr class="pr-Down">
+                                    <td>13:32:30</td>
+                                    <td class="price">17,084,000</td>
+                                    <td class="amount">0.002</td>
+                                    <td>1,173.4943</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div> <!-- end mk-pr-list -->
+                </div> <!-- end market-pr-ct-->
+            </div> <!-- end market-price -->
+            <div id="coin-list-popup">
+                <div class="head">
+                    <ul class="tab-wallet">
+                        <li>
+                            <p>즐겨찾기</p>
+                        </li>
+                        <li class="on">KRW</li>
+                    </ul>
+                    <!--- end tab-wallet -->
+                    <div class="search-box">
+                        <input type="text" name="" id="" class="width-100" placeholder="검색">
+                        <a class="sch-icon bg-img" href="#"></a>
+                    </div> <!-- end search-box -->
+                </div> <!-- end head -->
+                <div class="coin-list t-head">
+                    <table>
+                        <colgroup>
+                            <col width="28%">
+                            <col width="26%">
+                            <col width="20%">
+                            <col width="26%">
+                        </colgroup>
+                        <thead>
+                            <th>
+                                <p>자산</p>
+                            </th>
+                            <th>
+                                <p>현재가</p>
+                            </th>
+                            <th>
+                                <p>변동률</p>
+                            </th>
+                            <th>
+                                <p>거래금액</p>
+                            </th>
+                        </thead>
+                    </table>
+                </div> <!-- end coin-list -->
+                <div class="coin-list scroll-list">
+                    <table>
+                        <colgroup>
+                            <col width="28%">
+                            <col width="26%">
+                            <col width="20%">
+                            <col width="26%">
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <td class="coin-info">
+                                    <div class="coin-favorit bg-img"></div>
+                                    <div class="coin-nm">
+                                        <p>비트코인</p>
+                                        <span>BTC/KRW</span>
+                                    </div> <!-- end coin-nm -->
+                                </td>
+                                <td class="pr-now pr-Up">17,268,000</td>
+                                <td class="pr-change pr-Up">+0.86%</td>
+                                <td class="trans-pr">
+                                    <p>47,411 <span class="m-unit">백만</span></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="coin-info">
+                                    <div class="coin-favorit bg-img"></div>
+                                    <div class="coin-nm">
+                                        <p>이더리움</p>
+                                        <span>ETH/KRW</span>
+                                    </div> <!-- end coin-nm -->
+                                </td>
+                                <td class="pr-now pr-Down">506,500</td>
+                                <td class="pr-change pr-Down">-0.86%</td>
+                                <td class="trans-pr">
+                                    <p>16,275 <span class="m-unit">백만</span></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="coin-info">
+                                    <div class="coin-favorit bg-img"></div>
+                                    <div class="coin-nm">
+                                        <p>레드비트</p>
+                                        <span>RDC/KRW</span>
+                                    </div> <!-- end coin-nm -->
+                                </td>
+                                <td class="pr-now pr-Up">184,400</td>
+                                <td class="pr-change pr-Up">+0.86%</td>
+                                <td class="trans-pr">
+                                    <p>16,275 <span class="m-unit">백만</span></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="coin-info">
+                                    <div class="coin-favorit bg-img"></div>
+                                    <div class="coin-nm">
+                                        <p>비트코인</p>
+                                        <span>BTC/KRW</span>
+                                    </div> <!-- end coin-nm -->
+                                </td>
+                                <td class="pr-now pr-Up">17,268,000</td>
+                                <td class="pr-change pr-Up">+0.86%</td>
+                                <td class="trans-pr">
+                                    <p>47,411 <span class="m-unit">백만</span></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="coin-info">
+                                    <div class="coin-favorit bg-img"></div>
+                                    <div class="coin-nm">
+                                        <p>이더리움</p>
+                                        <span>ETH/KRW</span>
+                                    </div> <!-- end coin-nm -->
+                                </td>
+                                <td class="pr-now pr-Down">506,500</td>
+                                <td class="pr-change pr-Down">-0.86%</td>
+                                <td class="trans-pr">
+                                    <p>16,275 <span class="m-unit">백만</span></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="coin-info">
+                                    <div class="coin-favorit bg-img"></div>
+                                    <div class="coin-nm">
+                                        <p>레드비트</p>
+                                        <span>RDC/KRW</span>
+                                    </div> <!-- end coin-nm -->
+                                </td>
+                                <td class="pr-now pr-Up">184,400</td>
+                                <td class="pr-change pr-Up">+0.86%</td>
+                                <td class="trans-pr">
+                                    <p>16,275 <span class="m-unit">백만</span></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="coin-info">
+                                    <div class="coin-favorit bg-img"></div>
+                                    <div class="coin-nm">
+                                        <p>비트코인</p>
+                                        <span>BTC/KRW</span>
+                                    </div> <!-- end coin-nm -->
+                                </td>
+                                <td class="pr-now pr-Up">17,268,000</td>
+                                <td class="pr-change pr-Up">+0.86%</td>
+                                <td class="trans-pr">
+                                    <p>47,411 <span class="m-unit">백만</span></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="coin-info">
+                                    <div class="coin-favorit bg-img"></div>
+                                    <div class="coin-nm">
+                                        <p>이더리움</p>
+                                        <span>ETH/KRW</span>
+                                    </div> <!-- end coin-nm -->
+                                </td>
+                                <td class="pr-now pr-Down">506,500</td>
+                                <td class="pr-change pr-Down">-0.86%</td>
+                                <td class="trans-pr">
+                                    <p>16,275 <span class="m-unit">백만</span></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="coin-info">
+                                    <div class="coin-favorit bg-img"></div>
+                                    <div class="coin-nm">
+                                        <p>레드비트</p>
+                                        <span>RDC/KRW</span>
+                                    </div> <!-- end coin-nm -->
+                                </td>
+                                <td class="pr-now pr-Up">184,400</td>
+                                <td class="pr-change pr-Up">+0.86%</td>
+                                <td class="trans-pr">
+                                    <p>16,275 <span class="m-unit">백만</span></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="coin-info">
+                                    <div class="coin-favorit bg-img"></div>
+                                    <div class="coin-nm">
+                                        <p>비트코인</p>
+                                        <span>BTC/KRW</span>
+                                    </div> <!-- end coin-nm -->
+                                </td>
+                                <td class="pr-now pr-Up">17,268,000</td>
+                                <td class="pr-change pr-Up">+0.86%</td>
+                                <td class="trans-pr">
+                                    <p>47,411 <span class="m-unit">백만</span></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="coin-info">
+                                    <div class="coin-favorit bg-img"></div>
+                                    <div class="coin-nm">
+                                        <p>이더리움</p>
+                                        <span>ETH/KRW</span>
+                                    </div> <!-- end coin-nm -->
+                                </td>
+                                <td class="pr-now pr-Down">506,500</td>
+                                <td class="pr-change pr-Down">-0.86%</td>
+                                <td class="trans-pr">
+                                    <p>16,275 <span class="m-unit">백만</span></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="coin-info">
+                                    <div class="coin-favorit bg-img"></div>
+                                    <div class="coin-nm">
+                                        <p>레드비트</p>
+                                        <span>RDC/KRW</span>
+                                    </div> <!-- end coin-nm -->
+                                </td>
+                                <td class="pr-now pr-Up">184,400</td>
+                                <td class="pr-change pr-Up">+0.86%</td>
+                                <td class="trans-pr">
+                                    <p>16,275 <span class="m-unit">백만</span></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="coin-info">
+                                    <div class="coin-favorit bg-img"></div>
+                                    <div class="coin-nm">
+                                        <p>비트코인</p>
+                                        <span>BTC/KRW</span>
+                                    </div> <!-- end coin-nm -->
+                                </td>
+                                <td class="pr-now pr-Up">17,268,000</td>
+                                <td class="pr-change pr-Up">+0.86%</td>
+                                <td class="trans-pr">
+                                    <p>47,411 <span class="m-unit">백만</span></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="coin-info">
+                                    <div class="coin-favorit bg-img"></div>
+                                    <div class="coin-nm">
+                                        <p>이더리움</p>
+                                        <span>ETH/KRW</span>
+                                    </div> <!-- end coin-nm -->
+                                </td>
+                                <td class="pr-now pr-Down">506,500</td>
+                                <td class="pr-change pr-Down">-0.86%</td>
+                                <td class="trans-pr">
+                                    <p>16,275 <span class="m-unit">백만</span></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="coin-info">
+                                    <div class="coin-favorit bg-img"></div>
+                                    <div class="coin-nm">
+                                        <p>레드비트</p>
+                                        <span>RDC/KRW</span>
+                                    </div> <!-- end coin-nm -->
+                                </td>
+                                <td class="pr-now pr-Up">184,400</td>
+                                <td class="pr-change pr-Up">+0.86%</td>
+                                <td class="trans-pr">
+                                    <p>16,275 <span class="m-unit">백만</span></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="coin-info">
+                                    <div class="coin-favorit bg-img"></div>
+                                    <div class="coin-nm">
+                                        <p>비트코인</p>
+                                        <span>BTC/KRW</span>
+                                    </div> <!-- end coin-nm -->
+                                </td>
+                                <td class="pr-now pr-Up">17,268,000</td>
+                                <td class="pr-change pr-Up">+0.86%</td>
+                                <td class="trans-pr">
+                                    <p>47,411 <span class="m-unit">백만</span></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="coin-info">
+                                    <div class="coin-favorit bg-img"></div>
+                                    <div class="coin-nm">
+                                        <p>이더리움</p>
+                                        <span>ETH/KRW</span>
+                                    </div> <!-- end coin-nm -->
+                                </td>
+                                <td class="pr-now pr-Down">506,500</td>
+                                <td class="pr-change pr-Down">-0.86%</td>
+                                <td class="trans-pr">
+                                    <p>16,275 <span class="m-unit">백만</span></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="coin-info">
+                                    <div class="coin-favorit bg-img"></div>
+                                    <div class="coin-nm">
+                                        <p>레드비트</p>
+                                        <span>RDC/KRW</span>
+                                    </div> <!-- end coin-nm -->
+                                </td>
+                                <td class="pr-now pr-Up">184,400</td>
+                                <td class="pr-change pr-Up">+0.86%</td>
+                                <td class="trans-pr">
+                                    <p>16,275 <span class="m-unit">백만</span></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="coin-info">
+                                    <div class="coin-favorit bg-img"></div>
+                                    <div class="coin-nm">
+                                        <p>비트코인</p>
+                                        <span>BTC/KRW</span>
+                                    </div> <!-- end coin-nm -->
+                                </td>
+                                <td class="pr-now pr-Up">17,268,000</td>
+                                <td class="pr-change pr-Up">+0.86%</td>
+                                <td class="trans-pr">
+                                    <p>47,411 <span class="m-unit">백만</span></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="coin-info">
+                                    <div class="coin-favorit bg-img"></div>
+                                    <div class="coin-nm">
+                                        <p>이더리움</p>
+                                        <span>ETH/KRW</span>
+                                    </div> <!-- end coin-nm -->
+                                </td>
+                                <td class="pr-now pr-Down">506,500</td>
+                                <td class="pr-change pr-Down">-0.86%</td>
+                                <td class="trans-pr">
+                                    <p>16,275 <span class="m-unit">백만</span></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="coin-info">
+                                    <div class="coin-favorit bg-img"></div>
+                                    <div class="coin-nm">
+                                        <p>레드비트</p>
+                                        <span>RDC/KRW</span>
+                                    </div> <!-- end coin-nm -->
+                                </td>
+                                <td class="pr-now pr-Up">184,400</td>
+                                <td class="pr-change pr-Up">+0.86%</td>
+                                <td class="trans-pr">
+                                    <p>16,275 <span class="m-unit">백만</span></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="coin-info">
+                                    <div class="coin-favorit bg-img"></div>
+                                    <div class="coin-nm">
+                                        <p>비트코인</p>
+                                        <span>BTC/KRW</span>
+                                    </div> <!-- end coin-nm -->
+                                </td>
+                                <td class="pr-now pr-Up">17,268,000</td>
+                                <td class="pr-change pr-Up">+0.86%</td>
+                                <td class="trans-pr">
+                                    <p>47,411 <span class="m-unit">백만</span></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="coin-info">
+                                    <div class="coin-favorit bg-img"></div>
+                                    <div class="coin-nm">
+                                        <p>이더리움</p>
+                                        <span>ETH/KRW</span>
+                                    </div> <!-- end coin-nm -->
+                                </td>
+                                <td class="pr-now pr-Down">506,500</td>
+                                <td class="pr-change pr-Down">-0.86%</td>
+                                <td class="trans-pr">
+                                    <p>16,275 <span class="m-unit">백만</span></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="coin-info">
+                                    <div class="coin-favorit bg-img"></div>
+                                    <div class="coin-nm">
+                                        <p>레드비트</p>
+                                        <span>RDC/KRW</span>
+                                    </div> <!-- end coin-nm -->
+                                </td>
+                                <td class="pr-now pr-Up">184,400</td>
+                                <td class="pr-change pr-Up">+0.86%</td>
+                                <td class="trans-pr">
+                                    <p>16,275 <span class="m-unit">백만</span></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="coin-info">
+                                    <div class="coin-favorit bg-img"></div>
+                                    <div class="coin-nm">
+                                        <p>비트코인</p>
+                                        <span>BTC/KRW</span>
+                                    </div> <!-- end coin-nm -->
+                                </td>
+                                <td class="pr-now pr-Up">17,268,000</td>
+                                <td class="pr-change pr-Up">+0.86%</td>
+                                <td class="trans-pr">
+                                    <p>47,411 <span class="m-unit">백만</span></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="coin-info">
+                                    <div class="coin-favorit bg-img"></div>
+                                    <div class="coin-nm">
+                                        <p>이더리움</p>
+                                        <span>ETH/KRW</span>
+                                    </div> <!-- end coin-nm -->
+                                </td>
+                                <td class="pr-now pr-Down">506,500</td>
+                                <td class="pr-change pr-Down">-0.86%</td>
+                                <td class="trans-pr">
+                                    <p>16,275 <span class="m-unit">백만</span></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="coin-info">
+                                    <div class="coin-favorit bg-img"></div>
+                                    <div class="coin-nm">
+                                        <p>레드비트</p>
+                                        <span>RDC/KRW</span>
+                                    </div> <!-- end coin-nm -->
+                                </td>
+                                <td class="pr-now pr-Up">184,400</td>
+                                <td class="pr-change pr-Up">+0.86%</td>
+                                <td class="trans-pr">
+                                    <p>16,275 <span class="m-unit">백만</span></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="coin-info">
+                                    <div class="coin-favorit bg-img"></div>
+                                    <div class="coin-nm">
+                                        <p>비트코인</p>
+                                        <span>BTC/KRW</span>
+                                    </div> <!-- end coin-nm -->
+                                </td>
+                                <td class="pr-now pr-Up">17,268,000</td>
+                                <td class="pr-change pr-Up">+0.86%</td>
+                                <td class="trans-pr">
+                                    <p>47,411 <span class="m-unit">백만</span></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="coin-info">
+                                    <div class="coin-favorit bg-img"></div>
+                                    <div class="coin-nm">
+                                        <p>이더리움</p>
+                                        <span>ETH/KRW</span>
+                                    </div> <!-- end coin-nm -->
+                                </td>
+                                <td class="pr-now pr-Down">506,500</td>
+                                <td class="pr-change pr-Down">-0.86%</td>
+                                <td class="trans-pr">
+                                    <p>16,275 <span class="m-unit">백만</span></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="coin-info">
+                                    <div class="coin-favorit bg-img"></div>
+                                    <div class="coin-nm">
+                                        <p>레드비트</p>
+                                        <span>RDC/KRW</span>
+                                    </div> <!-- end coin-nm -->
+                                </td>
+                                <td class="pr-now pr-Up">184,400</td>
+                                <td class="pr-change pr-Up">+0.86%</td>
+                                <td class="trans-pr">
+                                    <p>16,275 <span class="m-unit">백만</span></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="coin-info">
+                                    <div class="coin-favorit bg-img"></div>
+                                    <div class="coin-nm">
+                                        <p>비트코인</p>
+                                        <span>BTC/KRW</span>
+                                    </div> <!-- end coin-nm -->
+                                </td>
+                                <td class="pr-now pr-Up">17,268,000</td>
+                                <td class="pr-change pr-Up">+0.86%</td>
+                                <td class="trans-pr">
+                                    <p>47,411 <span class="m-unit">백만</span></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="coin-info">
+                                    <div class="coin-favorit bg-img"></div>
+                                    <div class="coin-nm">
+                                        <p>이더리움</p>
+                                        <span>ETH/KRW</span>
+                                    </div> <!-- end coin-nm -->
+                                </td>
+                                <td class="pr-now pr-Down">506,500</td>
+                                <td class="pr-change pr-Down">-0.86%</td>
+                                <td class="trans-pr">
+                                    <p>16,275 <span class="m-unit">백만</span></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="coin-info">
+                                    <div class="coin-favorit bg-img"></div>
+                                    <div class="coin-nm">
+                                        <p>레드비트</p>
+                                        <span>RDC/KRW</span>
+                                    </div> <!-- end coin-nm -->
+                                </td>
+                                <td class="pr-now pr-Up">184,400</td>
+                                <td class="pr-change pr-Up">+0.86%</td>
+                                <td class="trans-pr">
+                                    <p>16,275 <span class="m-unit">백만</span></p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div> <!-- end coin-list -->
+            </div> <!-- end coin-list-popup -->
+        </div> <!-- end m-exchange -->
+        <div id="m-fixed-noti">
+            <div class="noti-icon align-center"><span>NOTICE</span></div>
+            <p>[공지사항] 금융사기 주의 안내</p>
+            <button><img src="img/close-btn.png" alt=""></button>
+        </div> <!-- end fixed-noti -->
+        <div id="m-fixed-footer">
+            <ul class="flex-container align-center">
+                <li>
+                    <a href="index.html">
+                        <img src="img/m_market_icon.png" alt="">
+                        <p>홈</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="m_exchange.html">
+                        <img src="img/m_wallet_icon.png" alt="">
+                        <p>거래소</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="m_asset_status.html">
+                        <img src="img/m_invest_icon.png" alt="">
+                        <p>자산현황</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="m_balance.html">
+                        <img src="img/m_trans_icon.png" alt="">
+                        <p>입출금</p>
+                    </a>
+                </li>
+            </ul>
+        </div> <!-- end m-fixed-footer -->
+    </div> <!-- end wrap -->
+
+
+
+
+
+
+</body>
+
+</html>
